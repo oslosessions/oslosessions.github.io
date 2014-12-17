@@ -1,0 +1,35 @@
+
+
+@function units($count) {
+	@return $count * $baseUnit;
+}
+
+@mixin dimensions($width, $height){
+	width: $width;
+	height: $height;
+}
+@mixin icon{
+	core-icon{
+		@content;
+	}
+}
+
+
+
+
+/* ========================================================================
+#MEDIA QUERIES
+========================================================================= */
+@mixin device-size($size) {
+	@if $size == small {
+		@media (max-width: 600px) { @content; }
+	}
+	@if $size == medium {
+		@media (min-width: 601px) { @content; }
+	}
+	@if $size == large{
+		@media (min-width: 850px ) { @content; }
+	}
+}
+
+

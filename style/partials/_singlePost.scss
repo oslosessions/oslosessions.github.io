@@ -1,0 +1,51 @@
+.singlePost{
+	#header{
+
+
+	}
+	.postTitle{
+		padding: units(2) 0 0 0;
+	}
+	article{
+
+	}
+	.date{
+		@include font-size($delta);
+	}
+
+	.postContent{
+
+//		>p:first-of-type::first-letter{
+//			float: left;
+//			font-size: 3.5rem;
+//			@include font-weight($bold);
+//			line-height: 3rem;
+//			margin: 0.06em 0.2em 0em 0;
+//		}
+
+		line-height: 2rem;
+	}
+	footer{
+		margin: units(2) 0 0 0;
+		display: block;
+		width: 100%;
+	}
+
+	.author{
+
+		img{}
+
+		img,figcaption{
+
+		}
+
+		img{
+			width: 10%;
+			float: left;
+			margin: 0 units(1) 0 0;
+		}
+		figcaption{
+
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<nav id="nav" role="navigation">
+	<ul>
+		{% assign url = page.url|remove:'index.html' %}
+		{% for link in site.navigation %}
+		{% assign state = '' %}
+		{% if page.url == link.url %}
+		{% assign state = 'active ' %}
+		{% endif %}
+		<li class="{{ state }}">
+			<a href="{% if page.url == link.url %}{{site.url}}{% else %}{{site.url}}{{ link.url }}{% endif %}" title="{{ link.title }}">{{ link.text }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</nav>

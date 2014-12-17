@@ -1,0 +1,23 @@
+<div class="latestPosts postLoop">
+	{% for post in site.posts limit:15 %}
+	<article>
+		<h2><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<a href="{{ post.url | prepend: site.baseurl }}" class="excerpt">
+			<p>{{ post.content | strip_html | truncatewords:10}}</p>
+			<div class="meta">
+				<div class="readTime">
+					<p>Read time:
+					   {% capture truncated_content %}
+					   {{ post.content | truncatewords: 250 }}
+					   {% endcapture %}
+					   {% if post.content != truncated_content %}
+						<span>{{ post.content | number_of_words | append: '.0' | divided_by:180 | append: 'min' }}</span>
+					   {% endif %}
+					</p>
+				</div>
+			</div>
+			<a href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+		</a>
+	</article>
+	{% endfor %}
+</div>

@@ -1,0 +1,54 @@
+
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body{
+	background: $siteBgColor;
+	overflow-y: scroll;
+}
+
+body, html{
+	padding: 0px;
+	margin: 0px;
+}
+
+img, video, svg, iframe{
+	max-width: 100%;
+	height: auto;
+}
+
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+}
+
+.author{
+	img{
+		@include border-radius(50%);
+	}
+}
+.main{
+	> h1{
+		margin-bottom: units(2);
+	}
+}
+
+
+
+/*  ================================================================================
+	Helpful classes
+================================================================================  */
+.widthLimit {
+	max-width: $siteMaxWidth;
+	margin: 0 auto;
+	padding: 0 $sitePadding;
+	position: relative;
+}
+
+
+

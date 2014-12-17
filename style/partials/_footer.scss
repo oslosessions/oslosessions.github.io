@@ -1,0 +1,26 @@
+#footer{
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin: units(7) 0;
+
+	.copyright,.socialLinks{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	.copyright{
+		@include font-size($gamma);
+		color: $light;
+	}
+	.socialLinks{
+		margin: units(1/2) 0 0 0;
+		padding: 0px;
+	}
+	a{
+		color: $light;
+		&:hover{
+			color: $black;
+		}
+	}
+}

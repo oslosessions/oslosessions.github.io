@@ -1,0 +1,26 @@
+/*  ================================================================================
+	Parameters
+	Parameters for use in this project
+================================================================================  */
+$baseUnit: 10px;
+$siteMaxWidth: 750px;
+$sitePadding: $baseUnit;
+
+
+/* ========================================================================
+#TRANSITIONS: Default Transition variables
+========================================================================= */
+$default-transition-property: all;
+$default-transition-duration: .3s;
+$default-transition-function: false;
+$default-transition-delay: 0s;
+
+.transitionDefaults {
+	@include transition($default-transition-property $default-transition-duration $default-transition-delay $default-transition-function);
+}
+
+/* ========================================================================
+#DEFAULT BORDER RADIUS
+========================================================================= */
+$default-border-radius: 3px;
+

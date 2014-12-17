@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="frontPage">
+	{% include header.html %}
+
+	<div class="widthLimit">
+		{% include sidebar.html %}
+		<main class="main">
+			<h1>Latest posts</h1>
+			{% include latest-posts.html %}
+		</main>
+	</div>
+	{% include footer.html %}

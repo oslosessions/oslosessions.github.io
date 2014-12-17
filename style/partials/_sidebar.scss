@@ -1,0 +1,37 @@
+.sidebar{
+	text-align: center;
+	.authorPic{
+		display: block;
+		width: 100%;
+
+		img{
+			@include border-radius(50%);
+			border: 2px solid black;
+		}
+		figcaption{
+			margin: units(1) 0;
+		}
+	}
+	.socialLinks{
+		display: block;
+
+		li{
+			list-style: none;
+		}
+		a{
+
+		}
+		@include icon{
+			@include dimensions(30px,30px);
+		}
+
+	}
+
+
+	@include device-size(medium){
+
+	}
+	@include device-size(large){
+		text-align: left;
+	}
+}

@@ -1,0 +1,32 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{{ site.description }}">
+	<meta name="author" content="{{ site.author }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{site.url}}feed.xml">
+	<link rel="canonical" href="{{ site.canonical }}">
+
+	<!-- scripts -->
+	<script src="{{site.url}}bower_components/platform/platform.js"></script>
+
+	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700,300italic' rel='stylesheet' type='text/css'>
+
+	<!-- css -->
+	<link rel="stylesheet" href="{{site.url}}style/css/screen.css">
+
+	<!-- polymer web components imports -->
+	<link rel="import" href="{{site.url}}bower_components/core-icons/social-icons.html">
+
+</head>
+
+<!--
+	This is a site built with Jekyll and hosted on Github Pages.
+	Check out the source code for the site here: https://github.com/eplehans/eplehans.github.io
+ -->

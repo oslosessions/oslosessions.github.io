@@ -1,0 +1,54 @@
+/* NAVIGATION  ======================================================= */
+#nav {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: units(1) 0 0 0;
+
+	ul {
+		font-size: 0px;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+		margin: 0;
+		padding: 0;
+
+		&.active{
+			a{
+				text-decoration: underline;
+			}
+		}
+	}
+	a {
+		display: block;
+		width: 100%;
+		padding: 0 units(1);
+		@include font-size($gamma);
+		&:before{
+			content: "/";
+			display: inline-block;
+		}
+	}
+}
+
+/*  ================================================================================
+	MEDIUM DEVICES
+================================================================================  */
+@include device-size(medium) {
+	#nav {
+	}
+}
+
+/*  ================================================================================
+	SMALL DEVICES
+================================================================================  */
+@include device-size(small) {
+	#nav {
+		//margin-top: units(1);
+	}
+}

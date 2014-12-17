@@ -1,0 +1,37 @@
+<ul class="socialLinks">
+	{% if site.github_username %}
+	<li>
+		<a href="https://github.com/{{ site.github_username }}" title="Fork me on GitHub" target="_blank">
+			<span>Fork me on GitHub</span>
+			<core-icon icon="social:post-github"></core-icon>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if site.twitter_username %}
+	<li>
+		<a href="https://twitter.com/{{ site.twitter_username }}" title="Follow me on Twitter" target="_blank">
+			<span>Follow me on Twitter</span>
+			<core-icon icon="social:post-twitter"></core-icon>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if site.instagram_username %}
+	<li>
+		<a href="https://instagram.com/{{ site.instagram_username }}" title="Follow me on Instagram" target="_blank">
+			<span>Follow me on Instagram</span>
+			<core-icon icon="social:post-instagram"></core-icon>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if site.linkedin_username %}
+	<li>
+		<a href="https://linkedin.com/in/{{ site.linkedin_username }}" title="Connect with me on LinkedIn" target="_blank">
+			<span>Connect with me on LinkedIn</span>
+			<core-icon icon="social:post-linkedin"></core-icon>
+		</a>
+	</li>
+	{% endif %}
+</ul>

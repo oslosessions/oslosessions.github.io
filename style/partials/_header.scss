@@ -1,0 +1,73 @@
+/*  ================================================================================
+	MAIN HEADER
+================================================================================  */
+#header {
+	position: relative;
+	padding: units(4) 0 0 0;
+	margin: 0 0 units(5) 0;
+
+
+	/* PAGE TITLE / IMAGE  ======================================================= */
+	.siteLegend{
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+
+	.siteLogo{
+		max-width: 70%;
+		text-align: center;
+		margin: 0 auto;
+		display: inline-block;
+
+		img{
+			max-width: 100px;
+			display: inline-block;
+			@include border-radius(50%);
+			border: 2px solid $black;
+		}
+	}
+	.siteSlogan{
+		margin: 0px;
+	}
+
+	.siteTitle{
+		text-decoration: none;
+		text-transform: none;
+		width: auto;
+		margin: 0 auto;
+		display: inline-block;
+
+		h1{
+			@include font-size($alpha);
+		}
+	}
+	.siteSlogan{
+		display: block;
+		width: 100%;
+		text-transform: none;
+		@include font-size($gamma);
+		&:before{
+			content: "-";
+			margin-right: 2px;
+
+		}
+	}
+}
+
+/*  ================================================================================
+	MEDIUM DEVICES
+================================================================================  */
+@include device-size(medium) {
+	#header {
+	}
+}
+
+/*  ================================================================================
+	SMALL DEVICES
+================================================================================  */
+@include device-size(small) {
+	#header {
+		margin-bottom: units(3);
+	}
+}

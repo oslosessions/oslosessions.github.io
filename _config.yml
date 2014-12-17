@@ -1,0 +1,61 @@
+# SITE SETTINGS
+title: Hanserino
+email: eplehans@gmail.com
+description: Let me do a brain dump on you
+author: Hans Kristian Smedsrød
+baseurl: ""
+url: "http://www.hanseri.no/" # the base hostname & protocol for your site
+#url: "http://0.0.0.0:4000/"
+permalink: :title/
+canonical: "http://www.hanseri.no/"
+
+# External usernames
+twitter_username: hanserino
+github_username:  eplehans
+facebook_username: eplehans
+instagram_username: hanserino
+linkedin_username: eplehans
+codepen_username: hanserino
+
+disqus: hanserino
+google_analytics: UA-56557241-1
+
+# BUILD SETTINGS
+markdown: kramdown
+
+# NAVIGATION
+navigation:
+- text: Archive
+  url: archive/index.html
+  title: Archive
+- text: About
+  url: about/index.html
+
+#Page and post defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      published: "true"
+      layout: "single-post"
+
+
+prose:
+  siteurl: "http://hanseri.no/"
+  media: "media/img"
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: "true"
+      - name: "tags"
+        field:
+          label: "Tags"
+          element: "text"
+          help: "Give me some tags"
+          type: "text"
+          placeholder: "Tag1"

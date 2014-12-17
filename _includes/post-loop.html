@@ -1,0 +1,12 @@
+<div class="postLoop">
+	{% for post in site.posts %}
+	<article>
+		<a href="{{ post.url | prepend: site.url }}#{{ post.title | handleize | downcase | replace: ' ', '-'  }}">
+			<h2>{{post.title}}</h2>
+			<div class="excerpt">
+				<p>{{ post.content | strip_html | truncatewords:25}}</p>
+			</div>
+		</a>
+	</article>
+	{% endfor %}
+</div>

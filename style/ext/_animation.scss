@@ -1,0 +1,142 @@
+/* ========================================================================
+#ANIMATION: Animation mixins
+This is a custom built set of mixins for generating the css for animations
+It has been made to be used the same way as compass's transition mixins
+are used.
+========================================================================= */
+
+// NAME
+@mixin animation-name($name){
+	@if $name != false {
+		-moz-animation-name: $name;
+		-webkit-animation-name: $name;
+		-o-animation-name: $name;
+		animation-name: $name;
+	}
+}
+
+// DELAY
+@mixin animation-delay($delay){
+	@if $delay != false {
+		-moz-animation-delay: $delay;
+		-o-animation-delay: $delay;
+		-webkit-animation-delay: $delay;
+		animation-delay: $delay;
+	}
+}
+
+// DURATION
+@mixin animation-duration($duration){
+	@if $duration != false {
+		-moz-animation-duration: $duration;
+		-o-animation-duration: $duration;
+		-webkit-animation-duration: $duration;
+		animation-duration: $duration;
+	}
+}
+
+// TIMING
+@mixin animation-timing-function($timing-function){
+	@if $timing-function != false {
+		-moz-animation-timing-function: $timing-function;
+		-o-animation-timing-function: $timing-function;
+		-webkit-animation-timing-function: $timing-function;
+		animation-timing-function: $timing-function;
+	}
+}
+
+// DIRECTION
+@mixin animation-direction($direction){
+	@if $direction != false {
+		-moz-animation-direction: $direction;
+		-o-animation-direction: $direction;
+		-webkit-animation-direction: $direction;
+		animation-direction: $direction;
+	}
+}
+
+// ITERATION
+@mixin animation-iteration-count($iteration-count){
+	@if $iteration-count != false {
+		-moz-animation-iteration-count: $iteration-count;
+		-o-animation-iteration-count: $iteration-count;
+		-webkit-animation-iteration-count: $iteration-count;
+		animation-iteration-count: $iteration-count;
+	}
+}
+
+// PLAY STATE
+@mixin animation-play-state($play-state){
+	@if $play-state != false {
+		-moz-animation-play-state: $play-state;
+		-o-animation-play-state: $play-state;
+		-webkit-animation-play-state: $play-state;
+		animation-play-state: $play-state;
+	}
+}
+
+// FILL MODE
+@mixin animation-fill-mode($fill-mode){
+	@if $fill-mode != false {
+		-moz-animation-fill-mode: $fill-mode;
+		-o-animation-fill-mode: $fill-mode;
+		-webkit-animation-fill-mode: $fill-mode;
+		animation-fill-mode: $fill-mode;
+	}
+}
+
+// ANIMATION
+@mixin animation(
+$name,
+$delay,
+$duration,
+$timing-function,
+$direction,
+$iteration-count,
+$play-state,
+$fill-mode
+){
+	@include animation-delay($delay);
+	@include animation-duration($duration);
+	@include animation-timing-function($timing-function);
+	@include animation-direction($direction);
+	@include animation-iteration-count($iteration-count);
+	@include animation-play-state($play-state);
+	@include animation-fill-mode($fill-mode);
+}
+
+// ANIMATION DEFAULTS
+@mixin animation-defaults(
+$name: false,
+$delay: $default-animation-delay,
+$duration: $default-animation-duration,
+$timing-function: $default-animation-timing-function,
+$direction: $default-animation-direction,
+$iteration-count:$default-animation-iteration-count,
+$play-state: $default-animation-play-state,
+$fill-mode: $default-animation-fill-mode
+){
+	@include animation-delay($delay);
+	@include animation-duration($duration);
+	@include animation-timing-function($timing-function);
+	@include animation-direction($direction);
+	@include animation-iteration-count($iteration-count);
+	@include animation-play-state($play-state);
+	@include animation-fill-mode($fill-mode);
+}
+
+
+
+/* ========================================================================
+#KEYFRAMES: Keyframes mixin
+This is a custom built keyframe mixin that will wrap your keyframe content
+in each vendor prefix.
+========================================================================= */
+@mixin keyframes($name) {
+	@-moz-keyframes $name { @content; }
+	@-webkit-keyframes $name { @content; }
+	@-o-keyframes $name { @content; }
+	@keyframes $name { @content; }
+}
+
+

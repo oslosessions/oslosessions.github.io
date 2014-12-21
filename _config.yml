@@ -48,6 +48,10 @@ prose:
           label: "Published"
           element: "checkbox"
           value: "true"
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
       - name: "video"
         field:
           label: "Paste in your fancy vimeo url here.."

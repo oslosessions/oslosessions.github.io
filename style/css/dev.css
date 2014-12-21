@@ -156,136 +156,23 @@ in each vendor prefix.
 /*  ================================================================================
 	COLORS
 ================================================================================  */
-/* line 34, ../parameters/_colors.scss */
-.swatch1a {
-  background: #f6253d;
+/* line 12, ../parameters/_typography.scss */
+body {
+  font-family: "helvetica";
 }
 
-/* line 38, ../parameters/_colors.scss */
-.swatch1b {
-  background: #f73a50;
-}
-
-/* line 42, ../parameters/_colors.scss */
-.swatch1c {
-  background: #f85164;
-}
-
-/* line 46, ../parameters/_colors.scss */
-.swatch1d {
-  background: #f96677;
-}
-
-/* line 50, ../parameters/_colors.scss */
-.swatch1e {
-  background: #fa7c8b;
-}
-
-/* line 54, ../parameters/_colors.scss */
-.swatch1f {
-  background: #fa929e;
-}
-
-/* line 58, ../parameters/_colors.scss */
-.swatch1g {
-  background: #fba8b1;
-}
-
-/* line 62, ../parameters/_colors.scss */
-.swatch1h {
-  background: #fcbdc4;
-}
-
-/* line 66, ../parameters/_colors.scss */
-.swatch1i {
-  background: #fdd3d8;
-}
-
-/* line 70, ../parameters/_colors.scss */
-.swatch1j {
-  background: #fee9eb;
-}
-
-/* line 74, ../parameters/_colors.scss */
-.swatch2a {
-  background: #42426d;
-}
-
-/* line 78, ../parameters/_colors.scss */
-.swatch2b {
-  background: #55557b;
-}
-
-/* line 82, ../parameters/_colors.scss */
-.swatch2c {
-  background: #68688a;
-}
-
-/* line 86, ../parameters/_colors.scss */
-.swatch2d {
-  background: #7a7a99;
-}
-
-/* line 90, ../parameters/_colors.scss */
-.swatch2e {
-  background: #8e8ea7;
-}
-
-/* line 94, ../parameters/_colors.scss */
-.swatch2f {
-  background: #a0a0b6;
-}
-
-/* line 98, ../parameters/_colors.scss */
-.swatch2g {
-  background: #b3b3c5;
-}
-
-/* line 102, ../parameters/_colors.scss */
-.swatch2h {
-  background: #c6c6d3;
-}
-
-/* line 106, ../parameters/_colors.scss */
-.swatch2i {
-  background: #d9d9e2;
-}
-
-/* line 110, ../parameters/_colors.scss */
-.swatch2j {
-  background: #ececf0;
-}
-
-/* line 116, ../parameters/_colors.scss */
-.gradient.horizontal {
-  background: linear-gradient(to right, #f6253d 0%, #42426d 100%);
-}
-/* line 119, ../parameters/_colors.scss */
-.gradient.vertical {
-  background: linear-gradient(to bottom, #f6253d 0%, #42426d 100%);
-}
-
-/* line 124, ../parameters/_colors.scss */
-.gradient2.horizontal {
-  background-image: linear-gradient(to right, #3c3c63 0%, #4e395d 40%, #7c3354 100%);
-}
-/* line 127, ../parameters/_colors.scss */
-.gradient2.vertical {
-  background-image: linear-gradient(to top, #3c3c63 0%, #4e395d 40%, #7c3354 100%);
-}
-
-/* line 20, ../parameters/_typography.scss */
+/* line 21, ../parameters/_typography.scss */
 a {
-  color: #f6253d;
+  color: black;
   text-decoration: none;
 }
 
-/* line 27, ../parameters/_typography.scss */
+/* line 28, ../parameters/_typography.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 32, ../parameters/_typography.scss */
+/* line 33, ../parameters/_typography.scss */
 p a:hover {
   text-decoration: underline;
 }
@@ -325,24 +212,54 @@ body {
   height: 100%;
 }
 
+/* line 9, ../partials/_global.scss */
+#main {
+  padding: 24px 0 0 0;
+}
+
+/* line 14, ../partials/_global.scss */
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+/* line 22, ../partials/_global.scss */
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 31, ../partials/_global.scss */
+.video .controls {
+  position: absolute;
+  z-index: 5;
+}
+
 /*  ================================================================================
 	Helpful classes
 ================================================================================  */
-/* line 16, ../partials/_global.scss */
+/* line 42, ../partials/_global.scss */
 .largeWrap {
   max-width: 960px;
   padding: 16px;
   margin: 0 auto;
 }
 
-/* line 22, ../partials/_global.scss */
+/* line 48, ../partials/_global.scss */
 .screenReaderText {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
 
-/* line 31, ../partials/_global.scss */
+/* line 57, ../partials/_global.scss */
 .absoluteRight,
 .absoluteLeft,
 .absoluteBottom,
@@ -350,27 +267,27 @@ body {
   position: absolute;
 }
 
-/* line 38, ../partials/_global.scss */
+/* line 64, ../partials/_global.scss */
 .absoluteLeft {
   left: 0;
 }
 
-/* line 42, ../partials/_global.scss */
+/* line 68, ../partials/_global.scss */
 .absoluteRight {
   right: 0;
 }
 
-/* line 46, ../partials/_global.scss */
+/* line 72, ../partials/_global.scss */
 .absoluteBottom {
   bottom: 0;
 }
 
-/* line 50, ../partials/_global.scss */
+/* line 76, ../partials/_global.scss */
 .absoluteTop {
   top: 0;
 }
 
-/* line 54, ../partials/_global.scss */
+/* line 80, ../partials/_global.scss */
 .absoluteCenter {
   position: absolute;
   top: 50%;
@@ -379,17 +296,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* line 58, ../partials/_global.scss */
+/* line 84, ../partials/_global.scss */
 .fullWidth {
   width: 100%;
 }
 
-/* line 62, ../partials/_global.scss */
+/* line 88, ../partials/_global.scss */
 .center {
   text-align: center;
 }
 
-/* line 66, ../partials/_global.scss */
+/* line 92, ../partials/_global.scss */
 .noRadius {
   border-right: 0px;
 }
@@ -399,28 +316,38 @@ body {
 ================================================================================  */
 /* line 5, ../partials/_header.scss */
 #header {
-  background: transparent url("../img/mainBg.jpg") no-repeat;
-  background-size: cover;
-  width: 100vw;
+  border: 5px solid black;
+  width: 100%;
   height: 100vh;
   position: relative;
-}
-/* line 18, ../partials/_header.scss */
-#header .logo {
-  width: 200px;
-  height: auto;
-  top: 40%;
-  left: 50%;
-  position: absolute;
-  margin-left: -100px;
+  z-index: 3;
   background: black;
+  overflow: hidden;
+}
+/* line 13, ../partials/_header.scss */
+#header nav {
+  position: absolute;
+  width: 100%;
   text-align: center;
-  padding: 32px 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+/* line 21, ../partials/_header.scss */
+#header nav a {
+  background: black;
+  padding: 8px 16px;
+  display: inline-block;
+  color: white;
 }
 /* line 29, ../partials/_header.scss */
-#header .logo img {
-  display: inline-block;
-  width: 55%;
+#header .logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 5;
+  width: 100px;
+  height: auto;
 }
 
 /*  ================================================================================
@@ -436,3 +363,118 @@ MEDIUM DEVICES
 /*  ================================================================================
 SMALL DEVICES
 ================================================================================  */
+/* line 1, ../partials/_latestPost.scss */
+.latestPost {
+  position: relative;
+}
+/* line 4, ../partials/_latestPost.scss */
+.latestPost .post {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 9, ../partials/_latestPost.scss */
+.latestPost .grain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/grain.png") repeat top left;
+  z-index: 3;
+}
+/* line 16, ../partials/_latestPost.scss */
+.latestPost .controls {
+  width: 200px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-left: -100px;
+  margin-top: -100px;
+  background: black;
+  text-align: center;
+  padding: 32px 0;
+  z-index: 5;
+}
+/* line 29, ../partials/_latestPost.scss */
+.latestPost .controls button {
+  display: inline-block;
+  width: 55%;
+}
+/* line 35, ../partials/_latestPost.scss */
+.latestPost .text {
+  left: 16px;
+  position: absolute;
+  z-index: 4;
+  max-width: 300px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  /* line 35, ../partials/_latestPost.scss */
+  .latestPost .text {
+    position: relative;
+  }
+}
+@media (max-width: 600px) {
+  /* line 35, ../partials/_latestPost.scss */
+  .latestPost .text {
+    position: relative;
+    max-width: 100%;
+  }
+}
+@media (min-width: 850px) {
+  /* line 35, ../partials/_latestPost.scss */
+  .latestPost .text {
+    position: absolute;
+    bottom: 20%;
+  }
+}
+/* line 55, ../partials/_latestPost.scss */
+.latestPost .text h2, .latestPost .text .description {
+  background: white;
+  padding: 16px;
+}
+/* line 59, ../partials/_latestPost.scss */
+.latestPost .text h2 {
+  text-transform: uppercase;
+}
+/* line 62, ../partials/_latestPost.scss */
+.latestPost .text .description {
+  display: block;
+}
+
+/* line 1, ../partials/_postLoop.scss */
+.postLoop {
+  display: block;
+  font-size: 0px;
+}
+/* line 5, ../partials/_postLoop.scss */
+.postLoop .post {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding: 0 8px;
+}
+@media (max-width: 600px) {
+  /* line 5, ../partials/_postLoop.scss */
+  .postLoop .post {
+    width: 100%;
+  }
+}
+@media (min-width: 601px) {
+  /* line 5, ../partials/_postLoop.scss */
+  .postLoop .post {
+    width: 50%;
+  }
+}
+@media (min-width: 850px) {
+  /* line 5, ../partials/_postLoop.scss */
+  .postLoop .post {
+    width: 25%;
+  }
+}
+/* line 21, ../partials/_postLoop.scss */
+.postLoop .post .text {
+  font-size: 16px;
+  line-height: 1.2em;
+}

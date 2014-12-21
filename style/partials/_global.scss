@@ -7,8 +7,34 @@ body {
 }
 
 #main {
-
+  padding: units(3) 0 0 0;
 }
+
+
+.video{
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+
+  iframe,
+  object,
+  embed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .controls{
+    position: absolute;
+    z-index: 5;
+
+  }
+}
+
 
 /*  ================================================================================
 	Helpful classes

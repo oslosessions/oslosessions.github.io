@@ -1,3 +1,4 @@
+$mainFont: 'helvetica';
 
 //Font sizes
 $giga: units(5);
@@ -9,7 +10,7 @@ $delta: 14px;
 
 
 body{
-
+  font-family: $mainFont;
 }
 
 //Font size and line height mixin
@@ -18,7 +19,7 @@ body{
 }
 
 a {
-  color: $swatch1a;
+  color: $black;
   text-decoration: none;
   &:hover {
   }

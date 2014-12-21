@@ -1,0 +1,9 @@
+<div class="postLoop" id="episodes">
+    <ul>
+        {% for post in site.posts %}
+        <li class="post">
+            {% include post-structure.html %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>

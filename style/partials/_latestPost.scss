@@ -1,0 +1,66 @@
+.latestPost{
+  position: relative;
+
+  .post{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .grain{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/grain.png') repeat top left;
+    z-index: 3;
+  }
+  .controls{
+      width: 200px;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      margin-left: -100px;
+      margin-top: -100px;
+      background: black;
+      text-align: center;
+      padding: units(4) 0;
+      z-index: 5;
+
+      button{
+        display: inline-block;
+        width: 55%;
+      }
+  }
+
+  .text{
+    left: units(2);
+    position: absolute;
+    z-index: 4;
+    max-width: $smallWrapperWidth;
+    width: 100%;
+
+    @include device-size(small){
+      position: relative;
+    }
+    @include device-size(small){
+      position: relative;
+      max-width: 100%;
+    }
+    @include device-size(large){
+      position: absolute;
+      bottom: 20%;
+    }
+
+
+    h2,.description{
+      background: white;
+      padding: units(2);
+    }
+    h2{
+      text-transform: uppercase;
+    }
+    .description{
+      display: block;
+    }
+  }
+}

@@ -3,33 +3,36 @@
 ================================================================================  */
 
 #header {
-  background: transparent url('../img/mainBg.jpg') no-repeat;
-  background-size: cover;
-
-  width: 100vw;
+  border: 5px solid black;
+  width: 100%;
   height: 100vh;
-
   position: relative;
-
+  z-index: 3;
+  background: black;
+  overflow: hidden;
   nav {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
 
+    a{
+      background: black;
+      padding: units(1) units(2);
+      display: inline-block;
+      color: white;
+    }
   }
 
   .logo {
-    width: 200px;
-    height: auto;
-    top: 40%;
-    left: 50%;
     position: absolute;
-    margin-left: -100px;
-    background: black;
-    text-align: center;
-    padding: units(4) 0;
-
-    img{
-      display: inline-block;
-      width: 55%;
-    }
+    top: units(2);
+    left: units(2);
+    z-index: 5;
+    width: 100px;
+    height: auto;
   }
 
 }

@@ -1,0 +1,33 @@
+.postLoop{
+  display: block;
+  font-size: 0px;
+
+  .post{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    padding: 0 units(1);
+
+    @include device-size(small){
+      width: 100%;
+    }
+    @include device-size(medium){
+      width: 50%;
+    }
+    @include device-size(large){
+      width: 25%;
+    }
+    .text{
+      font-size: $gamma;
+      line-height: 1.2em;
+    }
+  }
+
+}
+
+.post{
+  .text{
+
+  }
+}

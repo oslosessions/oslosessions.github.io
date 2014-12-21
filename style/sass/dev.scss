@@ -6,7 +6,7 @@
 "../ext/animation";
 
 // Import parameters ========================================
-@import  "../parameters/parameters",
+@import  "../parameters/parameters", 
 "../parameters/colors",
 "../parameters/animations",
 "../parameters/typography",
@@ -15,4 +15,6 @@
 // Import Partials	========================================
 @import "../partials/global",
 "../partials/header",
-"../partials/navigation";
+"../partials/navigation",
+"../partials/latestPost",
+"../partials/postLoop";

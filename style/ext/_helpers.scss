@@ -84,7 +84,7 @@ $searching: 'search';
 ========================================================================= */
 @mixin device-size($size) {
   @if $size == small {
-    @media (max-width: 600px) {
+    @media (max-width: 60px) {
       @content;
     }
   }
@@ -94,7 +94,7 @@ $searching: 'search';
     }
   }
   @if $size == large {
-    @media (min-width: 850px) {
+    @media (min-width: 900px) {
       @content;
     }
   }

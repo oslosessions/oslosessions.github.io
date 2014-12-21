@@ -408,20 +408,20 @@ SMALL DEVICES
   max-width: 300px;
   width: 100%;
 }
-@media (max-width: 600px) {
+@media (max-width: 60px) {
   /* line 35, ../partials/_latestPost.scss */
   .latestPost .text {
     position: relative;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 60px) {
   /* line 35, ../partials/_latestPost.scss */
   .latestPost .text {
     position: relative;
     max-width: 100%;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 900px) {
   /* line 35, ../partials/_latestPost.scss */
   .latestPost .text {
     position: absolute;
@@ -455,7 +455,7 @@ SMALL DEVICES
   width: 25%;
   padding: 0 8px;
 }
-@media (max-width: 600px) {
+@media (max-width: 60px) {
   /* line 5, ../partials/_postLoop.scss */
   .postLoop .post {
     width: 100%;
@@ -467,7 +467,7 @@ SMALL DEVICES
     width: 50%;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 900px) {
   /* line 5, ../partials/_postLoop.scss */
   .postLoop .post {
     width: 25%;

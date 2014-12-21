@@ -55,7 +55,6 @@ prose:
       - name: "video"
         field:
           label: "Paste in your fancy vimeo url here.."
-          element: "input"
-          help: "Give me some tags"
+          element: "text"
           type: "text"
           placeholder: "http://vimeo.com/111721083"

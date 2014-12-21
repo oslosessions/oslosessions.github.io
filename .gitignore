@@ -1,2 +1,5 @@
 _site
 .sass-cache
+style/.sass-cache
+.idea
+node_modules

@@ -1,0 +1,412 @@
+/* DEVELOPMENT STYLES. THIS SHOULD NOT GO INTO PRODUTION */
+/* line 2, ../ext/_reset.scss */
+html, body, div, span, applet, object, iframe, abbr,
+acronym, em, img, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 20, ../ext/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 24, ../ext/_reset.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../ext/_reset.scss */
+ul.reset,
+ol.reset {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 37, ../ext/_reset.scss */
+a img {
+  border: none;
+}
+
+/* line 40, ../ext/_reset.scss */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 46, ../ext/_reset.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 49, ../ext/_reset.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ========================================================================
+#UNITS
+========================================================================= */
+/* ========================================================================
+#WIDTH HELPER
+========================================================================= */
+/* line 42, ../ext/_helpers.scss */
+[data-width="100"] {
+  width: 100% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="90"] {
+  width: 90% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="80"] {
+  width: 80% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="70"] {
+  width: 70% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="60"] {
+  width: 60% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="50"] {
+  width: 50% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="40"] {
+  width: 40% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="30"] {
+  width: 30% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="20"] {
+  width: 20% !important;
+}
+
+/* line 42, ../ext/_helpers.scss */
+[data-width="10"] {
+  width: 10% !important;
+}
+
+/* ========================================================================
+#APP MODES
+========================================================================= */
+/*
+  When using this, be aware of the nesting property.
+  the app-mode data attribute is attached to the #main element.
+*/
+/* ========================================================================
+#MEDIA QUERIES
+========================================================================= */
+/* ========================================================================
+  #TOUCH DEVICE
+========================================================================= */
+/* ========================================================================
+#ANIMATION: Animation mixins
+This is a custom built set of mixins for generating the css for animations
+It has been made to be used the same way as compass's transition mixins
+are used.
+========================================================================= */
+/* ========================================================================
+#KEYFRAMES: Keyframes mixin
+This is a custom built keyframe mixin that will wrap your keyframe content
+in each vendor prefix.
+========================================================================= */
+/*  ================================================================================
+	Parameters
+	Parameters for use in this project
+================================================================================  */
+/* ========================================================================
+#TRANSITIONS: Default Transition variables
+========================================================================= */
+/* ========================================================================
+#BOX SHADOW: Default Box shadow variables
+========================================================================= */
+/* ========================================================================
+#DEFAULT BORDER RADIUS
+========================================================================= */
+/*  ================================================================================
+	COLORS
+================================================================================  */
+/* line 34, ../parameters/_colors.scss */
+.swatch1a {
+  background: #f6253d;
+}
+
+/* line 38, ../parameters/_colors.scss */
+.swatch1b {
+  background: #f73a50;
+}
+
+/* line 42, ../parameters/_colors.scss */
+.swatch1c {
+  background: #f85164;
+}
+
+/* line 46, ../parameters/_colors.scss */
+.swatch1d {
+  background: #f96677;
+}
+
+/* line 50, ../parameters/_colors.scss */
+.swatch1e {
+  background: #fa7c8b;
+}
+
+/* line 54, ../parameters/_colors.scss */
+.swatch1f {
+  background: #fa929e;
+}
+
+/* line 58, ../parameters/_colors.scss */
+.swatch1g {
+  background: #fba8b1;
+}
+
+/* line 62, ../parameters/_colors.scss */
+.swatch1h {
+  background: #fcbdc4;
+}
+
+/* line 66, ../parameters/_colors.scss */
+.swatch1i {
+  background: #fdd3d8;
+}
+
+/* line 70, ../parameters/_colors.scss */
+.swatch1j {
+  background: #fee9eb;
+}
+
+/* line 74, ../parameters/_colors.scss */
+.swatch2a {
+  background: #42426d;
+}
+
+/* line 78, ../parameters/_colors.scss */
+.swatch2b {
+  background: #55557b;
+}
+
+/* line 82, ../parameters/_colors.scss */
+.swatch2c {
+  background: #68688a;
+}
+
+/* line 86, ../parameters/_colors.scss */
+.swatch2d {
+  background: #7a7a99;
+}
+
+/* line 90, ../parameters/_colors.scss */
+.swatch2e {
+  background: #8e8ea7;
+}
+
+/* line 94, ../parameters/_colors.scss */
+.swatch2f {
+  background: #a0a0b6;
+}
+
+/* line 98, ../parameters/_colors.scss */
+.swatch2g {
+  background: #b3b3c5;
+}
+
+/* line 102, ../parameters/_colors.scss */
+.swatch2h {
+  background: #c6c6d3;
+}
+
+/* line 106, ../parameters/_colors.scss */
+.swatch2i {
+  background: #d9d9e2;
+}
+
+/* line 110, ../parameters/_colors.scss */
+.swatch2j {
+  background: #ececf0;
+}
+
+/* line 116, ../parameters/_colors.scss */
+.gradient.horizontal {
+  background: linear-gradient(to right, #f6253d 0%, #42426d 100%);
+}
+/* line 119, ../parameters/_colors.scss */
+.gradient.vertical {
+  background: linear-gradient(to bottom, #f6253d 0%, #42426d 100%);
+}
+
+/* line 124, ../parameters/_colors.scss */
+.gradient2.horizontal {
+  background-image: linear-gradient(to right, #3c3c63 0%, #4e395d 40%, #7c3354 100%);
+}
+/* line 127, ../parameters/_colors.scss */
+.gradient2.vertical {
+  background-image: linear-gradient(to top, #3c3c63 0%, #4e395d 40%, #7c3354 100%);
+}
+
+/* line 20, ../parameters/_typography.scss */
+a {
+  color: #f6253d;
+  text-decoration: none;
+}
+
+/* line 27, ../parameters/_typography.scss */
+.italic {
+  font-style: italic;
+}
+
+/* line 32, ../parameters/_typography.scss */
+p a:hover {
+  text-decoration: underline;
+}
+
+/* line 1, ../parameters/_icons.scss */
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+/* line 8, ../parameters/_icons.scss */
+.icon-larger {
+  width: 40px;
+  height: 40px;
+}
+
+/* line 12, ../parameters/_icons.scss */
+.icon-smaller {
+  width: 8px;
+  height: 8px;
+}
+
+/* line 16, ../parameters/_icons.scss */
+.icon {
+  fill: currentcolor;
+}
+
+/* line 1, ../partials/_global.scss */
+html {
+  min-height: 100%;
+}
+
+/* line 5, ../partials/_global.scss */
+body {
+  height: 100%;
+}
+
+/*  ================================================================================
+	Helpful classes
+================================================================================  */
+/* line 16, ../partials/_global.scss */
+.largeWrap {
+  max-width: 960px;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+/* line 22, ../partials/_global.scss */
+.screenReaderText {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* line 31, ../partials/_global.scss */
+.absoluteRight,
+.absoluteLeft,
+.absoluteBottom,
+.absoluteTop {
+  position: absolute;
+}
+
+/* line 38, ../partials/_global.scss */
+.absoluteLeft {
+  left: 0;
+}
+
+/* line 42, ../partials/_global.scss */
+.absoluteRight {
+  right: 0;
+}
+
+/* line 46, ../partials/_global.scss */
+.absoluteBottom {
+  bottom: 0;
+}
+
+/* line 50, ../partials/_global.scss */
+.absoluteTop {
+  top: 0;
+}
+
+/* line 54, ../partials/_global.scss */
+.absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 0px !important;
+  transform: translate(-50%, -50%);
+}
+
+/* line 58, ../partials/_global.scss */
+.fullWidth {
+  width: 100%;
+}
+
+/* line 62, ../partials/_global.scss */
+.center {
+  text-align: center;
+}
+
+/* line 66, ../partials/_global.scss */
+.noRadius {
+  border-right: 0px;
+}
+
+/*  ================================================================================
+	MAIN HEADER
+================================================================================  */
+/*  ================================================================================
+	MEDIUM DEVICES
+================================================================================  */
+/*  ================================================================================
+	SMALL DEVICES
+================================================================================  */
+/* NAVIGATION  ======================================================= */
+/*  ================================================================================
+MEDIUM DEVICES
+================================================================================  */
+/*  ================================================================================
+SMALL DEVICES
+================================================================================  */

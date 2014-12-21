@@ -4,28 +4,19 @@ title: Oslosessions
 # description: Site description
 # author: Hans Kristian Smedsrød
 baseurl: ""
-url: "http://www.hanseri.no/" # the base hostname & protocol for your site
-#url: "http://0.0.0.0:4000/"
+url: "http://www.oslosessions.no/" # the base hostname & protocol for your site
 permalink: :title/
-canonical: "http://www.hanseri.no/"
+canonical: "http://www.oslosessions.no/"
 
 # External usernames
-# facebook_username: eplehans
-# instagram_username: hanserino
+# facebook_username: oslosessions
+# instagram_username: oslosessions
 
 disqus: oslosessions
 google_analytics: UA-56557241-1
 
 # BUILD SETTINGS
 markdown: kramdown
-
-# NAVIGATION
-navigation:
-- text: Archive
-  url: archive/index.html
-  title: Archive
-- text: About
-  url: about/index.html
 
 #Page and post defaults
 defaults:
@@ -36,7 +27,6 @@ defaults:
     values:
       published: "true"
       layout: "single-post"
-
 
 prose:
   siteurl: "http://oslosessions.no/"

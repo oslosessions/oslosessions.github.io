@@ -218,7 +218,7 @@ body {
 }
 
 /* line 14, ../partials/_global.scss */
-.video {
+.videoContainer {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
@@ -227,17 +227,17 @@ body {
   height: auto;
 }
 /* line 22, ../partials/_global.scss */
-.video iframe,
-.video object,
-.video embed {
+.videoContainer iframe,
+.videoContainer object,
+.videoContainer embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-/* line 31, ../partials/_global.scss */
-.video .controls {
+/* line 32, ../partials/_global.scss */
+.videoContainer .controls {
   position: absolute;
   z-index: 5;
 }

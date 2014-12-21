@@ -1,0 +1,51 @@
+//Custom reset
+html, body, div, span, applet, object, iframe, abbr,
+acronym, em, img, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+ul.reset,
+ol.reset{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a img {
+	border: none;
+}
+img, video, iframe{
+	max-width: 100%;
+	height: auto;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}

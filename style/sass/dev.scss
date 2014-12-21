@@ -1,0 +1,18 @@
+/* DEVELOPMENT STYLES. THIS SHOULD NOT GO INTO PRODUTION */
+
+// Import helpers ========================================
+@import "../ext/reset",
+"../ext/helpers",
+"../ext/animation";
+
+// Import parameters ========================================
+@import  "../parameters/parameters",
+"../parameters/colors",
+"../parameters/animations",
+"../parameters/typography",
+"../parameters/icons";
+
+// Import Partials	========================================
+@import "../partials/global",
+"../partials/header",
+"../partials/navigation";

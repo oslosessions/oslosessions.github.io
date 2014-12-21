@@ -1,19 +1,81 @@
-
-
+/* ========================================================================
+#UNITS
+========================================================================= */
 @function units($count) {
-	@return $count * $baseUnit;
+  @return $count * $baseUnit;
 }
 
-@mixin dimensions($width, $height){
-	width: $width;
-	height: $height;
-}
-@mixin icon{
-	core-icon{
-		@content;
-	}
+//Example: .someClass{width: units(1);}
+
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
 }
 
+@mixin blur($blurVal: $defaultBlurValue) {
+  -webkit-filter: blur($blurVal);
+  filter: blur($blurVal);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 0px !important;
+  transform: translate(-50%, -50%);
+}
+
+@mixin allTextInputs() {
+  input:not([type=submit]):not([type=file]):not([type=checkbox]):not([type=radio]) {
+    @content;
+  }
+}
+
+
+/* ========================================================================
+#WIDTH HELPER
+========================================================================= */
+//Example: <div data-width="10"></div>
+$incrementer: 10;
+$percentage: 100;
+@while $percentage > 0 {
+  [data-width="#{$percentage}"] {
+    width: 0% + $percentage !important;
+  }
+  $percentage: $percentage - $incrementer;
+}
+
+
+
+/* ========================================================================
+#APP MODES
+========================================================================= */
+/*
+  When using this, be aware of the nesting property.
+  the app-mode data attribute is attached to the #main element.
+*/
+
+$calling: 'calling';
+$searching: 'search';
+
+
+@mixin app-mode($mode: calling, $nesting: inside){
+  @if $nesting == inside{
+    [data-mode="#{$mode}"] & {
+      @content;
+    }
+  }
+  @if $nesting == current {
+    &[data-mode="#{$mode}"] {
+      @content;
+    }
+  }
+  @else {
+    [data-mode="#{$mode}"] {
+      @content;
+    }
+  }
+}
 
 
 
@@ -21,15 +83,41 @@
 #MEDIA QUERIES
 ========================================================================= */
 @mixin device-size($size) {
-	@if $size == small {
-		@media (max-width: 600px) { @content; }
-	}
-	@if $size == medium {
-		@media (min-width: 601px) { @content; }
-	}
-	@if $size == large{
-		@media (min-width: 850px ) { @content; }
-	}
+  @if $size == small {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $size == medium {
+    @media (min-width: 601px) {
+      @content;
+    }
+  }
+  @if $size == large {
+    @media (min-width: 850px) {
+      @content;
+    }
+  }
 }
 
 
+
+/* ========================================================================
+  #TOUCH DEVICE
+========================================================================= */
+
+@mixin touch-devices(){
+  .touch &{
+    @content;
+  }
+}
+
+
+//Touch and small screen
+@mixin touch-and-small-screen(){
+  .touch &{
+    @include device-size(small){
+      @content;
+    }
+  }
+}

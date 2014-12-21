@@ -12,10 +12,17 @@ module.exports = function(grunt) {
 				command: "jekyll build --config _config.yml"
 			}
 		},
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'main.css': 'main.scss'       // 'destination': 'source'
+                }
+            }
+        },
 		watch: {
-			options: {
-				livereload: true
-			},
 			site: {
 				files: [
 					"index.html",

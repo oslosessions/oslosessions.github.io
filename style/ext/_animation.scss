@@ -96,13 +96,13 @@ $iteration-count,
 $play-state,
 $fill-mode
 ){
-	@include animation-delay($delay);
-	@include animation-duration($duration);
-	@include animation-timing-function($timing-function);
-	@include animation-direction($direction);
-	@include animation-iteration-count($iteration-count);
-	@include animation-play-state($play-state);
-	@include animation-fill-mode($fill-mode);
+	animation-delay: $delay;
+	animation-duration: $duration;
+	animation-timing-function: $timing-function;
+	animation-direction: $direction;
+	animation-iteration-count: $iteration-count;
+	animation-play-state: $play-state;
+	animation-fill-mode: $fill-mode;
 }
 
 // ANIMATION DEFAULTS
@@ -116,13 +116,13 @@ $iteration-count:$default-animation-iteration-count,
 $play-state: $default-animation-play-state,
 $fill-mode: $default-animation-fill-mode
 ){
-	@include animation-delay($delay);
-	@include animation-duration($duration);
-	@include animation-timing-function($timing-function);
-	@include animation-direction($direction);
-	@include animation-iteration-count($iteration-count);
-	@include animation-play-state($play-state);
-	@include animation-fill-mode($fill-mode);
+	animation-delay: $delay;
+	animation-duration: $duration;
+	animation-timing-function: $timing-function;
+	animation-direction: $direction;
+	animation-iteration-count: $iteration-count;
+	animation-play-state: $play-state;
+	animation-fill-mode: $fill-mode;
 }
 
 

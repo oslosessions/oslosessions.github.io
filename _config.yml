@@ -1,8 +1,8 @@
 # SITE SETTINGS
-title: Hanserino
-email: eplehans@gmail.com
-description: Let me do a brain dump on you
-author: Hans Kristian Smedsrød
+title: Oslosessions
+# email: eplehans@gmail.com
+# description: Site description
+# author: Hans Kristian Smedsrød
 baseurl: ""
 url: "http://www.hanseri.no/" # the base hostname & protocol for your site
 #url: "http://0.0.0.0:4000/"
@@ -10,14 +10,10 @@ permalink: :title/
 canonical: "http://www.hanseri.no/"
 
 # External usernames
-twitter_username: hanserino
-github_username:  eplehans
-facebook_username: eplehans
-instagram_username: hanserino
-linkedin_username: eplehans
-codepen_username: hanserino
+# facebook_username: eplehans
+# instagram_username: hanserino
 
-disqus: hanserino
+disqus: oslosessions
 google_analytics: UA-56557241-1
 
 # BUILD SETTINGS
@@ -43,8 +39,8 @@ defaults:
 
 
 prose:
-  siteurl: "http://hanseri.no/"
-  media: "media/img"
+  siteurl: "http://oslosessions.no/"
+  media: "media/images"
   metadata:
     _posts:
       - name: "published"
@@ -52,10 +48,10 @@ prose:
           label: "Published"
           element: "checkbox"
           value: "true"
-      - name: "tags"
+      - name: "video"
         field:
-          label: "Tags"
-          element: "text"
+          label: "Paste in your fancy vimeo url here.."
+          element: "input"
           help: "Give me some tags"
           type: "text"
-          placeholder: "Tag1"
+          placeholder: "http://vimeo.com/111721083"

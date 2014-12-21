@@ -1,144 +1,36 @@
-$giga: 2.5;
-$mega: 2;
-$alpha: 1.5;
-$beta: 1.2;
-$gamma: .9;
-$delta: .8;
 
-//Font weights
-$bold: 700;
-$normal: 400;
-
-//Default font
-$defaultFontFamily: 'Roboto', sans-serif;
-//font variations:
-//font-weights: bold(700), light(400)
-//font-styles: italic, normal
+//Font sizes
+$giga: units(5);
+$mega: units(4);
+$alpha: units(3) + units(1/2);
+$beta: units(2) + units(1/2);
+$gamma: units(2);
+$delta: 14px;
 
 
-//Complimentary font:
-$complimentaryFontFamily: 'Roboto Slab', helvetica, sans-serif;
-//Font variations:
-//font-weights: bold(700), normal(400)
+body{
 
+}
 
+//Font size and line height mixin
 @mixin font-size($font-size: $alpha) {
-	font-size: ($font-size * 10) + px;
-	font-size: $font-size + rem;
-	line-height: ($font-size * 10) + px;
-	line-height: ($font-size + 0.5) + rem;
-}
-
-@mixin font-weight($font-weight: $normal){
-	font-weight: $font-weight;
-}
-
-
-body {
-	font-family: $defaultFontFamily, 'sans-serif';
-	color: $black;
-	@include font-size($beta);
-}
-
-h1, h2, h3, h4, strong, em {
-	@include font-weight($bold);
-}
-h1, h2, h3, h4{
-	font-family: $complimentaryFontFamily;
-
-}
-
-
-h1 {
-	@include font-size($mega);
-	text-transform: uppercase;
-}
-h2{
-	@include font-size($alpha);
-}
-
-h3{
-	@include font-size($alpha);
-}
-
-
-article {
-	> header {
-		display: block;
-		width: 100%;
-		text-align: center;
-		margin: 0 0 units(2) 0;
-
-		h1 {
-			display: block;
-		}
-	}
-	h2{}
-}
-
-p{
-	margin-bottom: units(2);
-}
-pre, code, tt {
-
-}
-li{
-	margin: 0 0 0.3rem 0;
-}
-li ul, li ol {
-	margin:0 1.5rem;
-}
-ul, ol {
-	margin:0 1.5rem 1.5rem 1.5rem;
-}
-ul {
-	list-style-type:disc;
-}
-ol {
-	list-style-type:decimal;
-}
-ol ol {
-	list-style: upper-alpha;
-}
-ol ol ol {
-	list-style: lower-roman;
-}
-ol ol ol ol {
-	list-style: lower-alpha;
-}
-dl {
-	margin:0 0 1.5rem 0;
-}
-dl dt {
-	font-weight:bold;
-}
-dd {
-	margin-left:1.5rem;
-}
-table {
-	margin-bottom:1.4rem;
-	width:100%;
-}
-th {
-	font-weight:bold;
-}
-
-tfoot {
-	font-style:italic;
-}
-sup, sub {
-	line-height:0;
-}
-abbr, acronym {
-	border-bottom: 1px dotted;
+  font-size: $font-size;
 }
 
 a {
-	color: $linkColor;
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-		//color: $hoverColor;
-	}
+  color: $swatch1a;
+  text-decoration: none;
+  &:hover {
+  }
 }
+
+.italic {
+  font-style: italic;
+}
+
+p a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

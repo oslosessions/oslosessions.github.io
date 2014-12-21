@@ -6,9 +6,6 @@
 # Environment	========================================
 environment = :development
 
-# Requires 	========================================
-require "ceaser-easing"
-
 #	Imports 	========================================
 add_import_path "ext"
 add_import_path "parameters"

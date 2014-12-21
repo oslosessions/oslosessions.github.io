@@ -1,54 +1,68 @@
-
 html {
-	box-sizing: border-box;
-}
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-body{
-	background: $siteBgColor;
-	overflow-y: scroll;
+  min-height: 100%;
 }
 
-body, html{
-	padding: 0px;
-	margin: 0px;
+body {
+  height: 100%;
 }
 
-img, video, svg, iframe{
-	max-width: 100%;
-	height: auto;
-}
+#main {
 
-.icon{
-	display: inline-block;
-	vertical-align: middle;
-	width: 32px;
-	height: 32px;
 }
-
-.author{
-	img{
-		@include border-radius(50%);
-	}
-}
-.main{
-	> h1{
-		margin-bottom: units(2);
-	}
-}
-
-
 
 /*  ================================================================================
 	Helpful classes
 ================================================================================  */
-.widthLimit {
-	max-width: $siteMaxWidth;
-	margin: 0 auto;
-	padding: 0 $sitePadding;
-	position: relative;
+.largeWrap {
+  max-width: $siteMaxWidth;
+  padding: $sitePadding;
+  margin: 0 auto;
+}
+
+.screenReaderText {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 
 
+//absolute positioned help classes
+.absoluteRight,
+.absoluteLeft,
+.absoluteBottom,
+.absoluteTop {
+  position: absolute;
+}
+
+.absoluteLeft {
+  left: 0;
+}
+
+.absoluteRight {
+  right: 0;
+}
+
+.absoluteBottom {
+  bottom: 0;
+}
+
+.absoluteTop {
+  top: 0;
+}
+
+.absoluteCenter {
+  @include absolute-center;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.noRadius {
+  border-right: 0px;
+}

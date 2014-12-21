@@ -2,25 +2,45 @@
 	Parameters
 	Parameters for use in this project
 ================================================================================  */
-$baseUnit: 10px;
-$siteMaxWidth: 750px;
-$sitePadding: $baseUnit;
+$baseUnit: 8px;
+$siteMaxWidth: 960px;
+$mediumWrapperWidth: 450px;
+$smallWrapperWidth: 300px;
+$sitePadding: $baseUnit * 2;
 
+$iconHeight: 24px;
+$iconWidth: 24px;
 
 /* ========================================================================
 #TRANSITIONS: Default Transition variables
 ========================================================================= */
 $default-transition-property: all;
 $default-transition-duration: .3s;
-$default-transition-function: false;
+$default-transition-function: cubic-bezier(.55,0,.1,1);
 $default-transition-delay: 0s;
 
-.transitionDefaults {
-	@include transition($default-transition-property $default-transition-duration $default-transition-delay $default-transition-function);
+@mixin transitionDefaults{
+	transition: $default-transition-property $default-transition-duration $default-transition-delay $default-transition-function;
 }
+
+%transitionDefaults {
+	@include transitionDefaults;
+}
+
+/* ========================================================================
+#BOX SHADOW: Default Box shadow variables
+========================================================================= */
+$default-box-shadow-color: rgba(0,0,0,.25);
+$default-box-shadow-x-offset: 0px;
+$default-box-shadow-y-offset: 1px;
+$default-box-shadow-blur: 8px;
+
+@mixin defaultBoxShadow{
+  box-shadow: $default-box-shadow-x-offset $default-box-shadow-y-offset $default-box-shadow-blur $default-box-shadow-color;
+}
+
 
 /* ========================================================================
 #DEFAULT BORDER RADIUS
 ========================================================================= */
 $default-border-radius: 3px;
-

@@ -402,44 +402,41 @@ SMALL DEVICES
 }
 /* line 35, ../partials/_latestPost.scss */
 .latestPost .text {
-  left: 16px;
-  position: absolute;
+  position: relative;
   z-index: 4;
-  max-width: 300px;
   width: 100%;
+  padding: 8px;
 }
-@media (max-width: 60px) {
+@media (min-width: 601px) {
   /* line 35, ../partials/_latestPost.scss */
   .latestPost .text {
-    position: relative;
-  }
-}
-@media (max-width: 60px) {
-  /* line 35, ../partials/_latestPost.scss */
-  .latestPost .text {
-    position: relative;
-    max-width: 100%;
+    width: 100%;
   }
 }
 @media (min-width: 900px) {
   /* line 35, ../partials/_latestPost.scss */
   .latestPost .text {
     position: absolute;
-    bottom: 20%;
+    max-width: 350px;
+    width: 40%;
+    left: 16px;
+    bottom: 40px;
   }
 }
-/* line 55, ../partials/_latestPost.scss */
+/* line 54, ../partials/_latestPost.scss */
 .latestPost .text h2, .latestPost .text .description {
   background: white;
   padding: 16px;
 }
-/* line 59, ../partials/_latestPost.scss */
+/* line 58, ../partials/_latestPost.scss */
 .latestPost .text h2 {
   text-transform: uppercase;
+  line-height: 1.4em;
 }
-/* line 62, ../partials/_latestPost.scss */
+/* line 63, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
+  line-height: 1.4em;
 }
 
 /* line 1, ../partials/_postLoop.scss */
@@ -470,5 +467,4 @@ SMALL DEVICES
 /* line 18, ../partials/_postLoop.scss */
 .postLoop .post .text {
   font-size: 16px;
-  line-height: 1.2em;
 }

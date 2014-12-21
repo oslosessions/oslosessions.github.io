@@ -33,22 +33,21 @@
   }
 
   .text{
-    left: units(2);
-    position: absolute;
+    position: relative;
     z-index: 4;
-    max-width: $smallWrapperWidth;
     width: 100%;
+    padding: units(1);
 
-    @include device-size(small){
-      position: relative;
+    @include device-size(medium){
+      width: 100%;
     }
-    @include device-size(small){
-      position: relative;
-      max-width: 100%;
-    }
+
     @include device-size(large){
       position: absolute;
-      bottom: 20%;
+      max-width: 350px;
+      width: 40%;
+      left: units(2);
+      bottom: units(5);
     }
 
 
@@ -58,9 +57,12 @@
     }
     h2{
       text-transform: uppercase;
+      //display: inline;
+      line-height: 1.4em;
     }
     .description{
       display: block;
+      line-height: 1.4em;
     }
   }
 }

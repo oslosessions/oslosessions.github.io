@@ -452,14 +452,8 @@ SMALL DEVICES
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 25%;
+  width: 100%;
   padding: 0 8px;
-}
-@media (max-width: 60px) {
-  /* line 5, ../partials/_postLoop.scss */
-  .postLoop .post {
-    width: 100%;
-  }
 }
 @media (min-width: 601px) {
   /* line 5, ../partials/_postLoop.scss */
@@ -473,7 +467,7 @@ SMALL DEVICES
     width: 25%;
   }
 }
-/* line 21, ../partials/_postLoop.scss */
+/* line 18, ../partials/_postLoop.scss */
 .postLoop .post .text {
   font-size: 16px;
   line-height: 1.2em;

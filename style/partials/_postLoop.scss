@@ -6,12 +6,9 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 25%;
+    width: 100%;
     padding: 0 units(1);
 
-    @include device-size(small){
-      width: 100%;
-    }
     @include device-size(medium){
       width: 50%;
     }

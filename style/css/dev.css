@@ -397,6 +397,32 @@ body {
 /*  ================================================================================
 	MAIN HEADER
 ================================================================================  */
+/* line 5, ../partials/_header.scss */
+#header {
+  background: transparent url("../img/mainBg.jpg") no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+/* line 18, ../partials/_header.scss */
+#header .logo {
+  width: 200px;
+  height: auto;
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  margin-left: -100px;
+  background: black;
+  text-align: center;
+  padding: 32px 0;
+}
+/* line 29, ../partials/_header.scss */
+#header .logo img {
+  display: inline-block;
+  width: 55%;
+}
+
 /*  ================================================================================
 	MEDIUM DEVICES
 ================================================================================  */

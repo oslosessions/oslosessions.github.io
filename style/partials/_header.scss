@@ -3,14 +3,33 @@
 ================================================================================  */
 
 #header {
+  background: transparent url('../img/mainBg.jpg') no-repeat;
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
 
   nav {
 
   }
 
   .logo {
+    width: 200px;
+    height: auto;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    margin-left: -100px;
+    background: black;
+    text-align: center;
+    padding: units(4) 0;
 
-
+    img{
+      display: inline-block;
+      width: 55%;
+    }
   }
 
 }

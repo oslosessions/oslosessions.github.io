@@ -1,21 +1,11 @@
-<header class="site-header">
+<header id="header">
 
-  <div class="wrapper">
+    <a href="{{ site.baseurl }}/" class="logo">
+        <img src="{{ site.baseurl }}/media/images/logo.png" alt="Oslo Sessions Logo"/>
+    </a>
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <nav id="nav">
 
-    <nav class="site-nav">
-
-
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
     </nav>
-
-  </div>
 
 </header>

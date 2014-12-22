@@ -268,8 +268,6 @@ body {
 }
 /* line 53, ../partials/_global.scss */
 .videoContainer:before {
-  content: "";
-  background: url("../img/loader.png") no-repeat;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -277,11 +275,6 @@ body {
   left: 50%;
   margin-top: -15px;
   margin-left: -15px;
-  animation: spin .8s infinite linear;
-}
-/* line 65, ../partials/_global.scss */
-.loaded .videoContainer:before {
-  animation-play-state: paused;
 }
 
 /*  ================================================================================

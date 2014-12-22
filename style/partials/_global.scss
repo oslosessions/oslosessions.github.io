@@ -51,8 +51,8 @@ body {
   }
 
   &:before{
-    content: "";
-    background: url('../img/loader.png') no-repeat;
+    //content: "";
+    //background: url('../img/loader.png') no-repeat;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -60,10 +60,10 @@ body {
     left: 50%;
     margin-top: -15px;
     margin-left: -15px;
-    animation: spin .8s infinite linear;
+    //animation: spin .8s infinite linear;
 
     .loaded &{
-      animation-play-state: paused;
+      //animation-play-state: paused;
     }
   }
 }

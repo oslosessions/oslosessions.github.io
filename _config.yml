@@ -52,6 +52,6 @@ prose:
         field:
           label: "Poster image"
           help: "Main background picture from the event"
-          element: "file"
+          element: "text"
           type: "text"
-          placeholder: "your_awesome_image.jpg"
+          placeholder: "Url to your awesome image"

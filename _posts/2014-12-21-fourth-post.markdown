@@ -2,6 +2,7 @@
 layout: post
 title:  "Onkel P blir drit-fjern med de fjerne slektningene"
 date: 2014-12-21 23:06:41
+posterImg: "http://i.imgur.com/bvUGbXi.jpg"
 vimeoCode: "107805056"
 ---
 

@@ -2,7 +2,17 @@
     <ul>
         {% for post in site.posts %}
         <li class="post">
-            {% include post-structure.html %}
+            <div class="videoContainer">
+                <iframe class="video" src="//player.vimeo.com/video/{{post.vimeoCode}}?api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+
+            <div class="text">
+                <h2>{{ post.title }}</h2>
+                <div class="description">
+                    {{post.content}}
+                </div>
+            </div>
+
         </li>
         {% endfor %}
     </ul>

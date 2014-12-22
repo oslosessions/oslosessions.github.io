@@ -1,6 +1,7 @@
 .postLoop{
   display: block;
   font-size: 0px;
+  padding: 0 units(1);
 
   .post{
     position: relative;
@@ -8,20 +9,42 @@
     vertical-align: top;
     width: 100%;
     padding: 0 units(1);
+    margin-bottom: units(4);
 
     @include device-size(medium){
       width: 50%;
     }
     @include device-size(large){
+      margin-bottom: 0;
       width: 25%;
     }
+
     .text{
       font-size: $gamma;
+      h2, .description {
+        padding: units(1);
+      }
+      h2{
+        background: white;
+        color: $black;
+        margin: 0 0 units(1) 0;
+      }
+      .description{
+        color: $white;
+        margin: 0;
+      }
+
     }
   }
 }
 
 .post{
+  .postTag{
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: units(1);
+  }
   .text{
 
   }

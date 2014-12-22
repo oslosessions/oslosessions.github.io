@@ -30,7 +30,7 @@ defaults:
 
 prose:
   siteurl: "http://oslosessions.no/"
-  media: "media/images"
+  media: "media"
   metadata:
     _posts:
       - name: "published"
@@ -49,3 +49,10 @@ prose:
           element: "text"
           type: "text"
           placeholder: "111721083"
+      - name: "posterImg"
+        field:
+          label: "Poster image"
+          help: "Main background picture from the event"
+          element: "file"
+          type: "text"
+          placeholder: "your_awesome_image.jpg"

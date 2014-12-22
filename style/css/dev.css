@@ -156,6 +156,14 @@ in each vendor prefix.
 /*  ================================================================================
 	COLORS
 ================================================================================  */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* line 12, ../parameters/_typography.scss */
 body {
   font-family: "helvetica";
@@ -210,14 +218,15 @@ html {
 /* line 5, ../partials/_global.scss */
 body {
   height: 100%;
+  background: black;
 }
 
-/* line 9, ../partials/_global.scss */
+/* line 10, ../partials/_global.scss */
 #main {
   padding: 24px 0 0 0;
 }
 
-/* line 14, ../partials/_global.scss */
+/* line 15, ../partials/_global.scss */
 .videoContainer {
   position: relative;
   padding-bottom: 56.25%;
@@ -226,7 +235,7 @@ body {
   max-width: 100%;
   height: auto;
 }
-/* line 22, ../partials/_global.scss */
+/* line 23, ../partials/_global.scss */
 .videoContainer iframe,
 .videoContainer object,
 .videoContainer embed {
@@ -236,30 +245,47 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 32, ../partials/_global.scss */
+/* line 33, ../partials/_global.scss */
 .videoContainer .controls {
   position: absolute;
   z-index: 5;
+}
+/* line 38, ../partials/_global.scss */
+.videoContainer:before {
+  content: "";
+  background: url("../img/loader.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+  animation: spin .8s infinite linear;
+}
+/* line 50, ../partials/_global.scss */
+.loaded .videoContainer:before {
+  animation-play-state: paused;
 }
 
 /*  ================================================================================
 	Helpful classes
 ================================================================================  */
-/* line 42, ../partials/_global.scss */
+/* line 60, ../partials/_global.scss */
 .largeWrap {
   max-width: 960px;
   padding: 16px;
   margin: 0 auto;
 }
 
-/* line 48, ../partials/_global.scss */
+/* line 66, ../partials/_global.scss */
 .screenReaderText {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
 
-/* line 57, ../partials/_global.scss */
+/* line 75, ../partials/_global.scss */
 .absoluteRight,
 .absoluteLeft,
 .absoluteBottom,
@@ -267,27 +293,27 @@ body {
   position: absolute;
 }
 
-/* line 64, ../partials/_global.scss */
+/* line 82, ../partials/_global.scss */
 .absoluteLeft {
   left: 0;
 }
 
-/* line 68, ../partials/_global.scss */
+/* line 86, ../partials/_global.scss */
 .absoluteRight {
   right: 0;
 }
 
-/* line 72, ../partials/_global.scss */
+/* line 90, ../partials/_global.scss */
 .absoluteBottom {
   bottom: 0;
 }
 
-/* line 76, ../partials/_global.scss */
+/* line 94, ../partials/_global.scss */
 .absoluteTop {
   top: 0;
 }
 
-/* line 80, ../partials/_global.scss */
+/* line 98, ../partials/_global.scss */
 .absoluteCenter {
   position: absolute;
   top: 50%;
@@ -296,17 +322,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* line 84, ../partials/_global.scss */
+/* line 102, ../partials/_global.scss */
 .fullWidth {
   width: 100%;
 }
 
-/* line 88, ../partials/_global.scss */
+/* line 106, ../partials/_global.scss */
 .center {
   text-align: center;
 }
 
-/* line 92, ../partials/_global.scss */
+/* line 110, ../partials/_global.scss */
 .noRadius {
   border-right: 0px;
 }
@@ -318,13 +344,20 @@ body {
 #header {
   border: 5px solid black;
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
   z-index: 3;
   background: black;
-  overflow: hidden;
+  overflow: auto;
 }
-/* line 13, ../partials/_header.scss */
+@media (min-width: 900px) {
+  /* line 5, ../partials/_header.scss */
+  #header {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+/* line 19, ../partials/_header.scss */
 #header nav {
   position: absolute;
   width: 100%;
@@ -333,29 +366,59 @@ body {
   left: 0;
   z-index: 5;
 }
-/* line 21, ../partials/_header.scss */
+@media (min-width: 900px) {
+  /* line 19, ../partials/_header.scss */
+  #header nav {
+    transition: bottom 0.3s 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+}
+@media (max-width: 60px) {
+  /* line 31, ../partials/_header.scss */
+  [data-video-status=playing] #header nav {
+    display: none;
+  }
+}
+@media (min-width: 601px) {
+  /* line 31, ../partials/_header.scss */
+  [data-video-status=playing] #header nav {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  /* line 31, ../partials/_header.scss */
+  [data-video-status=playing] #header nav {
+    bottom: -100%;
+  }
+}
+/* line 44, ../partials/_header.scss */
 #header nav a {
   background: black;
   padding: 8px 16px;
   display: inline-block;
   color: white;
 }
-/* line 29, ../partials/_header.scss */
+/* line 53, ../partials/_header.scss */
 #header .logo {
   position: absolute;
   top: 16px;
   left: 16px;
   z-index: 5;
-  width: 100px;
+  width: 10%;
   height: auto;
 }
+@media (min-width: 900px) {
+  /* line 53, ../partials/_header.scss */
+  #header .logo {
+    max-width: 150px;
+    top: -300px;
+    transition: top 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  /* line 65, ../partials/_header.scss */
+  .loaded #header .logo {
+    top: 16px;
+  }
+}
 
-/*  ================================================================================
-	MEDIUM DEVICES
-================================================================================  */
-/*  ================================================================================
-	SMALL DEVICES
-================================================================================  */
 /* NAVIGATION  ======================================================= */
 /*  ================================================================================
 MEDIUM DEVICES
@@ -371,36 +434,143 @@ SMALL DEVICES
 .latestPost .post {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
+  padding: 0 0 32px 0;
 }
-/* line 9, ../partials/_latestPost.scss */
-.latestPost .grain {
+@media (min-width: 900px) {
+  /* line 4, ../partials/_latestPost.scss */
+  .latestPost .post {
+    height: 100vh;
+    max-height: 100vh;
+    padding: 0 0 0 0;
+  }
+}
+/* line 17, ../partials/_latestPost.scss */
+.latestPost .post:hover .controls {
+  opacity: 1;
+}
+/* line 23, ../partials/_latestPost.scss */
+.latestPost .poster {
+  width: 100%;
+  height: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 4;
+  opacity: 1;
+  display: block;
+}
+/* line 36, ../partials/_latestPost.scss */
+[data-video-status=paused] .latestPost .poster {
+  background: transparent;
+  display: block;
+}
+/* line 40, ../partials/_latestPost.scss */
+[data-video-status=playing] .latestPost .poster {
+  display: none;
+}
+/* line 44, ../partials/_latestPost.scss */
+.latestPost .poster:before {
+  content: "";
+  background: url("../img/grain.png") repeat top left;
+  display: block;
+  opacity: .7;
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/grain.png") repeat top left;
   z-index: 3;
 }
-/* line 16, ../partials/_latestPost.scss */
+@media (min-width: 900px) {
+  /* line 55, ../partials/_latestPost.scss */
+  [data-video-status=paused] .latestPost .poster:before {
+    display: block;
+  }
+  /* line 58, ../partials/_latestPost.scss */
+  [data-video-status=playing] .latestPost .poster:before {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  /* line 64, ../partials/_latestPost.scss */
+  .latestPost .videoContainer {
+    position: static;
+  }
+}
+/* line 69, ../partials/_latestPost.scss */
 .latestPost .controls {
-  width: 200px;
+  width: 20%;
   height: auto;
   top: 50%;
   left: 50%;
   position: absolute;
-  margin-left: -100px;
-  margin-top: -100px;
-  background: black;
+  margin-left: -10%;
+  margin-top: -10%;
+  background: transparent;
   text-align: center;
-  padding: 32px 0;
-  z-index: 5;
+  padding: 0;
+  z-index: 6;
+  opacity: 1;
 }
-/* line 29, ../partials/_latestPost.scss */
+/* line 84, ../partials/_latestPost.scss */
 .latestPost .controls button {
-  display: inline-block;
-  width: 55%;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-/* line 35, ../partials/_latestPost.scss */
+@media (min-width: 900px) {
+  /* line 69, ../partials/_latestPost.scss */
+  .latestPost .controls {
+    opacity: 0;
+    transition: opacity 0.2s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  /* line 94, ../partials/_latestPost.scss */
+  .loaded .latestPost .controls {
+    opacity: .8;
+  }
+  /* line 97, ../partials/_latestPost.scss */
+  .latestPost .controls:hover {
+    opacity: 1;
+  }
+}
+/* line 102, ../partials/_latestPost.scss */
+.latestPost .controls button {
+  width: 100%;
+}
+/* line 105, ../partials/_latestPost.scss */
+.latestPost .controls .play {
+  display: block;
+}
+/* line 108, ../partials/_latestPost.scss */
+.latestPost .controls .pause {
+  display: none;
+}
+/* line 113, ../partials/_latestPost.scss */
+[data-video-status=paused] .latestPost .controls {
+  opacity: 1;
+}
+/* line 116, ../partials/_latestPost.scss */
+[data-video-status=paused] .latestPost .controls .play {
+  display: block;
+}
+/* line 119, ../partials/_latestPost.scss */
+[data-video-status=paused] .latestPost .controls .pause {
+  display: none;
+}
+/* line 124, ../partials/_latestPost.scss */
+[data-video-status=playing] .latestPost .controls {
+  opacity: 0;
+}
+/* line 127, ../partials/_latestPost.scss */
+[data-video-status=playing] .latestPost .controls .play {
+  display: none;
+}
+/* line 130, ../partials/_latestPost.scss */
+[data-video-status=playing] .latestPost .controls .pause {
+  display: block;
+}
+/* line 136, ../partials/_latestPost.scss */
 .latestPost .text {
   position: relative;
   z-index: 4;
@@ -408,63 +578,104 @@ SMALL DEVICES
   padding: 8px;
 }
 @media (min-width: 601px) {
-  /* line 35, ../partials/_latestPost.scss */
+  /* line 136, ../partials/_latestPost.scss */
   .latestPost .text {
     width: 100%;
   }
 }
 @media (min-width: 900px) {
-  /* line 35, ../partials/_latestPost.scss */
+  /* line 136, ../partials/_latestPost.scss */
   .latestPost .text {
     position: absolute;
     max-width: 350px;
     width: 40%;
-    left: 16px;
+    left: -100%;
     bottom: 40px;
+    transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  /* line 153, ../partials/_latestPost.scss */
+  .loaded .latestPost .text {
+    left: 16px;
+  }
+  /* line 156, ../partials/_latestPost.scss */
+  [data-video-status=playing] .latestPost .text {
+    left: -100%;
   }
 }
-/* line 54, ../partials/_latestPost.scss */
+/* line 161, ../partials/_latestPost.scss */
 .latestPost .text h2, .latestPost .text .description {
   background: white;
   padding: 16px;
 }
-/* line 58, ../partials/_latestPost.scss */
+/* line 166, ../partials/_latestPost.scss */
 .latestPost .text h2 {
   text-transform: uppercase;
-  line-height: 1.4em;
+  line-height: 1.2em;
+  margin: 8px 0;
 }
-/* line 63, ../partials/_latestPost.scss */
+/* line 171, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
   line-height: 1.4em;
+  padding: 16px;
+}
+/* line 175, ../partials/_latestPost.scss */
+.latestPost .text .description * {
+  margin: 0;
 }
 
 /* line 1, ../partials/_postLoop.scss */
 .postLoop {
   display: block;
   font-size: 0px;
+  padding: 0 8px;
 }
-/* line 5, ../partials/_postLoop.scss */
+/* line 6, ../partials/_postLoop.scss */
 .postLoop .post {
   position: relative;
   display: inline-block;
   vertical-align: top;
   width: 100%;
   padding: 0 8px;
+  margin-bottom: 32px;
 }
 @media (min-width: 601px) {
-  /* line 5, ../partials/_postLoop.scss */
+  /* line 6, ../partials/_postLoop.scss */
   .postLoop .post {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 5, ../partials/_postLoop.scss */
+  /* line 6, ../partials/_postLoop.scss */
   .postLoop .post {
+    margin-bottom: 0;
     width: 25%;
   }
 }
-/* line 18, ../partials/_postLoop.scss */
+/* line 22, ../partials/_postLoop.scss */
 .postLoop .post .text {
   font-size: 16px;
+}
+/* line 24, ../partials/_postLoop.scss */
+.postLoop .post .text h2, .postLoop .post .text .description {
+  padding: 8px;
+}
+/* line 27, ../partials/_postLoop.scss */
+.postLoop .post .text h2 {
+  background: white;
+  color: black;
+  margin: 0 0 8px 0;
+}
+/* line 32, ../partials/_postLoop.scss */
+.postLoop .post .text .description {
+  color: white;
+  margin: 0;
+}
+
+/* line 42, ../partials/_postLoop.scss */
+.post .postTag {
+  background: black;
+  color: white;
+  display: inline-block;
+  padding: 8px;
 }

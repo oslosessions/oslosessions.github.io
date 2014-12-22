@@ -1,68 +1,180 @@
-.latestPost{
+.latestPost {
   position: relative;
 
-  .post{
+  .post {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
+    padding: 0 0 units(4) 0;
+
+    @include device-size(large){
+      height: 100vh;
+      max-height: 100vh;
+      padding: 0 0 0 0;
+    }
+
+    &:hover{
+      .controls{
+        opacity: 1;
+      }
+    }
   }
-  .grain{
-    position: absolute;
+
+  .poster{
     width: 100%;
     height: 100%;
-    background: url('../img/grain.png') repeat top left;
-    z-index: 3;
-  }
-  .controls{
-      width: 200px;
-      height: auto;
-      top: 50%;
-      left: 50%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 4;
+    opacity: 1;
+    display: block;
+
+
+
+    [data-video-status=paused] &{
+      background: transparent;
+      display: block;
+    }
+    [data-video-status=playing] &{
+      display: none;
+    }
+
+    &:before{
+      content: "";
+      background: url('../img/grain.png') repeat top left;
+      display: block;
+      opacity: .7;
       position: absolute;
-      margin-left: -100px;
-      margin-top: -100px;
-      background: black;
-      text-align: center;
-      padding: units(4) 0;
-      z-index: 5;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
 
-      button{
-        display: inline-block;
-        width: 55%;
+      @include device-size(large){
+        [data-video-status=paused] &{
+          display: block;
+        }
+        [data-video-status=playing] &{
+          display: none;
+        }
       }
+    }
+  }
+  .videoContainer{
+    @include device-size(large){
+      position: static;
+    }
+  }
+  .controls {
+    width: 20%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: - 10%;
+    margin-top: - 10%;
+    background: transparent;
+    text-align: center;
+    padding: 0;
+    z-index: 6;
+    opacity: 1;
+
+
+    button{
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    @include device-size(large) {
+      opacity: 0;
+      transition: opacity .2s .1s $default-transition-function;
+      .loaded &{
+        opacity: .8;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+    .play {
+      display: block;
+    }
+    .pause {
+      display: none;
+    }
+
+    //Show play button while paused
+    [data-video-status=paused] & {
+      opacity: 1;
+
+      .play {
+        display: block;
+      }
+      .pause {
+        display: none;
+      }
+    }
+    //Show pause button when playing
+    [data-video-status=playing] & {
+      opacity: 0;
+
+      .play {
+        display: none;
+      }
+      .pause {
+        display: block;
+      }
+    }
   }
 
-  .text{
+  .text {
     position: relative;
     z-index: 4;
     width: 100%;
     padding: units(1);
 
-    @include device-size(medium){
+    @include device-size(medium) {
       width: 100%;
     }
 
-    @include device-size(large){
+    @include device-size(large) {
       position: absolute;
       max-width: 350px;
       width: 40%;
-      left: units(2);
+      left: -100%;
       bottom: units(5);
+      transition: left $default-transition-duration .3s $default-transition-function;
+      .loaded &{
+        left: units(2);
+      }
+      [data-video-status=playing] & {
+        left: -100%;
+      }
     }
 
-
-    h2,.description{
+    h2, .description {
       background: white;
       padding: units(2);
     }
-    h2{
+
+    h2 {
       text-transform: uppercase;
-      //display: inline;
-      line-height: 1.4em;
+      line-height: 1.2em;
+      margin: units(1) 0;
     }
-    .description{
+    .description {
       display: block;
       line-height: 1.4em;
+      padding: units(2);
+      *{
+        margin: 0;
+      }
     }
   }
 }

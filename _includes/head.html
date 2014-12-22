@@ -45,28 +45,41 @@
             });
 
             // Call the API when a button is pressed
-            $('button').bind('click', function () {
-                player.api($(this).text().toLowerCase());
-                console.log('clicked');
+            $('.latestPost .controls button').bind('click', function (e) {
+                player.api($(this).val());
             });
 
+            function bodyStatus(state){
+                $('body').attr('data-video-status',state);
+            }
 
             function onPause(id) {
-                console.log('paused');
-                $(this).parents('.videoContainer').attr('data-video-status','paused');
+                //console.log('paused');
+                bodyStatus('paused');
             }
 
-            function onFinish(id, $target) {
-                console.log('finished');
-                $(this).parents('.videoContainer').attr('data-video-status','finished');
+            function onFinish(id) {
+                //console.log('finished');
+                bodyStatus('finished');
             }
 
-            function onPlayProgress(data, id, $target) {
-                console.log(data.seconds + 's played');
-                $(this).parents('.videoContainer').attr('data-video-status','playing');
+            function onPlayProgress(data) {
+                //console.log(data.seconds + 's played');
+                bodyStatus('playing');
             }
+
+            var apiUrl = 'http://vimeo.com/api/v2/video/+ videoId + .json';
+
+            var videoId = $('.latestPost .post').attr('data-video-id');
+
+
+
 
         });
+
+        $(window).load(function(){
+            $('body').addClass('loaded');
+        })
 
     </script>
 </head>

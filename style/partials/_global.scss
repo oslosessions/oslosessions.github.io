@@ -4,6 +4,7 @@ html {
 
 body {
   height: 100%;
+  background: $black;
 }
 
 #main {
@@ -32,6 +33,23 @@ body {
   .controls{
     position: absolute;
     z-index: 5;
+  }
+
+  &:before{
+    content: "";
+    background: url('../img/loader.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    animation: spin .8s infinite linear;
+
+    .loaded &{
+      animation-play-state: paused;
+    }
   }
 }
 

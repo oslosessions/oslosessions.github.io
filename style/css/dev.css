@@ -419,17 +419,28 @@ body {
   top: 16px;
   left: 16px;
   z-index: 5;
-  width: 10%;
+  width: 25%;
   height: auto;
+  background: black;
+  padding: 8px;
+}
+/* line 66, ../partials/_header.scss */
+#header .logo a, #header .logo img {
+  display: block;
 }
 @media (min-width: 900px) {
   /* line 56, ../partials/_header.scss */
   #header .logo {
-    max-width: 150px;
+    max-width: 350px;
+    padding: 24px;
     top: -300px;
-    transition: top 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 68, ../partials/_header.scss */
+  /* line 76, ../partials/_header.scss */
+  [data-video-status=playing] #header .logo {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  /* line 79, ../partials/_header.scss */
   .loaded #header .logo {
     top: 16px;
   }

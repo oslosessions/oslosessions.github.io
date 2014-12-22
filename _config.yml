@@ -11,7 +11,8 @@ canonical: "http://www.oslosessions.no/"
 # facebook_username: oslosessions
 # instagram_username: oslosessions
 # disqus: oslosessions
-# google_analytics: UA-56557241-1
+
+google_analytics: UA-57922199-1
 
 # BUILD SETTINGS
 markdown: kramdown

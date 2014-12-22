@@ -23,40 +23,41 @@
   .poster{
     width: 100%;
     height: 100%;
-    background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     z-index: 4;
     opacity: 1;
-    display: block;
+    display: none;
 
-
-
-    [data-video-status=paused] &{
-      background: transparent;
+    @include device-size(large) {
       display: block;
-    }
-    [data-video-status=playing] &{
-      display: none;
-    }
 
-    &:before{
-      content: "";
-      background: url('../img/grain.png') repeat top left;
-      display: block;
-      opacity: .7;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 3;
+      [data-video-status=paused] &{
+        background: transparent;
+        display: block;
+      }
+      [data-video-status=playing] &{
+        display: none;
+      }
 
-      @include device-size(large){
-        [data-video-status=paused] &{
-          display: block;
-        }
-        [data-video-status=playing] &{
-          display: none;
+      &:before{
+        content: "";
+        background: url('../img/grain.png') repeat top left;
+        display: block;
+        opacity: .7;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+
+        @include device-size(large){
+          [data-video-status=paused] &{
+            display: block;
+          }
+          [data-video-status=playing] &{
+            display: none;
+          }
         }
       }
     }
@@ -67,28 +68,21 @@
     }
   }
   .controls {
-    width: 20%;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    margin-left: - 10%;
-    margin-top: - 10%;
-    background: transparent;
-    text-align: center;
-    padding: 0;
-    z-index: 6;
-    opacity: 1;
+    display: none;
 
-
-    button{
+    @include device-size(large){
+      display: block;
+      width: 20%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      margin-left: - 10%;
+      margin-top: - 10%;
       background: transparent;
-      border: none;
-      outline: none;
-      cursor: pointer;
-    }
-
-    @include device-size(large) {
+      text-align: center;
+      padding: 0;
+      z-index: 6;
       opacity: 0;
       transition: opacity .2s .1s $default-transition-function;
       .loaded &{
@@ -97,21 +91,15 @@
       &:hover {
         opacity: 1;
       }
-    }
 
-    button {
-      width: 100%;
-    }
-    .play {
-      display: block;
-    }
-    .pause {
-      display: none;
-    }
 
-    //Show play button while paused
-    [data-video-status=paused] & {
-      opacity: 1;
+      button{
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+      }
 
       .play {
         display: block;
@@ -119,17 +107,30 @@
       .pause {
         display: none;
       }
-    }
-    //Show pause button when playing
-    [data-video-status=playing] & {
-      opacity: 0;
 
-      .play {
-        display: none;
+      //Show play button while paused
+      [data-video-status=paused] & {
+        opacity: 1;
+
+        .play {
+          display: block;
+        }
+        .pause {
+          display: none;
+        }
       }
-      .pause {
-        display: block;
+      //Show pause button when playing
+      [data-video-status=playing] & {
+        opacity: 0;
+
+        .play {
+          display: none;
+        }
+        .pause {
+          display: block;
+        }
       }
+
     }
   }
 

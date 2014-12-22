@@ -1,6 +1,5 @@
 .latestPost {
   position: relative;
-
   .post {
     position: relative;
     width: 100%;
@@ -71,7 +70,6 @@
     display: none;
 
     @include device-size(large){
-      display: block;
       width: 20%;
       height: auto;
       top: 50%;
@@ -83,10 +81,11 @@
       text-align: center;
       padding: 0;
       z-index: 6;
-      opacity: 0;
+      opacity: .8;
       transition: opacity .2s .1s $default-transition-function;
+
       .loaded &{
-        opacity: .8;
+        display: block;
       }
       &:hover {
         opacity: 1;

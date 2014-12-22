@@ -68,11 +68,10 @@
                 bodyStatus('playing');
             }
 
-            var apiUrl = 'http://vimeo.com/api/v2/video/+ videoId + .json';
 
-            var videoId = $('.latestPost .post').attr('data-video-id');
-
-
+            $('.showEpisodes').click(function(){
+                $('body').addClass('showEpisodes');
+            });
 
 
         });

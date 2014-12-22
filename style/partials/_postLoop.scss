@@ -20,6 +20,8 @@
     }
 
     .text{
+      margin: units(1) 0 0 0;
+      padding: 0 units(1);
       font-size: $gamma;
       h2, .description {
         padding: units(1);

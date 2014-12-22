@@ -426,16 +426,13 @@ body {
   #header .logo {
     max-width: 350px;
     padding: 24px;
-    top: -300px;
+    top: 16px;
     transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
   }
   /* line 76, ../partials/_header.scss */
   [data-video-status=playing] #header .logo {
     background: rgba(0, 0, 0, 0.3);
-  }
-  /* line 79, ../partials/_header.scss */
-  .loaded #header .logo {
-    top: 16px;
+    max-width: 200px;
   }
 }
 
@@ -473,6 +470,7 @@ SMALL DEVICES
 .latestPost .poster {
   width: 100%;
   height: 100%;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -485,16 +483,16 @@ SMALL DEVICES
   .latestPost .poster {
     display: block;
   }
-  /* line 35, ../partials/_latestPost.scss */
+  /* line 36, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .poster {
     background: transparent;
     display: block;
   }
-  /* line 39, ../partials/_latestPost.scss */
+  /* line 40, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .poster {
     display: none;
   }
-  /* line 43, ../partials/_latestPost.scss */
+  /* line 44, ../partials/_latestPost.scss */
   .latestPost .poster:before {
     content: "";
     background: url("../img/grain.png") repeat top left;
@@ -507,28 +505,28 @@ SMALL DEVICES
   }
 }
 @media (min-width: 900px) and (min-width: 900px) {
-  /* line 54, ../partials/_latestPost.scss */
+  /* line 55, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .poster:before {
     display: block;
   }
-  /* line 57, ../partials/_latestPost.scss */
+  /* line 58, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .poster:before {
     display: none;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 64, ../partials/_latestPost.scss */
+  /* line 65, ../partials/_latestPost.scss */
   .latestPost .videoContainer {
     position: static;
   }
 }
-/* line 69, ../partials/_latestPost.scss */
+/* line 70, ../partials/_latestPost.scss */
 .latestPost .controls {
   display: none;
 }
 @media (min-width: 900px) {
-  /* line 69, ../partials/_latestPost.scss */
+  /* line 70, ../partials/_latestPost.scss */
   .latestPost .controls {
     width: 20%;
     height: auto;
@@ -544,15 +542,15 @@ SMALL DEVICES
     opacity: .8;
     transition: opacity 0.2s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 87, ../partials/_latestPost.scss */
+  /* line 88, ../partials/_latestPost.scss */
   .loaded .latestPost .controls {
     display: block;
   }
-  /* line 90, ../partials/_latestPost.scss */
+  /* line 91, ../partials/_latestPost.scss */
   .latestPost .controls:hover {
     opacity: 1;
   }
-  /* line 95, ../partials/_latestPost.scss */
+  /* line 96, ../partials/_latestPost.scss */
   .latestPost .controls button {
     background: transparent;
     border: none;
@@ -560,40 +558,40 @@ SMALL DEVICES
     cursor: pointer;
     width: 100%;
   }
-  /* line 103, ../partials/_latestPost.scss */
+  /* line 104, ../partials/_latestPost.scss */
   .latestPost .controls .play {
     display: block;
   }
-  /* line 106, ../partials/_latestPost.scss */
+  /* line 107, ../partials/_latestPost.scss */
   .latestPost .controls .pause {
     display: none;
   }
-  /* line 111, ../partials/_latestPost.scss */
+  /* line 112, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls {
     opacity: 1;
   }
-  /* line 114, ../partials/_latestPost.scss */
+  /* line 115, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls .play {
     display: block;
   }
-  /* line 117, ../partials/_latestPost.scss */
+  /* line 118, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls .pause {
     display: none;
   }
-  /* line 122, ../partials/_latestPost.scss */
+  /* line 123, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls {
     opacity: 0;
   }
-  /* line 125, ../partials/_latestPost.scss */
+  /* line 126, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls .play {
     display: none;
   }
-  /* line 128, ../partials/_latestPost.scss */
+  /* line 129, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls .pause {
     display: block;
   }
 }
-/* line 136, ../partials/_latestPost.scss */
+/* line 137, ../partials/_latestPost.scss */
 .latestPost .text {
   position: relative;
   z-index: 4;
@@ -601,13 +599,13 @@ SMALL DEVICES
   padding: 8px;
 }
 @media (min-width: 601px) {
-  /* line 136, ../partials/_latestPost.scss */
+  /* line 137, ../partials/_latestPost.scss */
   .latestPost .text {
     width: 100%;
   }
 }
 @media (min-width: 900px) {
-  /* line 136, ../partials/_latestPost.scss */
+  /* line 137, ../partials/_latestPost.scss */
   .latestPost .text {
     position: absolute;
     max-width: 350px;
@@ -616,33 +614,33 @@ SMALL DEVICES
     bottom: 40px;
     transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 153, ../partials/_latestPost.scss */
+  /* line 154, ../partials/_latestPost.scss */
   .loaded .latestPost .text {
     left: 16px;
   }
-  /* line 156, ../partials/_latestPost.scss */
+  /* line 157, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .text {
     left: -100%;
   }
 }
-/* line 161, ../partials/_latestPost.scss */
+/* line 162, ../partials/_latestPost.scss */
 .latestPost .text h2, .latestPost .text .description {
   background: white;
   padding: 16px;
 }
-/* line 166, ../partials/_latestPost.scss */
+/* line 167, ../partials/_latestPost.scss */
 .latestPost .text h2 {
   text-transform: uppercase;
   line-height: 1.2em;
   margin: 8px 0;
 }
-/* line 171, ../partials/_latestPost.scss */
+/* line 172, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
   line-height: 1.4em;
   padding: 16px;
 }
-/* line 175, ../partials/_latestPost.scss */
+/* line 176, ../partials/_latestPost.scss */
 .latestPost .text .description * {
   margin: 0;
 }
@@ -677,25 +675,27 @@ SMALL DEVICES
 }
 /* line 22, ../partials/_postLoop.scss */
 .postLoop .post .text {
+  margin: 8px 0 0 0;
+  padding: 0 8px;
   font-size: 16px;
 }
-/* line 24, ../partials/_postLoop.scss */
+/* line 26, ../partials/_postLoop.scss */
 .postLoop .post .text h2, .postLoop .post .text .description {
   padding: 8px;
 }
-/* line 27, ../partials/_postLoop.scss */
+/* line 29, ../partials/_postLoop.scss */
 .postLoop .post .text h2 {
   background: white;
   color: black;
   margin: 0 0 8px 0;
 }
-/* line 32, ../partials/_postLoop.scss */
+/* line 34, ../partials/_postLoop.scss */
 .postLoop .post .text .description {
   color: white;
   margin: 0;
 }
 
-/* line 42, ../partials/_postLoop.scss */
+/* line 44, ../partials/_postLoop.scss */
 .post .postTag {
   background: black;
   color: white;

@@ -70,14 +70,15 @@
     @include device-size(large) {
       max-width: 350px;
       padding: units(3);
-      top: -300px;
+      top: units(2);
       transition: all $default-transition-duration .0s $default-transition-function;
 
       [data-video-status=playing] &{
         background: rgba(0,0,0,.3);
+        max-width: 200px;
       }
       .loaded &{
-        top: units(2);
+
       }
     }
 

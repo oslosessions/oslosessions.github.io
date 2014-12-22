@@ -1,8 +1,7 @@
 # SITE SETTINGS
 title: Oslosessions
 # email: eplehans@gmail.com
-# description: Site description
-# author: Hans Kristian Smedsrød
+description: Oslo Sessions
 baseurl: ""
 url: "http://www.oslosessions.no/" # the base hostname & protocol for your site
 permalink: :title/
@@ -11,21 +10,11 @@ canonical: "http://www.oslosessions.no/"
 # External usernames
 # facebook_username: oslosessions
 # instagram_username: oslosessions
-
-disqus: oslosessions
-google_analytics: UA-56557241-1
+# disqus: oslosessions
+# google_analytics: UA-56557241-1
 
 # BUILD SETTINGS
 markdown: kramdown
-
-#Page and post defaults
-#defaults:
-#  -
-#    scope:
-#      path: ""
-#      type: "posts"
-#    values:
-#      published: "true"
 
 prose:
   siteurl: "http://oslosessions.no/"

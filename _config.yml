@@ -1,11 +1,11 @@
 # SITE SETTINGS
-title: Oslosessions
+title: Oslo Sessions
 # email: eplehans@gmail.com
 description: Oslo Sessions
 baseurl: ""
 url: "http://www.oslosessions.no/" # the base hostname & protocol for your site
 permalink: :title/
-canonical: "http://www.oslosessions.no/"
+canonical: "http://www.oslosessions.com/"
 
 # External usernames
 # facebook_username: oslosessions
@@ -17,8 +17,9 @@ google_analytics: UA-57922199-1
 # BUILD SETTINGS
 markdown: kramdown
 
+# PROSE SETTINGS
 prose:
-  siteurl: "http://oslosessions.no/"
+  siteurl: "http://www.oslosessions.com/"
   media: "media"
   metadata:
     _posts:

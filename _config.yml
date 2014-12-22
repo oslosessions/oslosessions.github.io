@@ -19,14 +19,13 @@ google_analytics: UA-56557241-1
 markdown: kramdown
 
 #Page and post defaults
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      published: "true"
-      layout: "single-post"
+#defaults:
+#  -
+#    scope:
+#      path: ""
+#      type: "posts"
+#    values:
+#      published: "true"
 
 prose:
   siteurl: "http://oslosessions.no/"

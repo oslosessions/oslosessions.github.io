@@ -409,10 +409,10 @@ body {
 /* line 56, ../partials/_header.scss */
 #header .logo {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 8px;
+  left: 8px;
   z-index: 5;
-  width: 25%;
+  width: 30%;
   height: auto;
   background: black;
   padding: 8px;
@@ -427,9 +427,10 @@ body {
     max-width: 350px;
     padding: 24px;
     top: 16px;
+    left: 16px;
     transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 76, ../partials/_header.scss */
+  /* line 77, ../partials/_header.scss */
   [data-video-status=playing] #header .logo {
     background: rgba(0, 0, 0, 0.3);
     max-width: 200px;

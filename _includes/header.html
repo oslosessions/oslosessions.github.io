@@ -7,7 +7,11 @@
     {% include latest-post.html %}
 
     <nav id="nav">
-        <a class="showEpisodes" href="#episodes">Alle episoder</a>
+        {% for post in site.posts %}
+        {% if forloop.length == 0 %}
+            <a class="showEpisodes" href="#episodes">Alle episoder</a>
+        {% endif %}
+        {% endfor %}
     </nav>
 
 

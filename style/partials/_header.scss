@@ -55,10 +55,10 @@
 
   .logo {
     position: absolute;
-    top: units(2);
-    left: units(2);
+    top: units(1);
+    left: units(1);
     z-index: 5;
-    width: 25%;
+    width: 30%;
     height: auto;
     background: rgba(0,0,0,1);
     padding: units(1);
@@ -71,6 +71,7 @@
       max-width: 350px;
       padding: units(3);
       top: units(2);
+      left: units(2);
       transition: all $default-transition-duration .0s $default-transition-function;
 
       [data-video-status=playing] &{

@@ -454,7 +454,7 @@ SMALL DEVICES
 .latestPost {
   position: relative;
 }
-/* line 3, ../partials/_latestPost.scss */
+/* line 5, ../partials/_latestPost.scss */
 .latestPost .post {
   position: relative;
   width: 100%;
@@ -462,18 +462,18 @@ SMALL DEVICES
   padding: 0 0 32px 0;
 }
 @media (min-width: 900px) {
-  /* line 3, ../partials/_latestPost.scss */
+  /* line 5, ../partials/_latestPost.scss */
   .latestPost .post {
     height: 100vh;
     max-height: 100vh;
     padding: 0 0 0 0;
   }
 }
-/* line 16, ../partials/_latestPost.scss */
+/* line 18, ../partials/_latestPost.scss */
 .latestPost .post:hover .controls {
   opacity: 1;
 }
-/* line 22, ../partials/_latestPost.scss */
+/* line 24, ../partials/_latestPost.scss */
 .latestPost .poster {
   width: 100%;
   height: 100%;
@@ -486,20 +486,20 @@ SMALL DEVICES
   display: none;
 }
 @media (min-width: 900px) {
-  /* line 22, ../partials/_latestPost.scss */
+  /* line 24, ../partials/_latestPost.scss */
   .latestPost .poster {
     display: block;
   }
-  /* line 36, ../partials/_latestPost.scss */
+  /* line 38, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .poster {
     background: transparent;
     display: block;
   }
-  /* line 40, ../partials/_latestPost.scss */
+  /* line 42, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .poster {
     display: none;
   }
-  /* line 44, ../partials/_latestPost.scss */
+  /* line 46, ../partials/_latestPost.scss */
   .latestPost .poster:before {
     content: "";
     background: url("../img/grain.png") repeat top left;
@@ -512,28 +512,28 @@ SMALL DEVICES
   }
 }
 @media (min-width: 900px) and (min-width: 900px) {
-  /* line 55, ../partials/_latestPost.scss */
+  /* line 57, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .poster:before {
     display: block;
   }
-  /* line 58, ../partials/_latestPost.scss */
+  /* line 60, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .poster:before {
     display: none;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 65, ../partials/_latestPost.scss */
+  /* line 67, ../partials/_latestPost.scss */
   .latestPost .videoContainer {
     position: static;
   }
 }
-/* line 70, ../partials/_latestPost.scss */
+/* line 72, ../partials/_latestPost.scss */
 .latestPost .controls {
   display: none;
 }
 @media (min-width: 900px) {
-  /* line 70, ../partials/_latestPost.scss */
+  /* line 72, ../partials/_latestPost.scss */
   .latestPost .controls {
     width: 20%;
     height: auto;
@@ -549,15 +549,15 @@ SMALL DEVICES
     opacity: .8;
     transition: opacity 0.2s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 88, ../partials/_latestPost.scss */
+  /* line 90, ../partials/_latestPost.scss */
   .loaded .latestPost .controls {
     display: block;
   }
-  /* line 91, ../partials/_latestPost.scss */
+  /* line 93, ../partials/_latestPost.scss */
   .latestPost .controls:hover {
     opacity: 1;
   }
-  /* line 96, ../partials/_latestPost.scss */
+  /* line 98, ../partials/_latestPost.scss */
   .latestPost .controls button {
     background: transparent;
     border: none;
@@ -565,40 +565,40 @@ SMALL DEVICES
     cursor: pointer;
     width: 100%;
   }
-  /* line 104, ../partials/_latestPost.scss */
+  /* line 106, ../partials/_latestPost.scss */
   .latestPost .controls .play {
     display: block;
   }
-  /* line 107, ../partials/_latestPost.scss */
+  /* line 109, ../partials/_latestPost.scss */
   .latestPost .controls .pause {
     display: none;
   }
-  /* line 112, ../partials/_latestPost.scss */
+  /* line 114, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls {
     opacity: 1;
   }
-  /* line 115, ../partials/_latestPost.scss */
+  /* line 117, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls .play {
     display: block;
   }
-  /* line 118, ../partials/_latestPost.scss */
+  /* line 120, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls .pause {
     display: none;
   }
-  /* line 123, ../partials/_latestPost.scss */
+  /* line 125, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls {
     opacity: 0;
   }
-  /* line 126, ../partials/_latestPost.scss */
+  /* line 128, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls .play {
     display: none;
   }
-  /* line 129, ../partials/_latestPost.scss */
+  /* line 131, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls .pause {
-    display: block;
+    display: none;
   }
 }
-/* line 137, ../partials/_latestPost.scss */
+/* line 144, ../partials/_latestPost.scss */
 .latestPost .text {
   position: relative;
   z-index: 4;
@@ -606,13 +606,13 @@ SMALL DEVICES
   padding: 8px;
 }
 @media (min-width: 601px) {
-  /* line 137, ../partials/_latestPost.scss */
+  /* line 144, ../partials/_latestPost.scss */
   .latestPost .text {
     width: 100%;
   }
 }
 @media (min-width: 900px) {
-  /* line 137, ../partials/_latestPost.scss */
+  /* line 144, ../partials/_latestPost.scss */
   .latestPost .text {
     position: absolute;
     max-width: 350px;
@@ -621,33 +621,33 @@ SMALL DEVICES
     bottom: 40px;
     transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 154, ../partials/_latestPost.scss */
+  /* line 161, ../partials/_latestPost.scss */
   .loaded .latestPost .text {
     left: 16px;
   }
-  /* line 157, ../partials/_latestPost.scss */
+  /* line 164, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .text {
     left: -100%;
   }
 }
-/* line 162, ../partials/_latestPost.scss */
+/* line 169, ../partials/_latestPost.scss */
 .latestPost .text h2, .latestPost .text .description {
   background: white;
   padding: 16px;
 }
-/* line 167, ../partials/_latestPost.scss */
+/* line 174, ../partials/_latestPost.scss */
 .latestPost .text h2 {
   text-transform: uppercase;
   line-height: 1.2em;
   margin: 8px 0;
 }
-/* line 172, ../partials/_latestPost.scss */
+/* line 179, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
   line-height: 1.4em;
   padding: 16px;
 }
-/* line 176, ../partials/_latestPost.scss */
+/* line 183, ../partials/_latestPost.scss */
 .latestPost .text .description * {
   margin: 0;
 }

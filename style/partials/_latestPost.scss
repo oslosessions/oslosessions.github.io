@@ -1,4 +1,6 @@
 .latestPost {
+  $enablePauseButton: false;
+
   position: relative;
   .post {
     position: relative;
@@ -127,7 +129,12 @@
           display: none;
         }
         .pause {
-          display: block;
+          @if $enablePauseButton == true{
+            display: block;
+          }
+          @else{
+            display: none;
+          }
         }
       }
 

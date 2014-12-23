@@ -412,7 +412,7 @@ body {
   top: 8px;
   left: 8px;
   z-index: 5;
-  width: 30%;
+  width: 40%;
   height: auto;
   background: black;
   padding: 8px;
@@ -420,6 +420,12 @@ body {
 /* line 66, ../partials/_header.scss */
 #header .logo a, #header .logo img {
   display: block;
+}
+@media (min-width: 601px) {
+  /* line 56, ../partials/_header.scss */
+  #header .logo {
+    padding: 16px;
+  }
 }
 @media (min-width: 900px) {
   /* line 56, ../partials/_header.scss */
@@ -430,7 +436,7 @@ body {
     left: 16px;
     transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 77, ../partials/_header.scss */
+  /* line 81, ../partials/_header.scss */
   [data-video-status=playing] #header .logo {
     background: rgba(0, 0, 0, 0.3);
     max-width: 200px;

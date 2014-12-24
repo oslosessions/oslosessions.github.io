@@ -598,7 +598,7 @@ SMALL DEVICES
     display: none;
   }
 }
-/* line 144, ../partials/_latestPost.scss */
+/* line 145, ../partials/_latestPost.scss */
 .latestPost .text {
   position: relative;
   z-index: 4;
@@ -606,13 +606,13 @@ SMALL DEVICES
   padding: 8px;
 }
 @media (min-width: 601px) {
-  /* line 144, ../partials/_latestPost.scss */
+  /* line 145, ../partials/_latestPost.scss */
   .latestPost .text {
     width: 100%;
   }
 }
 @media (min-width: 900px) {
-  /* line 144, ../partials/_latestPost.scss */
+  /* line 145, ../partials/_latestPost.scss */
   .latestPost .text {
     position: absolute;
     max-width: 350px;
@@ -621,33 +621,33 @@ SMALL DEVICES
     bottom: 40px;
     transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 161, ../partials/_latestPost.scss */
+  /* line 162, ../partials/_latestPost.scss */
   .loaded .latestPost .text {
     left: 16px;
   }
-  /* line 164, ../partials/_latestPost.scss */
+  /* line 165, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .text {
     left: -100%;
   }
 }
-/* line 169, ../partials/_latestPost.scss */
+/* line 170, ../partials/_latestPost.scss */
 .latestPost .text h2, .latestPost .text .description {
   background: white;
   padding: 16px;
 }
-/* line 174, ../partials/_latestPost.scss */
+/* line 175, ../partials/_latestPost.scss */
 .latestPost .text h2 {
   text-transform: uppercase;
   line-height: 1.2em;
   margin: 8px 0;
 }
-/* line 179, ../partials/_latestPost.scss */
+/* line 180, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
   line-height: 1.4em;
   padding: 16px;
 }
-/* line 183, ../partials/_latestPost.scss */
+/* line 184, ../partials/_latestPost.scss */
 .latestPost .text .description * {
   margin: 0;
 }
@@ -658,7 +658,7 @@ SMALL DEVICES
   font-size: 0px;
   padding: 0 8px;
 }
-/* line 6, ../partials/_postLoop.scss */
+/* line 7, ../partials/_postLoop.scss */
 .postLoop .post {
   position: relative;
   display: inline-block;
@@ -668,41 +668,41 @@ SMALL DEVICES
   margin-bottom: 32px;
 }
 @media (min-width: 601px) {
-  /* line 6, ../partials/_postLoop.scss */
+  /* line 7, ../partials/_postLoop.scss */
   .postLoop .post {
     width: 50%;
   }
 }
 @media (min-width: 900px) {
-  /* line 6, ../partials/_postLoop.scss */
+  /* line 7, ../partials/_postLoop.scss */
   .postLoop .post {
     margin-bottom: 0;
     width: 25%;
   }
 }
-/* line 22, ../partials/_postLoop.scss */
+/* line 23, ../partials/_postLoop.scss */
 .postLoop .post .text {
   margin: 8px 0 0 0;
   padding: 0 8px;
   font-size: 16px;
 }
-/* line 26, ../partials/_postLoop.scss */
+/* line 27, ../partials/_postLoop.scss */
 .postLoop .post .text h2, .postLoop .post .text .description {
   padding: 8px;
 }
-/* line 29, ../partials/_postLoop.scss */
+/* line 30, ../partials/_postLoop.scss */
 .postLoop .post .text h2 {
   background: white;
   color: black;
   margin: 0 0 8px 0;
 }
-/* line 34, ../partials/_postLoop.scss */
+/* line 35, ../partials/_postLoop.scss */
 .postLoop .post .text .description {
   color: white;
   margin: 0;
 }
 
-/* line 44, ../partials/_postLoop.scss */
+/* line 45, ../partials/_postLoop.scss */
 .post .postTag {
   background: black;
   color: white;

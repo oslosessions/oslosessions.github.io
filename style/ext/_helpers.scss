@@ -5,17 +5,6 @@
   @return $count * $baseUnit;
 }
 
-//Example: .someClass{width: units(1);}
-
-@mixin dimensions($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin blur($blurVal: $defaultBlurValue) {
-  -webkit-filter: blur($blurVal);
-  filter: blur($blurVal);
-}
 
 @mixin absolute-center {
   position: absolute;
@@ -25,57 +14,6 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin allTextInputs() {
-  input:not([type=submit]):not([type=file]):not([type=checkbox]):not([type=radio]) {
-    @content;
-  }
-}
-
-
-/* ========================================================================
-#WIDTH HELPER
-========================================================================= */
-//Example: <div data-width="10"></div>
-$incrementer: 10;
-$percentage: 100;
-@while $percentage > 0 {
-  [data-width="#{$percentage}"] {
-    width: 0% + $percentage !important;
-  }
-  $percentage: $percentage - $incrementer;
-}
-
-
-
-/* ========================================================================
-#APP MODES
-========================================================================= */
-/*
-  When using this, be aware of the nesting property.
-  the app-mode data attribute is attached to the #main element.
-*/
-
-$calling: 'calling';
-$searching: 'search';
-
-
-@mixin app-mode($mode: calling, $nesting: inside){
-  @if $nesting == inside{
-    [data-mode="#{$mode}"] & {
-      @content;
-    }
-  }
-  @if $nesting == current {
-    &[data-mode="#{$mode}"] {
-      @content;
-    }
-  }
-  @else {
-    [data-mode="#{$mode}"] {
-      @content;
-    }
-  }
-}
 
 
 
@@ -111,6 +49,8 @@ $searching: 'search';
     @content;
   }
 }
+
+
 
 
 //Touch and small screen

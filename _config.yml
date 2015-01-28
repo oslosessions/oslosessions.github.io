@@ -42,8 +42,3 @@ prose:
           element: "text"
           type: "text"
           placeholder: "Url to your awesome image"
-      - name: "testPoster"
-        field:
-          label: "Test poster uploader"
-          element: "input"
-          type: "file"

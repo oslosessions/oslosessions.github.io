@@ -10,7 +10,20 @@
     <script src="{{ "/js/plugins/modernizrTouch.min.js" | prepend: site.baseurl }}"></script>
     <script src="{{ "/bower_components/froogaloop/froogaloop.min.js" | prepend: site.baseurl }}"></script>
 
-    <meta property="og:image" content="http://i.imgur.com/cI4bJZj.jpg" />
+
+    {% for post in site.posts limit:1 %}
+    <!-- Getting latest post's info -->
+    <meta property="og:image" content="{{post.posterImg}}" />
+    <meta property="og:title" content="{{post.title}}" />
+    <meta property="article:published_time" content="{{post.date}}" />
+    {% endfor %}
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{site.url}}" />
+    <meta property="og:description" content="{{site.description}}" />
+    <meta property="og:site_name" content="{{site.title}}" />
+
+
 
     <link rel="stylesheet" href="{{ "/style/css/dev.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -92,12 +105,12 @@
 
     </script>
 
-    <!--
+</head>
+
+<!--
         Developed by Hans Kristian Smedsrød with Jekyll and hosted on GitHub Pages.
         Twitter: @hanserino
         GitHub: https://github.com/eplehans
         Blog: http://hanseri.no/
         Repo: https://github.com/oslosessions/oslosessions.github.io
     -->
-
-</head>

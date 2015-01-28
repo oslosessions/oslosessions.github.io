@@ -347,8 +347,6 @@ body {
   #header .logo {
     max-width: 350px;
     padding: 24px;
-    top: 16px;
-    left: 16px;
     transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
   }
   /* line 81, ../partials/_header.scss */
@@ -388,7 +386,7 @@ SMALL DEVICES
 .latestPost .post:hover .controls {
   opacity: 1;
 }
-/* line 25, ../partials/_latestPost.scss */
+/* line 24, ../partials/_latestPost.scss */
 .latestPost .poster {
   width: 100%;
   height: 100%;
@@ -400,11 +398,15 @@ SMALL DEVICES
   opacity: 1;
   display: none;
 }
-/* line 36, ../partials/_latestPost.scss */
+/* line 35, ../partials/_latestPost.scss */
 .touch .latestPost .poster {
   display: none !important;
 }
 @media (min-width: 900px) {
+  /* line 24, ../partials/_latestPost.scss */
+  .latestPost .poster {
+    display: block;
+  }
   /* line 42, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .poster {
     background: transparent;
@@ -425,34 +427,31 @@ SMALL DEVICES
     height: 100%;
     z-index: 3;
   }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  /* line 61, ../partials/_latestPost.scss */
+  /* line 60, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .poster:before {
     display: block;
   }
-  /* line 64, ../partials/_latestPost.scss */
+  /* line 63, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .poster:before {
     display: none;
   }
 }
-
 @media (min-width: 900px) {
-  /* line 71, ../partials/_latestPost.scss */
+  /* line 70, ../partials/_latestPost.scss */
   .latestPost .videoContainer {
     position: static;
   }
 }
-/* line 76, ../partials/_latestPost.scss */
+/* line 75, ../partials/_latestPost.scss */
 .latestPost .controls {
   display: none;
 }
-/* line 79, ../partials/_latestPost.scss */
+/* line 78, ../partials/_latestPost.scss */
 .touch .latestPost .controls {
   display: none !important;
 }
 @media (min-width: 900px) {
-  /* line 76, ../partials/_latestPost.scss */
+  /* line 75, ../partials/_latestPost.scss */
   .latestPost .controls {
     width: 20%;
     height: auto;
@@ -468,15 +467,15 @@ SMALL DEVICES
     opacity: .8;
     transition: opacity 0.2s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 97, ../partials/_latestPost.scss */
+  /* line 96, ../partials/_latestPost.scss */
   .loaded .latestPost .controls {
     display: block;
   }
-  /* line 100, ../partials/_latestPost.scss */
+  /* line 99, ../partials/_latestPost.scss */
   .latestPost .controls:hover {
     opacity: 1;
   }
-  /* line 105, ../partials/_latestPost.scss */
+  /* line 103, ../partials/_latestPost.scss */
   .latestPost .controls button {
     background: transparent;
     border: none;
@@ -484,40 +483,40 @@ SMALL DEVICES
     cursor: pointer;
     width: 100%;
   }
-  /* line 113, ../partials/_latestPost.scss */
+  /* line 111, ../partials/_latestPost.scss */
   .latestPost .controls .play {
     display: block;
   }
-  /* line 116, ../partials/_latestPost.scss */
+  /* line 114, ../partials/_latestPost.scss */
   .latestPost .controls .pause {
     display: none;
   }
-  /* line 121, ../partials/_latestPost.scss */
+  /* line 119, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls {
     opacity: 1;
   }
-  /* line 124, ../partials/_latestPost.scss */
+  /* line 122, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls .play {
     display: block;
   }
-  /* line 127, ../partials/_latestPost.scss */
+  /* line 125, ../partials/_latestPost.scss */
   [data-video-status=paused] .latestPost .controls .pause {
     display: none;
   }
-  /* line 132, ../partials/_latestPost.scss */
+  /* line 130, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls {
     opacity: 0;
   }
-  /* line 135, ../partials/_latestPost.scss */
+  /* line 133, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls .play {
     display: none;
   }
-  /* line 138, ../partials/_latestPost.scss */
+  /* line 136, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .controls .pause {
     display: none;
   }
 }
-/* line 152, ../partials/_latestPost.scss */
+/* line 148, ../partials/_latestPost.scss */
 .latestPost .text {
   position: relative;
   z-index: 4;
@@ -525,13 +524,13 @@ SMALL DEVICES
   padding: 8px;
 }
 @media (min-width: 601px) {
-  /* line 152, ../partials/_latestPost.scss */
+  /* line 148, ../partials/_latestPost.scss */
   .latestPost .text {
     width: 100%;
   }
 }
 @media (min-width: 900px) {
-  /* line 152, ../partials/_latestPost.scss */
+  /* line 148, ../partials/_latestPost.scss */
   .latestPost .text {
     position: absolute;
     max-width: 350px;
@@ -540,33 +539,33 @@ SMALL DEVICES
     bottom: 48px;
     transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 169, ../partials/_latestPost.scss */
+  /* line 165, ../partials/_latestPost.scss */
   .loaded .latestPost .text {
-    left: 16px;
+    left: 8px;
   }
-  /* line 172, ../partials/_latestPost.scss */
+  /* line 168, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .text {
     left: -100%;
   }
 }
-/* line 177, ../partials/_latestPost.scss */
+/* line 173, ../partials/_latestPost.scss */
 .latestPost .text h2, .latestPost .text .description {
   background: white;
   padding: 16px;
 }
-/* line 182, ../partials/_latestPost.scss */
+/* line 178, ../partials/_latestPost.scss */
 .latestPost .text h2 {
   text-transform: uppercase;
   line-height: 1.2em;
   margin: 8px 0;
 }
-/* line 187, ../partials/_latestPost.scss */
+/* line 183, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
   line-height: 1.4em;
   padding: 16px;
 }
-/* line 191, ../partials/_latestPost.scss */
+/* line 187, ../partials/_latestPost.scss */
 .latestPost .text .description * {
   margin: 0;
 }

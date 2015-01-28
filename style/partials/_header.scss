@@ -74,8 +74,8 @@
     @include device-size(large) {
       max-width: 350px;
       padding: units(3);
-      top: units(2);
-      left: units(2);
+      //top: units(2);
+      //left: units(2);
       transition: all $default-transition-duration .0s $default-transition-function;
 
       [data-video-status=playing] &{

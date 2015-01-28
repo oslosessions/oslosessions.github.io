@@ -8,21 +8,20 @@
     height: auto;
     padding: 0 0 units(4) 0;
 
-    @include device-size(large){
+    @include device-size(large) {
       height: 100vh;
       max-height: 100vh;
       padding: 0 0 0 0;
     }
 
-    &:hover{
-      .controls{
+    &:hover {
+      .controls {
         opacity: 1;
       }
     }
   }
 
-
-  .poster{
+  .poster {
     width: 100%;
     height: 100%;
     background-position: center center;
@@ -38,16 +37,17 @@
     }
 
     @include device-size(large) {
+      display: block;
 
-      [data-video-status=paused] &{
+      [data-video-status=paused] & {
         background: transparent;
         display: block;
       }
-      [data-video-status=playing] &{
+      [data-video-status=playing] & {
         display: none;
       }
 
-      &:before{
+      &:before {
         content: "";
         background: url('../img/grain.png') repeat top left;
         display: block;
@@ -57,19 +57,18 @@
         height: 100%;
         z-index: 3;
 
-        @include device-size(large){
-          [data-video-status=paused] &{
-            display: block;
-          }
-          [data-video-status=playing] &{
-            display: none;
-          }
+        [data-video-status=paused] & {
+          display: block;
         }
+        [data-video-status=playing] & {
+          display: none;
+        }
+
       }
     }
   }
-  .videoContainer{
-    @include device-size(large){
+  .videoContainer {
+    @include device-size(large) {
       position: static;
     }
   }
@@ -79,7 +78,7 @@
     .touch & {
       display: none !important;
     }
-    @include device-size(large){
+    @include device-size(large) {
       width: 20%;
       height: auto;
       top: 50%;
@@ -94,15 +93,14 @@
       opacity: .8;
       transition: opacity .2s .1s $default-transition-function;
 
-      .loaded &{
+      .loaded & {
         display: block;
       }
       &:hover {
         opacity: 1;
       }
 
-
-      button{
+      button {
         background: transparent;
         border: none;
         outline: none;
@@ -136,10 +134,9 @@
           display: none;
         }
         .pause {
-          @if $enablePauseButton == true{
+          @if $enablePauseButton == true {
             display: block;
-          }
-          @else{
+          } @else {
             display: none;
           }
         }
@@ -147,7 +144,6 @@
 
     }
   }
-
 
   .text {
     position: relative;
@@ -166,8 +162,8 @@
       left: -100%;
       bottom: units(6);
       transition: left $default-transition-duration .3s $default-transition-function;
-      .loaded &{
-        left: units(2);
+      .loaded & {
+        left: units(1);
       }
       [data-video-status=playing] & {
         left: -100%;
@@ -188,7 +184,7 @@
       display: block;
       line-height: 1.4em;
       padding: units(2);
-      *{
+      * {
         margin: 0;
       }
     }

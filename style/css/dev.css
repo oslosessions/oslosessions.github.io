@@ -140,28 +140,11 @@ body {
 #main {
   padding: 24px 0 0 0;
 }
-@media (min-width: 900px) {
-  /* line 10, ../partials/_global.scss */
-  #main {
-    padding: 0px;
-    min-height: 0vh;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
-    transition-property: min-height, max-height,padding;
-  }
-  /* line 21, ../partials/_global.scss */
-  .showEpisodes #main {
-    min-height: 100vh;
-    padding: 40px 0 0 0;
-  }
-}
 
-/* line 30, ../partials/_global.scss */
+/* line 31, ../partials/_global.scss */
 .videoContainer {
   position: relative;
   padding-bottom: 56.25%;
-  height: 0;
   overflow: hidden;
   max-width: 100%;
   height: auto;
@@ -354,6 +337,23 @@ body {
     background: rgba(0, 0, 0, 0.3);
     max-width: 200px;
   }
+}
+
+/* line 1, ../partials/_footer.scss */
+#footer {
+  text-align: center;
+  color: white;
+  display: block;
+  font-size: 14px;
+  padding: 16px 0;
+}
+/* line 8, ../partials/_footer.scss */
+#footer a {
+  color: white;
+}
+/* line 10, ../partials/_footer.scss */
+#footer a:hover {
+  text-decoration: underline;
 }
 
 /* NAVIGATION  ======================================================= */
@@ -573,7 +573,7 @@ SMALL DEVICES
 /* line 1, ../partials/_postLoop.scss */
 .postLoop {
   display: block;
-  font-size: 0px;
+  font-size: 0;
   padding: 0 8px;
 }
 /* line 7, ../partials/_postLoop.scss */

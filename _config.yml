@@ -1,6 +1,6 @@
 # SITE SETTINGS
 title: Oslo Sessions
-# email: eplehans@gmail.com
+email: mail@oslosessions.com
 description: Oslo Sessions
 baseurl: ""
 url: "http://www.oslosessions.no/" # the base hostname & protocol for your site

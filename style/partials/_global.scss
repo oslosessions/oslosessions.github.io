@@ -10,27 +10,27 @@ body {
 #main {
   padding: units(3) 0 0 0;
 
-  @include device-size(large){
-    padding: 0px;
-    min-height: 0vh;
-    max-height: 0;
-    overflow: hidden;
-    transition: all $default-transition-duration 0s $default-transition-function;
-    transition-property: min-height, max-height,padding;
-
-    .showEpisodes &{
-      min-height: 100vh;
-      padding: units(5) 0 0 0;
-    }
-
-  }
+//  @include device-size(large){
+//    padding: 0;
+//    min-height: 0;
+//    max-height: 0;
+//    overflow: hidden;
+//    transition: all $default-transition-duration 0s $default-transition-function;
+//    transition-property: min-height, max-height,padding;
+//
+//    .showEpisodes &{
+//      min-height: 100vh;
+//      padding: units(5) 0 0 0;
+//    }
+//
+//  }
 }
+
 
 
 .videoContainer{
   position: relative;
   padding-bottom: 56.25%;
-  height: 0;
   overflow: hidden;
   max-width: 100%;
   height: auto;

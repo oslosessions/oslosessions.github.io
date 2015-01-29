@@ -1,0 +1,14 @@
+#footer{
+  text-align: center;
+  color: white;
+  display: block;
+  font-size: $delta;
+  padding: units(2) 0;
+
+  a{
+    color: white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

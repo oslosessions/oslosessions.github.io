@@ -4,6 +4,7 @@ email: mail@oslosessions.com
 description: Oslo Sessions
 baseurl: ""
 url: "http://www.oslosessions.no/" # the base hostname & protocol for your site
+disclaimer: Denne tjenesten tilbys av Oslo Sessions. Musikken er gjengitt med tillatelse fra TONO. Uautorisert fremføring eller kopiering er ulovlig
 permalink: :title/
 canonical: "http://www.oslosessions.com/"
 

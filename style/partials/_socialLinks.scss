@@ -1,0 +1,51 @@
+.social-links{
+	background: black;
+	color: white;
+	z-index: 6;
+	list-style: none;
+	position: absolute;
+	bottom: units(2);
+	right: units(2);
+	padding: units(2) units(3);
+	transition: right $default-transition-duration .3s $default-transition-function;
+
+	[data-video-status=playing] & {
+		right: -100%;
+	}
+
+	li{
+		display: inline-block;
+		margin: 0 units(2);
+	}
+
+	a{
+		color: white;
+		display: block;
+		width: units(3);
+		height: units(3);
+	}
+
+	svg{
+		fill: white;;
+	}
+	#header &{
+		display: none;
+
+		@include device-size(large) {
+			display: block;
+		}
+	}
+	#footer &{
+		position: relative;
+		width: 100%;
+		text-align: center;
+		right: 0;
+		bottom: 0;
+		border: 1px solid white;
+		border-width: 1px 0;
+
+		@include device-size(large) {
+			display: none;
+		}
+	}
+}

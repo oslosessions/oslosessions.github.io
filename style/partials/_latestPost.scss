@@ -160,7 +160,7 @@
       max-width: 350px;
       width: 40%;
       left: -100%;
-      bottom: units(6);
+      bottom: units(2);
       transition: left $default-transition-duration .3s $default-transition-function;
       .loaded & {
         left: units(1);

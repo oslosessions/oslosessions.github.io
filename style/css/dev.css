@@ -142,11 +142,16 @@ body {
 }
 
 /* line 10, ../partials/_global.scss */
+hr {
+  border-color: white;
+}
+
+/* line 13, ../partials/_global.scss */
 #main {
   padding: 24px 0 0 0;
 }
 
-/* line 31, ../partials/_global.scss */
+/* line 34, ../partials/_global.scss */
 .videoContainer {
   position: relative;
   padding-bottom: 56.25%;
@@ -154,7 +159,7 @@ body {
   max-width: 100%;
   height: auto;
 }
-/* line 38, ../partials/_global.scss */
+/* line 41, ../partials/_global.scss */
 .videoContainer iframe,
 .videoContainer object,
 .videoContainer embed {
@@ -164,12 +169,12 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 48, ../partials/_global.scss */
+/* line 51, ../partials/_global.scss */
 .videoContainer .controls {
   position: absolute;
   z-index: 5;
 }
-/* line 53, ../partials/_global.scss */
+/* line 56, ../partials/_global.scss */
 .videoContainer:before {
   width: 30px;
   height: 30px;
@@ -183,21 +188,21 @@ body {
 /*  ================================================================================
 	Helpful classes
 ================================================================================  */
-/* line 75, ../partials/_global.scss */
+/* line 78, ../partials/_global.scss */
 .largeWrap {
   max-width: 960px;
   padding: 16px;
   margin: 0 auto;
 }
 
-/* line 81, ../partials/_global.scss */
+/* line 84, ../partials/_global.scss */
 .screenReaderText {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
 
-/* line 90, ../partials/_global.scss */
+/* line 93, ../partials/_global.scss */
 .absoluteRight,
 .absoluteLeft,
 .absoluteBottom,
@@ -205,27 +210,27 @@ body {
   position: absolute;
 }
 
-/* line 97, ../partials/_global.scss */
+/* line 100, ../partials/_global.scss */
 .absoluteLeft {
   left: 0;
 }
 
-/* line 101, ../partials/_global.scss */
+/* line 104, ../partials/_global.scss */
 .absoluteRight {
   right: 0;
 }
 
-/* line 105, ../partials/_global.scss */
+/* line 108, ../partials/_global.scss */
 .absoluteBottom {
   bottom: 0;
 }
 
-/* line 109, ../partials/_global.scss */
+/* line 112, ../partials/_global.scss */
 .absoluteTop {
   top: 0;
 }
 
-/* line 113, ../partials/_global.scss */
+/* line 116, ../partials/_global.scss */
 .absoluteCenter {
   position: absolute;
   top: 50%;
@@ -234,17 +239,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* line 117, ../partials/_global.scss */
+/* line 120, ../partials/_global.scss */
 .fullWidth {
   width: 100%;
 }
 
-/* line 121, ../partials/_global.scss */
+/* line 124, ../partials/_global.scss */
 .center {
   text-align: center;
 }
 
-/* line 125, ../partials/_global.scss */
+/* line 128, ../partials/_global.scss */
 .noRadius {
   border-right: 0px;
 }
@@ -311,38 +316,71 @@ body {
   text-transform: uppercase;
   font-weight: 300;
 }
-/* line 58, ../partials/_header.scss */
+/* line 57, ../partials/_header.scss */
 #header .logo {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  z-index: 5;
-  width: 40%;
+  position: relative;
   height: auto;
-  background: black;
-  padding: 8px;
+  font-size: 0;
 }
-/* line 68, ../partials/_header.scss */
+/* line 65, ../partials/_header.scss */
 #header .logo a, #header .logo img {
   display: block;
 }
-@media (min-width: 601px) {
-  /* line 58, ../partials/_header.scss */
-  #header .logo {
-    padding: 16px;
-  }
+/* line 69, ../partials/_header.scss */
+#header .logo .left, #header .logo .right {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 74, ../partials/_header.scss */
+#header .logo .left {
+  background: black;
+  width: 80px;
+  padding: 16px;
+}
+/* line 80, ../partials/_header.scss */
+#header .logo .right {
+  width: 183px;
+  padding: 16px 16px 16px 0;
+  background: black;
+  opacity: 1;
+  transition: opacity 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
 }
 @media (min-width: 900px) {
-  /* line 58, ../partials/_header.scss */
+  /* line 57, ../partials/_header.scss */
   #header .logo {
-    max-width: 350px;
-    padding: 24px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 5;
+    width: auto;
+    top: 16px;
+    left: 16px;
+  }
+  /* line 101, ../partials/_header.scss */
+  #header .logo .left {
+    padding: 40px;
+    width: 150px;
     transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 83, ../partials/_header.scss */
+  /* line 107, ../partials/_header.scss */
+  #header .logo .right {
+    width: 280px;
+    background: transparent;
+    padding: 0 0 0 16px;
+  }
+  /* line 115, ../partials/_header.scss */
   [data-video-status=playing] #header .logo {
-    background: rgba(0, 0, 0, 0.3);
     max-width: 200px;
+  }
+  /* line 117, ../partials/_header.scss */
+  [data-video-status=playing] #header .logo .right {
+    opacity: 0;
+  }
+  /* line 121, ../partials/_header.scss */
+  [data-video-status=playing] #header .logo .left {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 24px;
+    width: 120px;
   }
 }
 
@@ -361,6 +399,65 @@ body {
 /* line 10, ../partials/_footer.scss */
 #footer a:hover {
   text-decoration: underline;
+}
+
+/* line 1, ../partials/_socialLinks.scss */
+.social-links {
+  background: black;
+  color: white;
+  z-index: 6;
+  list-style: none;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 16px 24px;
+  transition: right 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+/* line 12, ../partials/_socialLinks.scss */
+[data-video-status=playing] .social-links {
+  right: -100%;
+}
+/* line 16, ../partials/_socialLinks.scss */
+.social-links li {
+  display: inline-block;
+  margin: 0 16px;
+}
+/* line 21, ../partials/_socialLinks.scss */
+.social-links a {
+  color: white;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+/* line 28, ../partials/_socialLinks.scss */
+.social-links svg {
+  fill: white;
+}
+/* line 31, ../partials/_socialLinks.scss */
+#header .social-links {
+  display: none;
+}
+@media (min-width: 900px) {
+  /* line 31, ../partials/_socialLinks.scss */
+  #header .social-links {
+    display: block;
+  }
+}
+/* line 38, ../partials/_socialLinks.scss */
+#footer .social-links {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  border: 1px solid white;
+  border-width: 1px 0;
+}
+@media (min-width: 900px) {
+  /* line 38, ../partials/_socialLinks.scss */
+  #footer .social-links {
+    display: none;
+  }
 }
 
 /* NAVIGATION  ======================================================= */
@@ -543,7 +640,7 @@ SMALL DEVICES
     max-width: 350px;
     width: 40%;
     left: -100%;
-    bottom: 48px;
+    bottom: 16px;
     transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   }
   /* line 165, ../partials/_latestPost.scss */

@@ -1,7 +1,13 @@
 <header id="header">
 
-    <a href="{{ site.baseurl }}/" class="logo playBtn">
-        <img src="{{ site.baseurl }}/style/img/mainLogo.png" alt="Oslo Sessions Logo"/>
+    <a href="{{ site.baseurl }}/" class="logo">
+    	<div class="left">
+        	<img src="{{ site.baseurl }}/style/img/logo_part1.png" alt="Oslo Sessions Logo"/>
+        </div>
+        <div class="right">
+			<img src="{{ site.baseurl }}/style/img/logo_part2.png" alt="Oslo Sessions Logo"/>
+        </div>
+
     </a>
 
     {% include latest-post.html %}
@@ -10,5 +16,7 @@
         <a class="showEpisodes" href="#episodes">Alle episoder</a>
     </nav>
 
+    {% include social-links.html %}
 
-</header>
+
+</header> 

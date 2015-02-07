@@ -1,6 +1,5 @@
 # SITE SETTINGS
 title: Oslo Sessions
-email: mail@oslosessions.com
 description: Oslo Sessions
 baseurl: ""
 url: "http://www.oslosessions.no/" # the base hostname & protocol for your site
@@ -11,7 +10,11 @@ canonical: "http://www.oslosessions.com/"
 # External usernames
 facebook_username: oslosessions
 instagram_username: oslosessions
-# disqus: oslosessions
+soundcloud_username: oslosessions
+
+# Emails
+email: mail@oslosessions.com
+booking_email: booking@oslosessions.com
 
 google_analytics: UA-57922199-1
 

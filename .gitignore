@@ -3,3 +3,4 @@ _site
 style/.sass-cache
 .idea/
 node_modules
+_posts/

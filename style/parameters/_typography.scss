@@ -1,4 +1,4 @@
-$mainFont: 'helvetica';
+$mainFont: 'Open Sans', sans-serif;
 
 //Font sizes
 $giga: units(5);
@@ -9,18 +9,19 @@ $gamma: units(2);
 $delta: 14px;
 
 
-body{
+body{ 
   font-family: $mainFont;
 }
 
 //Font size and line height mixin
 @mixin font-size($font-size: $alpha) {
-  font-size: $font-size;
+  font-size: $font-size; 
+
 }
 
 a {
   color: $black;
-  text-decoration: none;
+  text-decoration: none; 
   &:hover {
   }
 }
@@ -35,3 +36,6 @@ p a {
   }
 }
 
+h1,h2,h3{
+  font-weight: 800;
+} 

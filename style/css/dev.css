@@ -106,23 +106,28 @@ in each vendor prefix.
 }
 /* line 12, ../parameters/_typography.scss */
 body {
-  font-family: "helvetica";
+  font-family: "Open Sans", sans-serif;
 }
 
-/* line 21, ../parameters/_typography.scss */
+/* line 22, ../parameters/_typography.scss */
 a {
   color: black;
   text-decoration: none;
 }
 
-/* line 28, ../parameters/_typography.scss */
+/* line 29, ../parameters/_typography.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 33, ../parameters/_typography.scss */
+/* line 34, ../parameters/_typography.scss */
 p a:hover {
   text-decoration: underline;
+}
+
+/* line 39, ../parameters/_typography.scss */
+h1, h2, h3 {
+  font-weight: 800;
 }
 
 /* line 1, ../partials/_global.scss */
@@ -303,8 +308,10 @@ body {
   padding: 8px 16px;
   display: inline-block;
   color: white;
+  text-transform: uppercase;
+  font-weight: 300;
 }
-/* line 56, ../partials/_header.scss */
+/* line 58, ../partials/_header.scss */
 #header .logo {
   position: absolute;
   top: 8px;
@@ -315,24 +322,24 @@ body {
   background: black;
   padding: 8px;
 }
-/* line 66, ../partials/_header.scss */
+/* line 68, ../partials/_header.scss */
 #header .logo a, #header .logo img {
   display: block;
 }
 @media (min-width: 601px) {
-  /* line 56, ../partials/_header.scss */
+  /* line 58, ../partials/_header.scss */
   #header .logo {
     padding: 16px;
   }
 }
 @media (min-width: 900px) {
-  /* line 56, ../partials/_header.scss */
+  /* line 58, ../partials/_header.scss */
   #header .logo {
     max-width: 350px;
     padding: 24px;
     transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 81, ../partials/_header.scss */
+  /* line 83, ../partials/_header.scss */
   [data-video-status=playing] #header .logo {
     background: rgba(0, 0, 0, 0.3);
     max-width: 200px;
@@ -557,15 +564,16 @@ SMALL DEVICES
 .latestPost .text h2 {
   text-transform: uppercase;
   line-height: 1.2em;
+  display: inline-block;
   margin: 8px 0;
 }
-/* line 183, ../partials/_latestPost.scss */
+/* line 184, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
-  line-height: 1.4em;
+  line-height: 1.7em;
   padding: 16px;
 }
-/* line 187, ../partials/_latestPost.scss */
+/* line 188, ../partials/_latestPost.scss */
 .latestPost .text .description * {
   margin: 0;
 }
@@ -614,16 +622,18 @@ SMALL DEVICES
   color: black;
   margin: 0 0 8px 0;
 }
-/* line 35, ../partials/_postLoop.scss */
+/* line 36, ../partials/_postLoop.scss */
 .postLoop .post .text .description {
   color: white;
   margin: 0;
 }
 
-/* line 45, ../partials/_postLoop.scss */
+/* line 46, ../partials/_postLoop.scss */
 .post .postTag {
   background: black;
   color: white;
   display: inline-block;
-  padding: 8px;
+  text-transform: uppercase;
+  padding: 16px;
+  font-weight: 300;
 }

@@ -178,11 +178,12 @@
     h2 {
       text-transform: uppercase;
       line-height: 1.2em;
+      display: inline-block;
       margin: units(1) 0;
     }
     .description {
       display: block;
-      line-height: 1.4em;
+      line-height: 1.7em;
       padding: units(2);
       * {
         margin: 0;

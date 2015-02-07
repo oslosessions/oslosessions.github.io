@@ -30,6 +30,7 @@
       h2{
         background: white;
         color: $black;
+      
         margin: 0 0 units(1) 0;
       }
       .description{
@@ -46,7 +47,9 @@
     background: black;
     color: white;
     display: inline-block;
-    padding: units(1);
+    text-transform: uppercase;
+    padding: units(2);
+    font-weight: 300;
   }
   .text{
 

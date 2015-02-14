@@ -1,7 +1,8 @@
 <footer id="footer">
 	<div class="largeWrap">
+		{% include email.html %}
 		{% include social-links.html %}
-	    <p>{{site.disclaimer}}</p>
-	    <small>Copyright {{site.title}} - <a href="mailto:{{site.email}}">{{site.email}}</a></small>
+	    
+	   	<p class="disclaimer">{{site.disclaimer}}</p>
     </div>
 </footer>

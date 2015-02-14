@@ -20,3 +20,10 @@ fonts_dir = "fonts"
 #	Output options 	========================================
 relative_assets = true
 output_style = :expanded
+
+# compass watch -c development_config.rb 
+# cd /Users/hanskristian/Documents/devProjects/oslosessions.github.io 
+
+# grunt serve
+# grunt
+

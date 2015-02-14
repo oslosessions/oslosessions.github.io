@@ -1,0 +1,38 @@
+<ul class="emails">
+	{% if site.booking_email %}
+	<li>
+		<a href="mailto:{{site.booking_email}}">
+			<span class="icon">
+				<?xml version="1.0" encoding="utf-8"?>
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+				<path d="M0.8,4.6C1.5,5,10.9,10,11.2,10.2c0.3,0.2,0.8,0.3,1.3,0.3c0.5,0,0.9-0.1,1.3-0.3C14.1,10,23.5,5,24.2,4.6
+					C24.9,4.3,25.5,0,24.2,0H0.8C-0.5,0,0.1,4.3,0.8,4.6 M24.5,7.4c-0.8,0.4-10.2,5.3-10.7,5.6c-0.5,0.2-0.8,0.3-1.3,0.3
+					c-0.5,0-0.8,0-1.3-0.3c-0.5-0.2-9.9-5.2-10.7-5.6C0,7.1,0,7.5,0,7.7v16C0,24.3,0.8,25,1.4,25h22.2c0.6,0,1.4-0.7,1.4-1.3v-16
+					C25,7.5,25,7.1,24.5,7.4"/>
+				</svg>
+			</span>
+
+			<span>Booking</span>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if site.email %}
+	<li>
+		<a href="mailto:{{site.email}}">
+			<span class="icon">
+				<?xml version="1.0" encoding="utf-8"?>
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+				<path d="M0.8,4.6C1.5,5,10.9,10,11.2,10.2c0.3,0.2,0.8,0.3,1.3,0.3c0.5,0,0.9-0.1,1.3-0.3C14.1,10,23.5,5,24.2,4.6
+					C24.9,4.3,25.5,0,24.2,0H0.8C-0.5,0,0.1,4.3,0.8,4.6 M24.5,7.4c-0.8,0.4-10.2,5.3-10.7,5.6c-0.5,0.2-0.8,0.3-1.3,0.3
+					c-0.5,0-0.8,0-1.3-0.3c-0.5-0.2-9.9-5.2-10.7-5.6C0,7.1,0,7.5,0,7.7v16C0,24.3,0.8,25,1.4,25h22.2c0.6,0,1.4-0.7,1.4-1.3v-16
+					C25,7.5,25,7.1,24.5,7.4"/>
+				</svg>
+			</span>
+			<span>Annet</span>
+		</a>
+	</li>
+	{% endif %}
+</ul>

@@ -190,8 +190,8 @@ hr {
 ================================================================================  */
 /* line 78, ../partials/_global.scss */
 .largeWrap {
-  max-width: 960px;
-  padding: 16px;
+  max-width: 100%;
+  padding: 24px;
   margin: 0 auto;
 }
 
@@ -386,11 +386,11 @@ hr {
 
 /* line 1, ../partials/_footer.scss */
 #footer {
-  text-align: center;
   color: white;
   display: block;
   font-size: 14px;
   padding: 16px 0;
+  text-align: center;
 }
 /* line 8, ../partials/_footer.scss */
 #footer a {
@@ -399,6 +399,64 @@ hr {
 /* line 10, ../partials/_footer.scss */
 #footer a:hover {
   text-decoration: underline;
+}
+/* line 15, ../partials/_footer.scss */
+#footer .emails, #footer .disclaimer {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 20, ../partials/_footer.scss */
+#footer .emails {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  margin: 0 0 16px 0;
+}
+@media (min-width: 900px) {
+  /* line 20, ../partials/_footer.scss */
+  #footer .emails {
+    width: 25%;
+    text-align: left;
+    margin: 0 -4px 0 0;
+  }
+}
+/* line 32, ../partials/_footer.scss */
+#footer .emails a {
+  display: block;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* line 38, ../partials/_footer.scss */
+#footer .emails li {
+  padding: 0;
+  margin: 0 16px 0 0;
+  display: inline-block;
+}
+/* line 44, ../partials/_footer.scss */
+#footer .emails span {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 49, ../partials/_footer.scss */
+#footer .emails .icon {
+  width: 16px;
+  height: 16px;
+  margin: 0 4px 0 0;
+}
+/* line 55, ../partials/_footer.scss */
+#footer .emails svg {
+  fill: white;
+}
+/* line 60, ../partials/_footer.scss */
+#footer .disclaimer {
+  width: 100%;
+}
+@media (min-width: 900px) {
+  /* line 60, ../partials/_footer.scss */
+  #footer .disclaimer {
+    width: 75%;
+    text-align: left;
+  }
 }
 
 /* line 1, ../partials/_socialLinks.scss */
@@ -640,37 +698,38 @@ SMALL DEVICES
     max-width: 350px;
     width: 40%;
     left: -100%;
-    bottom: 16px;
+    padding: 0;
+    bottom: 32px;
     transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   }
-  /* line 165, ../partials/_latestPost.scss */
+  /* line 166, ../partials/_latestPost.scss */
   .loaded .latestPost .text {
-    left: 8px;
+    left: 16px;
   }
-  /* line 168, ../partials/_latestPost.scss */
+  /* line 169, ../partials/_latestPost.scss */
   [data-video-status=playing] .latestPost .text {
     left: -100%;
   }
 }
-/* line 173, ../partials/_latestPost.scss */
+/* line 174, ../partials/_latestPost.scss */
 .latestPost .text h2, .latestPost .text .description {
   background: white;
   padding: 16px;
 }
-/* line 178, ../partials/_latestPost.scss */
+/* line 179, ../partials/_latestPost.scss */
 .latestPost .text h2 {
   text-transform: uppercase;
   line-height: 1.2em;
   display: inline-block;
   margin: 8px 0;
 }
-/* line 184, ../partials/_latestPost.scss */
+/* line 185, ../partials/_latestPost.scss */
 .latestPost .text .description {
   display: block;
   line-height: 1.7em;
   padding: 16px;
 }
-/* line 188, ../partials/_latestPost.scss */
+/* line 189, ../partials/_latestPost.scss */
 .latestPost .text .description * {
   margin: 0;
 }

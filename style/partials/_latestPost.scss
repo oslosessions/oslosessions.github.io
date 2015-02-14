@@ -160,10 +160,11 @@
       max-width: 350px;
       width: 40%;
       left: -100%;
-      bottom: units(2);
+      padding: 0;
+      bottom: units(4);
       transition: left $default-transition-duration .3s $default-transition-function;
       .loaded & {
-        left: units(1);
+        left: units(2);
       }
       [data-video-status=playing] & {
         left: -100%;

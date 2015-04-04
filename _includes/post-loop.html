@@ -1,29 +1,29 @@
 <div class="postLoop" id="episodes">
     <ul>
         {% for post in site.posts %}
-
             {% if forloop.first == true %}
-
                 <!-- Don't show latest post to avoid duplicate content -->
-
             {% else %}
-
             <li class="post">
-                <div class="videoContainer">
-                    <iframe class="video" src="//player.vimeo.com/video/{{post.vimeoCode}}?api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
+                <a href="{{ post.url }}">
+                    {% if post.imgurId %}
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="http://i.imgur.com/{{post.imgurId}}l.jpg" media="(min-width: 1200px)" alt="{{post.title}} in action">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img srcset="http://i.imgur.com/{{post.imgurId}}m.jpg" alt="{{ post.title }} in action">
+                    </picture>
+                    {% endif %}
 
-                <div class="text">
-                    <h2>{{ post.title }}</h2>
-                    <div class="description">
-                        {{post.content}}
+                    <div class="text">
+                        <h2>{{ post.title }}</h2>
+                        <div class="description">
+                            {{post.content}}
+                        </div>
                     </div>
-                </div>
-
+                </a>
             </li>
-
             {% endif %}
-
         {% endfor %}
     </ul>
 </div>

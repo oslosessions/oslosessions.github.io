@@ -1,8 +1,4 @@
-/*  ================================================================================
-	MAIN HEADER
-================================================================================  */
-
-#header {
+.top {
   border: 5px solid black;
   width: 100%;
   height: auto;
@@ -11,25 +7,37 @@
   background: black;
   overflow: auto;
 
+  .social-links{
+    display:none;
+      @include device-size(large){
+        display: block;
+      }
+  }
+
   @include device-size(large){
     max-height: 100vh;
-    overflow: hidden;
+    overflow: hidden; 
     .showEpisodes &{
 
     }
   }
+} 
 
-  nav {
+#nav {
+
+    display: none;
     position: absolute;
     width: 100%;
     text-align: center;
     bottom: 0;
-    left: 0;
+    left: 0; 
     z-index: 5;
+ 
 
     @include device-size(large){
-      transition: bottom $default-transition-duration .2s $default-transition-function;
-    }
+        display: block;
+        transition: bottom $default-transition-duration .2s $default-transition-function;
+    } 
 
     [data-video-status=playing] &{
       @include device-size(small){
@@ -40,7 +48,7 @@
       }
 
       @include device-size(large){
-        bottom: -100%;
+        bottom: -100%; 
       }
     }
 
@@ -52,85 +60,4 @@
       text-transform: uppercase;
       font-weight: 300;
     }
-  }
-
-  .logo { 
-    position: relative;
-
-    //width: 40%;
-    height: auto;
-    font-size: 0;
-
-
-    a,img{
-      display: block;
-    }
-
-    .left,.right{
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    .left{
-      background: rgba(0,0,0,1);
-      width: 80px;
-      padding: units(2);
-    }
-
-    .right{
-      width: 183px;
-      padding: units(2) units(2) units(2) 0;
-      background: black;
-      opacity: 1;
-      transition: opacity $default-transition-duration .0s $default-transition-function;
-    }
- 
-    @include device-size(medium) {
-      
-    }
-
-    @include device-size(large) {
-      position: absolute;
-      top: units(1);
-      left: units(1);
-      z-index: 5;
-      width: auto;
-      top: units(2);
-      left: units(2);
-
-      .left{
-        padding: units(5);
-        width: 150px;
-        transition: all $default-transition-duration .0s $default-transition-function;
-      }
-
-      .right{
-        width: 280px;
-        background: transparent;
-        padding: 0 0 0 units(2);
-      }
-
-
-
-      [data-video-status=playing] &{
-        max-width: 200px;
-        .right{
-          opacity: 0;
-        }
-        
-        .left{
-          background: rgba(0,0,0,.3);
-          padding: units(3);
-          width: 120px;
-        }
-      }
-      .loaded &{
-
-      }
-    }
-
-  }
-
-
 }
-

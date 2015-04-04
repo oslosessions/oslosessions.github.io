@@ -13,15 +13,35 @@ module.exports = function(grunt) {
 			}
 		},
         sass: {
-            dist: {
-                options: {
-                    style: 'expanded'
-                },
-                files: {
-                    'main.css': 'main.scss'       // 'destination': 'source'
-                }
-            }
-        },
+			options: {
+				style: 'compact',
+				loadPath: [
+					'style/ext',
+					'style/parameters',
+					'style/partials',
+					'style/sass'
+				]
+			},
+			dist: {
+				files: {
+					'style/css/dev.css': 'style/sass/dev.scss',
+				}
+			}
+		}, 
+		autoprefixer: {
+			options: {
+				// Task-specific options go here.
+			},
+
+			single_file: {
+				options: {
+					browsers: ['last 2 versions', 'ie 8', 'ie 9']
+				},
+				src: 'style/css/dev.css',
+				dest: 'style/css/dev-prefixed.css'
+			}
+		},
+
 		watch: {
 			site: {
 				files: [
@@ -34,13 +54,14 @@ module.exports = function(grunt) {
 					"style/css/*.css"
 				],
 				tasks: [
-					"shell:jekyllBuild"
+					"shell:jekyllBuild" 
 				]
 			},
 			css: {
-				files: ["_sass/*.scss"],
+				files: "**/*.scss",
 				tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
 			},
+			
 			src: {
 				files: ['lib/*.js', 'style/**/*.scss'],
 				tasks: ['default']
@@ -61,7 +82,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask("default",
 		[
-			"shell:jekyllBuild",
 			"watch"
 		]
 	);

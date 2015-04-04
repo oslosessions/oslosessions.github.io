@@ -21,6 +21,11 @@ google_analytics: UA-57922199-1
 # BUILD SETTINGS
 markdown: kramdown
 
+defaults:
+  -
+    values:
+      layout: "post"
+
 # PROSE SETTINGS
 prose:
   siteurl: "http://www.oslosessions.com/"

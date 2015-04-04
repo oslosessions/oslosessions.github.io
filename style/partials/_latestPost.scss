@@ -1,11 +1,11 @@
-.latestPost {
+.featured {
   $enablePauseButton: false;
 
   position: relative;
   .post {
-    position: relative;
+    position: relative; 
     width: 100%;
-    height: auto;
+    height: auto; 
     padding: 0 0 units(4) 0;
 
     @include device-size(large) {
@@ -72,78 +72,7 @@
       position: static;
     }
   }
-  .controls {
-    display: none;
-
-    .touch & {
-      display: none !important;
-    }
-    @include device-size(large) {
-      width: 20%;
-      height: auto;
-      top: 50%;
-      left: 50%;
-      position: absolute;
-      margin-left: - 10%;
-      margin-top: - 10%;
-      background: transparent;
-      text-align: center;
-      padding: 0;
-      z-index: 6;
-      opacity: .8;
-      transition: opacity .2s .1s $default-transition-function;
-
-      .loaded & {
-        display: block;
-      }
-      &:hover {
-        opacity: 1;
-      }
-
-      button {
-        background: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        width: 100%;
-      }
-
-      .play {
-        display: block;
-      }
-      .pause {
-        display: none;
-      }
-
-      //Show play button while paused
-      [data-video-status=paused] & {
-        opacity: 1;
-
-        .play {
-          display: block;
-        }
-        .pause {
-          display: none;
-        }
-      }
-      //Show pause button when playing
-      [data-video-status=playing] & {
-        opacity: 0;
-
-        .play {
-          display: none;
-        }
-        .pause {
-          @if $enablePauseButton == true {
-            display: block;
-          } @else {
-            display: none;
-          }
-        }
-      }
-
-    }
-  }
+  
 
   .text {
     position: relative;

@@ -1,9 +1,6 @@
-/* DEVELOPMENT STYLES. THIS SHOULD NOT GO INTO PRODUTION */
 
 // Import helpers ========================================
-@import "../ext/reset",
-"../ext/helpers",
-"../ext/animation";
+@import "../ext/reset", "../ext/helpers";
 
 // Import parameters ========================================
 @import  "../parameters/parameters", 
@@ -14,6 +11,8 @@
 // Import Partials	========================================
 @import "../partials/global",
 "../partials/header",
+"../partials/logo",
+"../partials/videoControls",
 "../partials/footer",
 "../partials/socialLinks",
 "../partials/navigation",

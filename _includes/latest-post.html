@@ -1,19 +1,12 @@
-<div class="latestPost">
+<div class="featured">
 
     {% for post in site.posts limit:1 %}
     <div class="post" data-video-id="{{post.vimeoCode}}">
         <div class="poster" style="background-image: url(' {{post.posterImg}} '); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
-
+ 
 
         <div class="videoContainer">
-            <div class="controls">
-                <button class="play" value="play">
-                    <img src="{{ "/style/img/play.png" | prepend: site.baseurl }}">
-                </button>
-                <button class="pause" value="pause">
-                    <img src="{{ "/style/img/pause.png" | prepend: site.baseurl }}">
-                </button>
-            </div>
+            {% include video-controls.html %}
 
             <iframe class="video" src="//player.vimeo.com/video/{{post.vimeoCode}}?api=1" frameborder="0"
                     webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

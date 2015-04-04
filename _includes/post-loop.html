@@ -7,14 +7,8 @@
             <li class="post">
                 <a href="{{ post.url }}">
                     {% if post.imgurId %}
-                    <picture>
-                        <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="http://i.imgur.com/{{post.imgurId}}l.jpg" media="(min-width: 1200px)" alt="{{post.title}} in action">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img srcset="http://i.imgur.com/{{post.imgurId}}m.jpg" alt="{{ post.title }} in action">
-                    </picture>
+                    <img src="http://i.imgur.com/{{post.imgurId}}m.jpg" alt="{{ post.title }} in action">
                     {% endif %}
-
                     <div class="text">
                         <h2>{{ post.title }}</h2>
                         <div class="description">

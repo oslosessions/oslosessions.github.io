@@ -38,8 +38,10 @@ html { box-sizing: border-box; }
 /*  ================================================================================
 	COLORS
 ================================================================================  */
-@keyframes spinner { from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); } }
+@-webkit-keyframes spinner { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes spinner { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
 body { font-family: "Open Sans", sans-serif; }
 
 a { color: black; text-decoration: none; }
@@ -80,7 +82,7 @@ hr { border-color: white; }
 
 .absoluteTop { top: 0; }
 
-.absoluteCenter { position: absolute; top: 50%; left: 50%; margin-top: 0px !important; transform: translate(-50%, -50%); }
+.absoluteCenter { position: absolute; top: 50%; left: 50%; margin-top: 0px !important; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 .fullWidth { width: 100%; }
 
@@ -120,7 +122,7 @@ hr { border-color: white; }
   .videoControls button img, .videoControls .loader img { position: absolute; left: 50%; top: 25%; margin-left: -100px; }
   .videoControls button { cursor: pointer; }
   .videoControls button, .videoControls .loader { background: transparent; border: none; outline: none; width: 100%; height: 100%; position: relative; text-align: center; background: transparent; padding: 0; }
-  .videoControls .loader img { animation: spinner 1s infinite linear; }
+  .videoControls .loader img { -webkit-animation: spinner 1s infinite linear; animation: spinner 1s infinite linear; }
   .loaded .videoControls .loader, .loaded .videoControls .pause { display: none; }
   .loaded .videoControls .play { display: block; }
   [data-video-status=paused] .videoControls { opacity: 1; }
@@ -195,5 +197,3 @@ SMALL DEVICES
 .postLoop .post .text .description { color: white; margin: 0; }
 
 .post .postTag { background: black; color: white; display: inline-block; text-transform: uppercase; padding: 16px; font-weight: 300; }
-
-/*# sourceMappingURL=dev.css.map */

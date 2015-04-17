@@ -1,0 +1,207 @@
+html, body, div, span, applet, object, iframe, abbr, acronym, em, img, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+ul.reset, ol.reset { list-style: none; padding: 0px; margin: 0px; }
+
+a img { border: none; }
+
+img, video, iframe { max-width: 100%; height: auto; }
+
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+/* ========================================================================
+#UNITS
+========================================================================= */
+/* ========================================================================
+#MEDIA QUERIES
+========================================================================= */
+/* ======================================================================== #TOUCH DEVICE
+========================================================================= */
+/*  ================================================================================
+	Parameters
+	Parameters for use in this project
+================================================================================  */
+/* ========================================================================
+#TRANSITIONS: Default Transition variables
+========================================================================= */
+/* ========================================================================
+#BOX SHADOW: Default Box shadow variables
+========================================================================= */
+/* ========================================================================
+#DEFAULT BORDER RADIUS
+========================================================================= */
+/*  ================================================================================
+	COLORS
+================================================================================  */
+@-webkit-keyframes spinner { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes spinner { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@-webkit-keyframes pop { 0% { -webkit-transform: scale(1); transform: scale(1); }
+  60% { -webkit-transform: scale(1.05); transform: scale(1.05); }
+  100% { -webkit-transform: scale(0.95); transform: scale(0.95); } }
+@keyframes pop { 0% { -webkit-transform: scale(1); transform: scale(1); }
+  60% { -webkit-transform: scale(1.05); transform: scale(1.05); }
+  100% { -webkit-transform: scale(0.95); transform: scale(0.95); } }
+body { font-family: "Open Sans", sans-serif; }
+
+a { color: black; text-decoration: none; }
+
+.italic { font-style: italic; }
+
+p a:hover { text-decoration: underline; }
+
+h1, h2, h3 { font-weight: 800; }
+
+html { min-height: 100%; }
+
+body { height: 100%; background: black; }
+
+hr { border-color: white; }
+
+#main { padding: 24px 0 0 0; }
+
+.videoContainer { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; height: auto; }
+.videoContainer iframe, .videoContainer object, .videoContainer embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.videoContainer .controls { position: absolute; z-index: 5; }
+.videoContainer:before { width: 30px; height: 30px; position: absolute; top: 50%; left: 50%; margin-top: -15px; margin-left: -15px; }
+
+/*  ================================================================================
+	Helpful classes
+================================================================================  */
+.largeWrap { max-width: 100%; padding: 24px; margin: 0 auto; }
+
+.screenReaderText { position: absolute; top: -9999px; left: -9999px; }
+
+.absoluteRight, .absoluteLeft, .absoluteBottom, .absoluteTop { position: absolute; }
+
+.absoluteLeft { left: 0; }
+
+.absoluteRight { right: 0; }
+
+.absoluteBottom { bottom: 0; }
+
+.absoluteTop { top: 0; }
+
+.absoluteCenter { position: absolute; top: 50%; left: 50%; margin-top: 0px !important; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.fullWidth { width: 100%; }
+
+.center { text-align: center; }
+
+.noRadius { border-right: 0px; }
+
+.top { border: 5px solid black; width: 100%; height: auto; position: relative; z-index: 3; background: black; overflow: auto; }
+.top .social-links { display: none; }
+@media (min-width: 900px) { .top .social-links { display: block; } }
+@media (min-width: 900px) { .top { max-height: 100vh; overflow: hidden; } }
+
+#nav { display: none; position: absolute; width: 100%; text-align: center; bottom: 0; left: 0; z-index: 5; }
+@media (min-width: 900px) { #nav { display: block; transition: bottom 0.3s 0.2s cubic-bezier(0.55, 0, 0.1, 1); } }
+@media (max-width: 60px) { [data-video-status=playing] #nav { display: none; } }
+@media (min-width: 601px) { [data-video-status=playing] #nav { display: none; } }
+@media (min-width: 900px) { [data-video-status=playing] #nav { bottom: -100%; } }
+#nav a { background: black; padding: 8px 16px; display: inline-block; color: white; text-transform: uppercase; font-weight: 300; }
+
+.logo { position: relative; height: auto; font-size: 0; }
+.logo a, .logo img { display: block; }
+.logo .left, .logo .right { display: inline-block; vertical-align: middle; }
+.logo .left { background: black; width: 80px; padding: 16px; }
+.logo .right { width: 183px; padding: 16px 16px 16px 0; background: black; opacity: 1; transition: opacity 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1); }
+@media (min-width: 900px) { .logo { position: absolute; z-index: 5; width: auto; top: 16px; left: 16px; }
+  .logo .left { padding: 40px; width: 150px; transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1); }
+  .logo .right { width: 280px; background: transparent; padding: 0 0 0 16px; }
+  [data-video-status=playing] .logo { max-width: 200px; }
+  [data-video-status=playing] .logo .right { opacity: 0; }
+  [data-video-status=playing] .logo .left { background: rgba(0, 0, 0, 0.3); padding: 24px; width: 120px; } }
+
+.videoControls .svgContainer { width: 140px; height: 140px; position: absolute; top: 50%; left: 50%; margin-left: -70px; margin-top: -70px; z-index: 2; }
+.videoControls #spin { -webkit-animation: spinner 1s infinite linear; animation: spinner 1s infinite linear; -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; }
+.videoControls svg { fill: white; }
+.touch .videoControls { display: none !important; }
+[data-video-status=playing] .videoControls { display: none; }
+@media (min-width: 900px) { .videoControls { width: 100%; height: 100%; top: 0; left: 0; position: absolute; background: transparent; text-align: center; padding: 0; z-index: 6; }
+  .videoControls .svgContainer { opacity: .8; transition: opacity 0.15s 0s cubic-bezier(0.55, 0, 0.1, 1); }
+  .videoControls .svgContainer:hover { opacity: 1; } }
+.videoControls button { background: transparent; border: none; outline: none; width: 100%; height: 100%; position: relative; text-align: center; padding: 0; cursor: default; }
+.videoControls #play { display: none; }
+.loaded .videoControls button { cursor: pointer; }
+.loaded .videoControls .svgContainer { -webkit-animation: pop .2s 1 ease-in-out; animation: pop .2s 1 ease-in-out; }
+.loaded .videoControls #spin { display: none; -webkit-animation-play-state: paused; animation-play-state: paused; }
+.loaded .videoControls #play { display: block; }
+[data-video-status=paused] .videoControls { opacity: 1; }
+[data-video-status=paused] .videoControls #spin { display: none; }
+[data-video-status=paused] .videoControls #play { display: block; }
+[data-video-status=playing] .videoControls { opacity: 0; display: none; }
+
+#footer { color: white; display: block; font-size: 14px; padding: 16px 0; text-align: center; }
+#footer a { color: white; }
+#footer a:hover { text-decoration: underline; }
+#footer .emails, #footer .disclaimer { display: inline-block; vertical-align: middle; }
+#footer .emails { width: 100%; padding: 0; list-style: none; margin: 0 0 16px 0; }
+@media (min-width: 900px) { #footer .emails { width: 25%; text-align: left; margin: 0 -4px 0 0; } }
+#footer .emails a { display: block; font-weight: 300; text-transform: uppercase; }
+#footer .emails li { padding: 0; margin: 0 16px 0 0; display: inline-block; }
+#footer .emails span { display: inline-block; vertical-align: middle; }
+#footer .emails .icon { width: 16px; height: 16px; margin: 0 4px 0 0; }
+#footer .emails svg { fill: white; }
+#footer .disclaimer { width: 100%; }
+@media (min-width: 900px) { #footer .disclaimer { width: 75%; text-align: left; } }
+
+.social-links { background: black; color: white; z-index: 6; list-style: none; position: absolute; bottom: 16px; right: 16px; padding: 16px 24px; transition: right 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1); }
+[data-video-status=playing] .social-links { right: -100%; }
+.social-links li { display: inline-block; margin: 0 16px; }
+.social-links a { color: white; display: block; width: 24px; height: 24px; }
+.social-links svg { fill: white; }
+#header .social-links { display: none; }
+@media (min-width: 900px) { #header .social-links { display: block; } }
+#footer .social-links { position: relative; width: 100%; text-align: center; right: 0; bottom: 0; border: 1px solid white; border-width: 1px 0; }
+@media (min-width: 900px) { #footer .social-links { display: none; } }
+
+/* NAVIGATION  ======================================================= */
+/*  ================================================================================
+MEDIUM DEVICES
+================================================================================  */
+/*  ================================================================================
+SMALL DEVICES
+================================================================================  */
+.featured { position: relative; }
+.featured .post { position: relative; width: 100%; height: auto; padding: 0 0 32px 0; }
+@media (min-width: 900px) { .featured .post { height: 100vh; max-height: 100vh; padding: 0 0 0 0; } }
+.featured .post:hover .controls { opacity: 1; }
+.featured .poster { width: 100%; height: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover; position: absolute; z-index: 4; opacity: 1; display: none; }
+.touch .featured .poster { display: none !important; }
+@media (min-width: 900px) { .featured .poster { display: block; }
+  [data-video-status=paused] .featured .poster { background: transparent; display: block; }
+  [data-video-status=playing] .featured .poster { display: none; }
+  .featured .poster:before { content: ""; background: url("../img/grain.png") repeat top left; display: block; opacity: .7; position: absolute; width: 100%; height: 100%; z-index: 3; }
+  [data-video-status=paused] .featured .poster:before { display: block; }
+  [data-video-status=playing] .featured .poster:before { display: none; } }
+@media (min-width: 900px) { .featured .videoContainer { position: static; } }
+.featured .text { position: relative; z-index: 4; width: 100%; padding: 8px; }
+@media (min-width: 601px) { .featured .text { width: 100%; } }
+@media (min-width: 900px) { .featured .text { position: absolute; max-width: 350px; width: 40%; left: -100%; padding: 0; bottom: 32px; transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1); }
+  .loaded .featured .text { left: 16px; }
+  [data-video-status=playing] .featured .text { left: -100%; } }
+.featured .text h2, .featured .text .description { background: white; padding: 16px; }
+.featured .text h2 { text-transform: uppercase; line-height: 1.2em; display: inline-block; margin: 8px 0; }
+.featured .text .description { display: block; line-height: 1.7em; padding: 16px; }
+.featured .text .description * { margin: 0; }
+
+.postLoop { display: block; font-size: 0; padding: 0 8px; }
+.postLoop .post { position: relative; display: inline-block; vertical-align: top; width: 100%; padding: 0 8px; margin-bottom: 32px; }
+@media (min-width: 601px) { .postLoop .post { width: 50%; } }
+@media (min-width: 900px) { .postLoop .post { margin-bottom: 0; width: 25%; } }
+.postLoop .post a { display: block; }
+.postLoop .post a img, .postLoop .post a picture { width: 100%; display: block; }
+.postLoop .post .text { margin: 8px 0 0 0; padding: 0 8px; font-size: 16px; }
+.postLoop .post .text h2, .postLoop .post .text .description { padding: 8px; }
+.postLoop .post .text h2 { background: white; color: black; margin: 0 0 8px 0; }
+.postLoop .post .text .description { color: white; margin: 0; }
+
+.post .postTag { background: black; color: white; display: inline-block; text-transform: uppercase; padding: 16px; font-weight: 300; }

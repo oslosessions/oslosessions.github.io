@@ -32,7 +32,7 @@
 
     @include device-size(large) {
       position: absolute;
-      z-index: 5;
+      z-index: 9;
       width: auto;
       top: units(2);
       left: units(2);

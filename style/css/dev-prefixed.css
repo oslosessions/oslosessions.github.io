@@ -101,7 +101,7 @@ hr { border-color: white; }
 @media (min-width: 900px) { .top .social-links { display: block; } }
 @media (min-width: 900px) { .top { max-height: 100vh; overflow: hidden; } }
 
-#nav { display: none; position: absolute; width: 100%; text-align: center; bottom: 0; left: 0; z-index: 5; }
+#nav { display: none; position: absolute; width: 100%; text-align: center; bottom: 0; left: 0; z-index: 9; }
 @media (min-width: 900px) { #nav { display: block; transition: bottom 0.3s 0.2s cubic-bezier(0.55, 0, 0.1, 1); } }
 @media (max-width: 60px) { [data-video-status=playing] #nav { display: none; } }
 @media (min-width: 601px) { [data-video-status=playing] #nav { display: none; } }
@@ -113,7 +113,7 @@ hr { border-color: white; }
 .logo .left, .logo .right { display: inline-block; vertical-align: middle; }
 .logo .left { background: black; width: 80px; padding: 16px; }
 .logo .right { width: 183px; padding: 16px 16px 16px 0; background: black; opacity: 1; transition: opacity 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1); }
-@media (min-width: 900px) { .logo { position: absolute; z-index: 5; width: auto; top: 16px; left: 16px; }
+@media (min-width: 900px) { .logo { position: absolute; z-index: 9; width: auto; top: 16px; left: 16px; }
   .logo .left { padding: 40px; width: 150px; transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1); }
   .logo .right { width: 280px; background: transparent; padding: 0 0 0 16px; }
   [data-video-status=playing] .logo { max-width: 200px; }
@@ -183,7 +183,7 @@ SMALL DEVICES
   [data-video-status=paused] .featured .poster:before { display: block; }
   [data-video-status=playing] .featured .poster:before { display: none; } }
 @media (min-width: 900px) { .featured .videoContainer { position: static; } }
-.featured .text { position: relative; z-index: 4; width: 100%; padding: 8px; }
+.featured .text { position: relative; z-index: 9; width: 100%; padding: 8px; }
 @media (min-width: 601px) { .featured .text { width: 100%; } }
 @media (min-width: 900px) { .featured .text { position: absolute; max-width: 350px; width: 40%; left: -100%; padding: 0; bottom: 32px; transition: left 0.3s 0.3s cubic-bezier(0.55, 0, 0.1, 1); }
   .loaded .featured .text { left: 16px; }

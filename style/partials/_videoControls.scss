@@ -1,90 +1,115 @@
 .videoControls {
-    //display: none;
-      
-      .loader{
-        display: block; 
-      }
-      .play,.pause { 
-        display: none;
-      }
-      
-    .touch & {
-      display: none !important;
-    }
+  
+  .svgContainer {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -70px;
+    margin-top: -70px;
+    z-index: 2;
+  }
 
-    @include device-size(large) {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      position: absolute;
-      background: transparent;
-      text-align: center;
-      padding: 0;
-      z-index: 6;
+  
+
+  #spin {
+    animation: spinner 1s infinite linear;
+    transform-origin: 50% 50%;
+    transform: rotate(0) translate(-100px,-100px);
+  }
+
+  svg {
+    fill: white;
+  }
+
+  .touch & {
+    display: none !important;
+  }
+  [data-video-status=playing] & {
+    display: none;
+  }
+
+  @include device-size(large) {
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: transparent;
+    text-align: center;
+    padding: 0;
+    z-index: 6;
+
+    .svgContainer{
       opacity: .8;
-      transition: opacity .2s .1s $default-transition-function;
+      transition: opacity .15s 0s $default-transition-function;
 
       &:hover {
         opacity: 1;
       }
-      button img,.loader img{
-        position: absolute;
-        left: 50%;
-        top: 25%;
-        margin-left: -100px;
-        
-      }
-      button{
-        cursor: pointer;
-      }
-      button,.loader {
-        background: transparent; 
-        border: none;
-        outline: none;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        text-align: center;
-        background: transparent;
-        padding: 0;
-      }
-
-      .loader img{
-        animation: spinner 1s infinite linear;
-      }
-
-      //Show play button when loaded
-      .loaded & {
-        .loader,.pause{
-          display: none;
-        }
-        .play {
-          display: block;
-        }
-      }
-
-    
-
-      //Show play button while paused
-      [data-video-status=paused] & {
-        opacity: 1;
-
-        .play {
-          display: block;
-        }
-        .pause,.loader {
-          display: none;
-        }
-      }
-      //Show pause button when playing
-      [data-video-status=playing] & {
-        opacity: 0;
-
-        .play,.loader {
-          display: none;
-        }
-      }
-
     }
   }
+
+
+
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    cursor: default;
+  }
+
+  #play {
+    display: none;
+  }
+
+  //Show play button when loaded
+  .loaded & {
+    button{
+      cursor: pointer;
+    }
+
+    .svgContainer {
+      animation: pop .2s 1 ease-in-out;
+
+      &:hover {
+        #play {
+
+        }
+      }
+    }
+
+    #spin {
+      display: none;
+      animation-play-state: paused;
+    }
+    #play {
+      display: block;
+    }
+  }
+
+  //Show play button while paused
+  [data-video-status=paused] & {
+    opacity: 1;
+    
+    #spin {
+      display: none;
+    }
+    #play {
+      display: block;
+    }
+  
+  }
+  //Show pause button when playing
+  [data-video-status=playing] & {
+    opacity: 0;
+    display: none;
+  }
+
+}

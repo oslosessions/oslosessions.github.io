@@ -40,6 +40,9 @@ html { box-sizing: border-box; }
 ================================================================================  */
 @keyframes spinner { from { transform: rotate(0deg); }
   to { transform: rotate(360deg); } }
+@keyframes pop { 0% { transform: scale(1); }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(0.95); } }
 body { font-family: "Open Sans", sans-serif; }
 
 a { color: black; text-decoration: none; }
@@ -112,22 +115,24 @@ hr { border-color: white; }
   [data-video-status=playing] .logo .right { opacity: 0; }
   [data-video-status=playing] .logo .left { background: rgba(0, 0, 0, 0.3); padding: 24px; width: 120px; } }
 
-.videoControls .loader { display: block; }
-.videoControls .play, .videoControls .pause { display: none; }
+.videoControls .svgContainer { width: 140px; height: 140px; position: absolute; top: 50%; left: 50%; margin-left: -70px; margin-top: -70px; z-index: 2; }
+.videoControls #spin { animation: spinner 1s infinite linear; transform-origin: 50% 50%; transform: rotate(0) translate(-100px, -100px); }
+.videoControls svg { fill: white; }
 .touch .videoControls { display: none !important; }
-@media (min-width: 900px) { .videoControls { width: 100%; height: 100%; top: 0; left: 0; position: absolute; background: transparent; text-align: center; padding: 0; z-index: 6; opacity: .8; transition: opacity 0.2s 0.1s cubic-bezier(0.55, 0, 0.1, 1); }
-  .videoControls:hover { opacity: 1; }
-  .videoControls button img, .videoControls .loader img { position: absolute; left: 50%; top: 25%; margin-left: -100px; }
-  .videoControls button { cursor: pointer; }
-  .videoControls button, .videoControls .loader { background: transparent; border: none; outline: none; width: 100%; height: 100%; position: relative; text-align: center; background: transparent; padding: 0; }
-  .videoControls .loader img { animation: spinner 1s infinite linear; }
-  .loaded .videoControls .loader, .loaded .videoControls .pause { display: none; }
-  .loaded .videoControls .play { display: block; }
-  [data-video-status=paused] .videoControls { opacity: 1; }
-  [data-video-status=paused] .videoControls .play { display: block; }
-  [data-video-status=paused] .videoControls .pause, [data-video-status=paused] .videoControls .loader { display: none; }
-  [data-video-status=playing] .videoControls { opacity: 0; }
-  [data-video-status=playing] .videoControls .play, [data-video-status=playing] .videoControls .loader { display: none; } }
+[data-video-status=playing] .videoControls { display: none; }
+@media (min-width: 900px) { .videoControls { width: 100%; height: 100%; top: 0; left: 0; position: absolute; background: transparent; text-align: center; padding: 0; z-index: 6; }
+  .videoControls .svgContainer { opacity: .8; transition: opacity 0.15s 0s cubic-bezier(0.55, 0, 0.1, 1); }
+  .videoControls .svgContainer:hover { opacity: 1; } }
+.videoControls button { background: transparent; border: none; outline: none; width: 100%; height: 100%; position: relative; text-align: center; padding: 0; cursor: default; }
+.videoControls #play { display: none; }
+.loaded .videoControls button { cursor: pointer; }
+.loaded .videoControls .svgContainer { animation: pop .2s 1 ease-in-out; }
+.loaded .videoControls #spin { display: none; animation-play-state: paused; }
+.loaded .videoControls #play { display: block; }
+[data-video-status=paused] .videoControls { opacity: 1; }
+[data-video-status=paused] .videoControls #spin { display: none; }
+[data-video-status=paused] .videoControls #play { display: block; }
+[data-video-status=playing] .videoControls { opacity: 0; display: none; }
 
 #footer { color: white; display: block; font-size: 14px; padding: 16px 0; text-align: center; }
 #footer a { color: white; }

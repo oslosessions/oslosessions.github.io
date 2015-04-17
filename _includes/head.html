@@ -25,6 +25,11 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <script>
+        document.createElement("picture");
+    </script>
+
+
 
     <script>
 
@@ -68,8 +73,8 @@
             // Call the API when a button is pressed
             $('.videoControls button').bind('click', function (e) {
                 var action = $(this).val();
-                //console.log(action);
-                //player.api(action);
+                console.log(action);
+                player.api(action);
             });
 
             function bodyStatus(state) {
@@ -77,7 +82,7 @@
             }
 
             function onPause(id) {
-                //console.log('paused');
+                console.log('paused');
                 bodyStatus('paused');
             }
 
@@ -96,18 +101,13 @@
                 $('body').addClass('showEpisodes');
             });
 
-
         });
 
         $(window).load(function () {
             $('body').addClass('loaded');
         });
 
-        document.createElement("picture");
-
-
     </script>
-
 
     <style type="text/css">
         .videoControls {

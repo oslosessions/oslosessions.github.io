@@ -1,0 +1,22 @@
+<div class="featured">
+    <div class="post" data-video-id="{{page.vimeoCode}}">
+        <div class="poster" style="background-image: url(' {{page.posterImg}} '); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+
+
+        <div class="videoContainer">
+            {% include video-controls.html %}
+
+            <iframe class="video" src="//player.vimeo.com/video/{{page.vimeoCode}}?autoplay=1?api=1" frameborder="0"
+                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+
+        <div class="text">
+            <h2>{{ page.title }}</h2>
+
+            <div class="description">
+                {{page.content}}
+            </div>
+        </div>
+    </div>
+
+</div> 

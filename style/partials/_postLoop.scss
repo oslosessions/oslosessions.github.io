@@ -20,6 +20,15 @@
       width: 25%;
     }
 
+    a{
+      display: block;
+
+      img,picture{
+        width: 100%;
+        display: block;
+      }
+    }
+
     .text{
       margin: units(1) 0 0 0;
       padding: 0 units(1);

@@ -1,22 +1,15 @@
-<header id="header">
 
-    <a href="{{ site.baseurl }}/" class="logo">
-    	<div class="left">
-        	<img src="{{ site.baseurl }}/style/img/logo_part1.png" alt="Oslo Sessions Logo"/>
-        </div>
-        <div class="right">
-			<img src="{{ site.baseurl }}/style/img/logo_part2.png" alt="Oslo Sessions Logo"/>
-        </div>
-
-    </a>
-
+<div class="top">
+    <header id="header">
+    {% include logo.html %}
+    </header>
+    
     {% include latest-post.html %}
-
     <nav id="nav">
         <a class="showEpisodes" href="#episodes">Alle episoder</a>
     </nav>
 
     {% include social-links.html %}
 
-
+    </div>
 </header> 

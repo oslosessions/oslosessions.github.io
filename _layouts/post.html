@@ -1,15 +1,38 @@
----
-layout: default
----
-<div class="singlePost">
+<!DOCTYPE html>
+<html>
 
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<head>
+    {% include head.html %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+    <meta property="og:image" content="http://i.imgur.com/{{page.imgurId}}m.jpg" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta property="article:published_time" content="{{page.date}}" />
+</head>
+
+<body data-video-status="playing">
+
+<div class="top">
+    <header id="header">
+    {% include logo.html %}
+    </header>
+    
+    {% include single-post.html %}
+
+    <nav id="nav">
+        <a class="showEpisodes" href="#episodes">Alle episoder</a>
+    </nav>
+
+    {% include social-links.html %}
 
 </div>
+
+<main id="main"> 
+    {% include post-loop.html %}
+</main>
+
+{% include footer.html %}
+{% include analytics.html %}
+
+</body> 
+
+</html>

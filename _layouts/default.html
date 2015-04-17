@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-
+<head>
   {% include head.html %}
+
+  {% for post in site.posts limit:1 %}
+  <!-- Getting latest post's info -->
+  <meta property="og:image" content="http://i.imgur.com/{{post.imgurId}}m.jpg" />
+  <meta property="og:title" content="{{post.title}}" />
+  <meta property="article:published_time" content="{{post.date}}" />
+  {% endfor %}
+
+  </head>
 
   <body data-video-status="">
     {% include header.html %}
-
     <main id="main">
         {% include post-loop.html %}
     </main>

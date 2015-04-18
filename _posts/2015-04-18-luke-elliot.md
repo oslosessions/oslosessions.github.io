@@ -1,7 +1,8 @@
 ---
-published: false
+published: true
 vimeoCode: "125325287"
 posterImg: YwI9XvE
+imgurId: YwI9XvE
 ---
 
 Live at Rockefeller

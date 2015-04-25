@@ -2,7 +2,7 @@
 
     {% for post in site.posts limit:1 %}
     <div class="post" data-video-id="{{post.vimeoCode}}">
-        <div class="poster" style="background-image: url(' http://i.imgur.com/{{post.posterImg}}.jpg '); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+        <div class="poster" style="background-image: url(' http://i.imgur.com/{{post.imgurId}}.jpg '); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
 
         <div class="videoContainer">
             {% include video-controls.html %}

@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 vimeoCode: "130621284"
 imgurId: gkoLVSn
 ---

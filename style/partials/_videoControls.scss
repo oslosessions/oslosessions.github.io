@@ -1,15 +1,45 @@
 .videoControls {
-  
-  .svgContainer {
-    width: 140px;
-    height: 140px;
+  width: 100%; 
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: transparent;
+  text-align: center;
+  padding: 0;
+  z-index: 6;
+  overflow: hidden;
+
+
+
+  .svgContainer{
+    opacity: .8;
+    transition: opacity .15s 0s $default-transition-function;
+    
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
-    margin-left: -70px;
-    margin-top: -70px;
+  
     z-index: 2;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    margin-top: -80px;
+
+
+    @include device-size(large){
+      width: 140px;
+      height: 140px;
+      margin-left: -70px;
+      margin-top: -70px;
+
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
+
 
   
 
@@ -23,32 +53,15 @@
   }
 
   .touch & {
-    display: none !important;
+    //display: none !important;
   }
+
   [data-video-status=playing] & {
     display: none;
   }
 
-  @include device-size(large) {
-    width: 100%; 
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    background: transparent;
-    text-align: center;
-    padding: 0;
-    z-index: 6;
-
-    .svgContainer{
-      opacity: .8;
-      transition: opacity .15s 0s $default-transition-function;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
+  
+  
 
 
 

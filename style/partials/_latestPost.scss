@@ -1,16 +1,25 @@
 .featured {
   $enablePauseButton: false;
-
   position: relative;
+
   .post {
     position: relative; 
     width: 100%;
-    height: auto; 
     padding: 0 0 units(4) 0;
+    height: 100vh;
+    max-height: 100vh;
 
+    .single-post &{
+      height: auto;
+      max-height: 3000vh;
+
+      @include device-size(large) {
+        height: 100vh;
+        max-height: 100vh;
+      }
+    }
+      
     @include device-size(large) {
-      height: 100vh;
-      max-height: 100vh;
       padding: 0 0 0 0;
     }
 
@@ -30,14 +39,14 @@
     position: absolute;
     z-index: 4;
     opacity: 1;
-    display: none;
+    display: block;
 
     .touch & {
-      display: none !important;
+      //display: none !important; 
     }
 
     @include device-size(large) {
-      display: block;
+      //display: block;
 
       [data-video-status=paused] & {
         background: transparent;
@@ -75,17 +84,29 @@
   
 
   .text {
-    position: relative;
+    position: absolute;
     z-index: 9;
     width: 100%;
     padding: units(1);
+    bottom: units(4);
+    //left: units(2);
+    max-width: 100%;
 
+    .single-post &{
+      position: relative;
+      left: 0;
+      margin-top: units(2);
+
+      @include device-size(large) {
+        display: none;
+      }
+    }
+ 
     @include device-size(medium) {
       width: 100%;
     }
 
     @include device-size(large) {
-      position: absolute;
       max-width: 350px;
       width: 40%;
       left: -100%;

@@ -1,7 +1,20 @@
 .logo { 
-    position: relative;
+    position: absolute;
+    z-index: 9;
     height: auto;
     font-size: 0;
+    top: units(2);
+    left: units(2);
+
+    .single-post &{
+      position: relative;
+      top: 0;
+      left: 0;
+
+      @include device-size(large) {
+        position: absolute;
+      }
+    }
 
     a,img{
       display: block;
@@ -31,8 +44,7 @@
     }
 
     @include device-size(large) {
-      position: absolute;
-      z-index: 9;
+    
       width: auto;
       top: units(2);
       left: units(2);
@@ -51,7 +63,8 @@
 
 
 
-      [data-video-status=playing] &{
+      [data-video-status=playing] &,
+      .single-post &{
         max-width: 200px;
         .right{
           opacity: 0;

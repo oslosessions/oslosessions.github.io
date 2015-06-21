@@ -1,26 +1,22 @@
 <div class="featured">
 
     {% for post in site.posts limit:1 %}
-    <div class="post" data-video-id="{{post.vimeoCode}}">
-        <div class="poster" style="background-image: url(' http://i.imgur.com/{{post.imgurId}}.jpg '); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+    <div class="post">    
+            <a href="{{post.url}}" class="poster"
+                 style="background-image: url(' http://i.imgur.com/{{post.imgurId}}.jpg '); background-size: cover; background-position: center center; background-repeat: no-repeat;">
 
-        <div class="videoContainer">
             {% include video-controls.html %}
 
-            <iframe class="video" src="//player.vimeo.com/video/{{post.vimeoCode}}?api=1" frameborder="0"
-                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-        <div class="text">
+            <div class="text">
+                <span class="postTag">Ny episode</span><br/>
 
-            <span class="postTag">Ny episode</span><br />
+                <h2>{{ post.title }}</h2>
 
-            <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
-
-            <div class="description">
-                <a href="{{post.url}}">{{post.content}}</a>
-            </div>
-
-        </div>
-    </div> 
+                <div class="description">
+                    <p href="{{post.url}}">{{post.content}}</p>
+                </div>
+            </div> 
+        </a>
+    </div>
     {% endfor %}
 </div>

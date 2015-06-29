@@ -1,9 +1,9 @@
 # SITE SETTINGS
 title: Oslo Sessions
-description: Oslo Sessions
+description: Oslo Sessions loves live music. We've got the bouncing beats and sweet tunes from your favourite artists.
 baseurl: ""
 url: "http://www.oslosessions.no/" # the base hostname & protocol for your site
-disclaimer: Denne tjenesten tilbys av Oslo Sessions. Musikken er gjengitt med tillatelse fra TONO. Uautorisert fremføring eller kopiering er ulovlig
+disclaimer: This service is provided by Oslo Sessions. The music is distributed with permission from TONO. Unauthorised usage or copying is illegal.
 permalink: :title/
 canonical: "http://www.oslosessions.com/"
 

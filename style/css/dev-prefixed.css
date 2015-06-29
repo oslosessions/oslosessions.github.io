@@ -108,7 +108,7 @@ hr { border-color: white; }
 @media (min-width: 900px) { [data-video-status=playing] #nav { bottom: -100%; } }
 #nav a { background: black; padding: 8px 16px; display: inline-block; color: white; text-transform: uppercase; font-weight: 300; }
 
-.logo { position: absolute; z-index: 9; height: auto; font-size: 0; top: 16px; left: 16px; background: black; }
+.logo { position: absolute; z-index: 9; height: auto; font-size: 0; top: 16px; left: 8px; background: black; }
 .single-post .logo { position: relative; top: 0; left: 0; }
 .logo a, .logo img { display: block; }
 .logo .left, .logo .right { display: inline-block; vertical-align: middle; }

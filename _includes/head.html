@@ -47,15 +47,30 @@
         });
 
 
+        function marginSetter(){
+            var vh = $(window).height();
+            $('#main').css('margin-top', vh);
+        }
+
+
         $(window).load(function () {
             $('body').addClass('loaded');
         });
 
+        $(document).ready(function(){
+            marginSetter();
+        });
+
+        var resizeTimer;
+        $(window).resize(function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(marginSetter, 200);
+        });
+
+
     </script>
 
-    <style type="text/css">
-        
-    </style>
+
 
     <!--
         Developed by Hans Kristian Smedsrød with Jekyll and hosted on GitHub Pages.

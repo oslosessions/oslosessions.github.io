@@ -5,15 +5,16 @@
     font-size: 0;
     top: units(2);
     left: units(2);
+    background: $black;
 
+  
+    
     .single-post &{
       position: relative;
       top: 0;
       left: 0;
 
-      @include device-size(large) {
-        position: absolute;
-      }
+    
     }
 
     a,img{
@@ -39,12 +40,9 @@
       transition: opacity $default-transition-duration .0s $default-transition-function;
     }
 
-    @include device-size(medium) {
-      
-    }
 
     @include device-size(large) {
-    
+      background: transparent;
       width: auto;
       top: units(2);
       left: units(2);
@@ -65,6 +63,7 @@
 
       [data-video-status=playing] &,
       .single-post &{
+        display: none;
         max-width: 200px;
         .right{
           opacity: 0;

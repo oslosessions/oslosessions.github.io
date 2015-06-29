@@ -59,7 +59,7 @@ body { height: 100%; background: black; }
 
 hr { border-color: white; }
 
-#main { padding: 24px 0 0 0; }
+#main { padding: 32px 0 0 0; position: relative; min-height: 100%; margin-top: 100%; }
 
 .videoContainer { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; height: auto; }
 .videoContainer iframe, .videoContainer object, .videoContainer embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -91,7 +91,7 @@ hr { border-color: white; }
 
 .noRadius { border-right: 0px; }
 
-.top { border: 5px solid black; width: 100%; height: auto; position: relative; z-index: 3; background: black; overflow: auto; }
+.top { border: 5px solid black; width: 100%; height: 100%; min-height: 100%; top: 0; position: absolute; z-index: 3; background: black; }
 .top .social-links { display: none; }
 @media (min-width: 900px) { .top .social-links { display: block; } }
 @media (min-width: 900px) { .top { max-height: 100vh; overflow: hidden; } }
@@ -103,17 +103,16 @@ hr { border-color: white; }
 @media (min-width: 900px) { [data-video-status=playing] #nav { bottom: -100%; } }
 #nav a { background: black; padding: 8px 16px; display: inline-block; color: white; text-transform: uppercase; font-weight: 300; }
 
-.logo { position: absolute; z-index: 9; height: auto; font-size: 0; top: 16px; left: 16px; }
+.logo { position: absolute; z-index: 9; height: auto; font-size: 0; top: 16px; left: 16px; background: black; }
 .single-post .logo { position: relative; top: 0; left: 0; }
-@media (min-width: 900px) { .single-post .logo { position: absolute; } }
 .logo a, .logo img { display: block; }
 .logo .left, .logo .right { display: inline-block; vertical-align: middle; }
 .logo .left { background: black; width: 80px; padding: 16px; }
 .logo .right { width: 183px; padding: 16px 16px 16px 0; background: black; opacity: 1; transition: opacity 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1); }
-@media (min-width: 900px) { .logo { width: auto; top: 16px; left: 16px; }
+@media (min-width: 900px) { .logo { background: transparent; width: auto; top: 16px; left: 16px; }
   .logo .left { padding: 40px; width: 150px; transition: all 0.3s 0s cubic-bezier(0.55, 0, 0.1, 1); }
   .logo .right { width: 280px; background: transparent; padding: 0 0 0 16px; }
-  [data-video-status=playing] .logo, .single-post .logo { max-width: 200px; }
+  [data-video-status=playing] .logo, .single-post .logo { display: none; max-width: 200px; }
   [data-video-status=playing] .logo .right, .single-post .logo .right { opacity: 0; }
   [data-video-status=playing] .logo .left, .single-post .logo .left { background: rgba(0, 0, 0, 0.3); padding: 24px; width: 120px; } }
 
@@ -166,8 +165,7 @@ MEDIUM DEVICES
 /*  ================================================================================
 SMALL DEVICES
 ================================================================================  */
-.featured { position: relative; }
-.featured .post { position: relative; width: 100%; padding: 0 0 32px 0; height: 100vh; max-height: 100vh; }
+.featured .post { position: absolute; width: 100%; height: 100%; padding: 0 0 32px 0; }
 .single-post .featured .post { height: auto; max-height: 3000vh; }
 @media (min-width: 900px) { .single-post .featured .post { height: 100vh; max-height: 100vh; } }
 @media (min-width: 900px) { .featured .post { padding: 0 0 0 0; } }

@@ -34,6 +34,10 @@ prose:
   media: "media"
   metadata:
     _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
       - name: "published"
         field:
           label: "Published"

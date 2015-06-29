@@ -1,5 +1,6 @@
 ---
 published: true
+title: "The Northern Belle"
 imgurId: V9Ysb8O
 vimeoCode: "126671361"
 ---

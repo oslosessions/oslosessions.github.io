@@ -4,7 +4,7 @@
             {% if forloop.first == true %}
                 <!-- Don't show latest post to avoid duplicate content -->
             {% else %}
-            <li class="post">
+        <li class="post" data-nordic-restricted="{{post.nordicRestricted}}">
                 <a href="{{ post.url }}">
                     {% if post.imgurId %}
                     <picture>

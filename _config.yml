@@ -43,6 +43,11 @@ prose:
           label: "Published"
           element: "checkbox"
           value: "true"
+      - name: "nordicRestricted"
+        field:
+          label: "Restricted to show only in Nordic countries"
+          element: "checkbox"
+          value: "true"
       - name: "vimeoCode"
         field:
           label: "Vimeo video id"

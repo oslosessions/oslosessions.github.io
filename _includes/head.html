@@ -47,6 +47,26 @@
         });
 
 
+        //Geo blocking content
+        function blockContent($el, restricted) {
+            $el.attr('data-geo-restricted', restricted);
+        }
+
+        $.get("http://ipinfo.io", function (response) {
+            $('body').attr('data-country', response.country);
+
+            var $nordicRestricted = $('[data-nordic-restricted]');
+
+            if (response.country != "NO" || response.country != "SE" || response.country != "DK") {
+                blockContent($nordicRestricted, true);
+            } else {
+                blockContent($nordicRestricted, false);
+            }
+
+        }, "jsonp");
+
+
+
         function marginSetter(){
             var vh = $(window).height();
             $('#main').css('margin-top', vh);

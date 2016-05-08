@@ -1,5 +1,6 @@
 ---
 published: true
+nordicRestricted: true
 vimeoCode: "165421750"
 imgurId: Ixf2snO
 title: Me And Mark

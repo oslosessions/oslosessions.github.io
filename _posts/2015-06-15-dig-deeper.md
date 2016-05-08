@@ -1,5 +1,6 @@
 ---
 published: true
+nordicRestricted: true
 title: "Dig Deeper"
 vimeoCode: "130621284"
 imgurId: gkoLVSn

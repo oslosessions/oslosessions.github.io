@@ -6,6 +6,8 @@ url: "http://www.oslosessions.no/" # the base hostname & protocol for your site
 disclaimer: This service is provided by Oslo Sessions. The music is distributed with permission from TONO. Unauthorised usage or copying is illegal.
 permalink: :title/
 canonical: "http://www.oslosessions.com/"
+geoRestrictedText: "This video is not available in your country"
+geoRestrictedTextShort: "Not available in your country"
 
 # External usernames
 facebook_username: oslosessions

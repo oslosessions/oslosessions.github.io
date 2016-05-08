@@ -50,6 +50,11 @@
         //Geo blocking content
         function blockContent($el, restricted) {
             $el.attr('data-geo-restricted', restricted);
+
+            if (restricted === true) {
+                var $videoEl = $el.find('iframe');
+                $videoEl.attr('src', ''); //kills loading of video
+            }
         }
 
         $.get("http://ipinfo.io", function (response) {

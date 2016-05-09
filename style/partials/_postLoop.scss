@@ -1,10 +1,9 @@
-.postLoop{
+.postLoop {
   display: block;
   font-size: 0;
   padding: 0 units(1);
 
-
-  .post{
+  .post {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -12,37 +11,57 @@
     padding: 0 units(1);
     margin-bottom: units(4);
 
-    @include device-size(medium){
+    &[data-nordic-restricted="true"] {
+
+      opacity: .5;
+
+      a {
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+    .geoBlockedText {
+      position: absolute;
+      z-index: 9;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 100%;
+      padding: 0 units(1);
+      text-align: center;
+    }
+
+    @include device-size(medium) {
       width: 50%;
     }
-    @include device-size(large){
+    @include device-size(large) {
       margin-bottom: 0;
       width: 25%;
     }
 
-    a{
+    a {
       display: block;
 
-      img,picture{
+      img, picture {
         width: 100%;
         display: block;
       }
     }
 
-    .text{
+    .text {
       margin: units(1) 0 0 0;
       padding: 0 units(1);
       font-size: $gamma;
       h2, .description {
         padding: units(1);
       }
-      h2{
+      h2 {
         background: white;
         color: $black;
-      
+
         margin: 0 0 units(1) 0;
       }
-      .description{
+      .description {
         color: $white;
         margin: 0;
       }
@@ -51,8 +70,8 @@
   }
 }
 
-.post{
-  .postTag{
+.post {
+  .postTag {
     background: black;
     color: white;
     display: inline-block;
@@ -60,7 +79,7 @@
     padding: units(2);
     font-weight: 300;
   }
-  .text{
+  .text {
 
   }
 }

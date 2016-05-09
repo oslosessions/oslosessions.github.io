@@ -20,8 +20,7 @@
     <script>
         document.createElement("picture");
     </script>
- 
- 
+
 
     <script>
 
@@ -47,25 +46,31 @@
         });
 
 
+
         //Geo blocking content
         function blockContent($el, restricted) {
             $el.attr('data-geo-restricted', restricted);
 
             if (restricted === true) {
-                var $videoEl = $el.find('iframe');
-                $videoEl.attr('src', ''); //kills loading of video
+                var $videoEl = $el.find('iframe'),
+                        $videoLink = $el.find('a');
+                $videoEl.attr('src', '');
+                $videoLink.attr('href', '');
+                $videoLink.prepend('<p class="geoBlockedText"> {{site.geoRestrictedTextShort}} </p>')
             }
         }
 
         $.get("http://ipinfo.io", function (response) {
-            $('body').attr('data-country', response.country);
+            console.log('Country', response.country);
 
             var $nordicRestricted = $('[data-nordic-restricted]');
 
             if (response.country != "NO" || response.country != "SE" || response.country != "DK") {
                 blockContent($nordicRestricted, true);
+                console.log('You are outside of the Nordic region and will get some alternative content');
             } else {
                 blockContent($nordicRestricted, false);
+                console.log('You are in a Nordic country and can view all content on oslosessions.com');
             }
 
         }, "jsonp");

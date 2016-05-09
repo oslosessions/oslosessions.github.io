@@ -191,6 +191,26 @@ SMALL DEVICES
 
 .postLoop { display: block; font-size: 0; padding: 0 8px; }
 .postLoop .post { position: relative; display: inline-block; vertical-align: top; width: 100%; padding: 0 8px; margin-bottom: 32px; }
+
+.postLoop .post[data-nordic-restricted="true"] {
+  opacity: .5;
+}
+
+.postLoop .post[data-nordic-restricted="true"] a {
+  cursor: default;
+  pointer-events: none;
+}
+
+.postLoop .post .geoBlockedText {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 0 8px;
+  text-align: center;
+}
 @media (min-width: 601px) { .postLoop .post { width: 50%; } }
 @media (min-width: 900px) { .postLoop .post { margin-bottom: 0; width: 25%; } }
 .postLoop .post a { display: block; }

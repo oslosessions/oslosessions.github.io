@@ -12,13 +12,13 @@
     margin-bottom: units(4);
 
     &[data-nordic-restricted="true"] {
-
-      opacity: .5;
-
-      a {
-        cursor: default;
-        pointer-events: none;
-      }
+      //
+      //opacity: .5;
+      //
+      //a {
+      //  cursor: default;
+      //  pointer-events: none;
+      //}
     }
     .geoBlockedText {
       position: absolute;

@@ -67,10 +67,11 @@
 
             if (response.country != "NO" || response.country != "SE" || response.country != "DK") {
                 blockContent($nordicRestricted, false);
-                console.log('You are outside of the Nordic region and will get some alternative content');
+                console.log('You are in a Nordic country and can view all content');
             } else {
                 blockContent($nordicRestricted, true);
-                console.log('You are in a Nordic country and can view all content on oslosessions.com');
+                console.log('You are outside of the Nordic region and will get some alternative content');
+
             }
 
         }, "jsonp");

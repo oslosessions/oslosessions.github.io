@@ -198,12 +198,8 @@ SMALL DEVICES
 .postLoop .post { position: relative; display: inline-block; vertical-align: top; width: 100%; padding: 0 8px; margin-bottom: 32px; }
 
 .postLoop .post[data-nordic-restricted="true"] {
-  opacity: .5;
-}
-
-.postLoop .post[data-nordic-restricted="true"] a {
-  cursor: default;
-  pointer-events: none;
+  /*opacity: .5;
+a { cursor: default; pointer-events: none; }*/
 }
 
 .postLoop .post .geoBlockedText {
